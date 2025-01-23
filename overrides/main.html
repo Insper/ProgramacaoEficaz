@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<script>
+    window.site_url = "{{config.site_url}}";
+</script>
+
+{{ super() }}
+<!-- Add scripts that need to run afterwards here -->
+{% endblock %}

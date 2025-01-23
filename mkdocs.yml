@@ -1,0 +1,180 @@
+site_name: Programação Eficaz - Insper 2025/1
+site_author: Marcio F. Stabile Jr.
+
+extra:
+  materia: Programação Eficaz
+  professor: Marcio F. Stabile Jr.
+  semestre: 2025/1
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.tooltips
+  custom_dir: overrides
+  icon:
+    annotation: material/arrow-right-circle
+
+docs_dir: material
+site_dir: docs
+
+site_url: https://insper.github.io/progeficaz/
+
+nav:
+  - Home: index.md
+  - Cálculo da média: notas.md
+  - Aulas:
+    - "01 - Get-it":
+      - "Slides": "aulas/01-getit/Aula01.pdf"
+      - "Handout": aulas/01-getit.md
+      - "Handout Parte 0: Antes de começar": aulas/01-getit/parte0.md
+      - "Handout Parte 1: Criando o servidor": aulas/01-getit/parte1.md
+      - "Handout Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
+      - "Handout Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
+      - "Handout Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
+    # - "02 - Desafio CSS": 
+    #   - "Slides": "aulas/02-desafio-css/Aula02.pdf"
+    #   - "Enunciado": aulas/02-desafio-css.md
+    # - "03 - Persistência de dados":
+    #   - "Handout": aulas/03-persistencia-de-dados.md
+    #   - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
+    #   - "Handout Parte 2: Criando a tabela": aulas/03-persistencia-de-dados/parte2.md
+    #   - "Handout Parte 3: Inserindo dados na tabela": aulas/03-persistencia-de-dados/parte3.md
+    #   - "Handout Parte 4: Consultando e selecionando dados": aulas/03-persistencia-de-dados/parte4.md
+    #   - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
+    #   - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
+    # - "04 - Django":
+    #   - "Slides": "aulas/04-django/Aula04.pdf"
+    #   - "Handout": aulas/04-django.md
+    #   - "Handout Parte 1: Iniciando o projeto": aulas/04-django/parte1.md
+    #   - "Handout Parte 2: Criando nosso primeiro app": aulas/04-django/parte2.md
+    #   - "Handout Parte 3: Integrando com o banco de dados": aulas/04-django/parte3.md
+    #   - "Handout Parte 4: O Django Admin": aulas/04-django/parte4.md
+    #   - "Handout Parte 5: Usando templates": aulas/04-django/parte5.md
+    #   - "Handout Parte 6: Trabalhando com formulários e o método POST": aulas/04-django/parte6.md
+    # - "05 - Containers e Bancos de Dados":
+    #   - "Slides": "aulas/05-bd/Aula05.pdf"
+    #   - "Handout": aulas/05-bd.md
+    #   - "Guia de Instalação WSL e Docker para Windows": aulas/05-bd/guia-wsl.md
+    #   # - "Guia de Instalação WSL e Docker para Windows (v2)": aulas/05-bd/windows_docker_install.md
+    # - "06 - Deploy": aulas/06-deploy.md
+    # - "07 - Javascript":
+    #   - "Handout": aulas/07-javascript.md
+    # - "08 - Django REST":
+    #     - "Slides": aulas/08-django-rest/Aula18.pdf
+    #     - "Handout": aulas/08-django-rest.md
+    # - "09 - React":
+    #   - "Criando projeto": aulas/09-react-vite.md
+    #   - "Componentes": aulas/09-react/parte-01-componentes.md
+    #   - "Recebendo Dados": aulas/09-react/parte-02-recebendo-dados.md
+    #   - "Carregando imagens e arquivos estáticos": aulas/09-react/parte-03-carregando-estaticos.md
+    #   - "Implementando a Criação de Anotações": aulas/09-react/parte-04-criacao-notas.md
+    #   - "Implementando a edição de Anotações": aulas/09-react/parte-05-editando-anotacao.md
+    #   - "Bônus: implementando a rotação dos cartões": aulas/09-react/parte-06-bonus.md
+    # - "10 - Autenticação Django REST": 
+    #   - "Django REST": aulas/10-autenticacao.md
+    #   - "React Login": aulas/10-autenticacao/react-cadastro-e-login.md
+    # - "Aula de Apoio - Docker & Banco de dados": aulas/Aula-Docker-TecWeb.pdf
+  - "Material Auxiliar":
+    - "Usando o Terminal": auxiliar/terminal.md
+    - "Usando o Git": auxiliar/git.md
+    - "Usando Python com ambientes virtuais": auxiliar/venv.md
+    - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
+    - Heroku: aulas/heroku.md
+  - Entregas:
+    - "01 - ELI5": entregas/01-ELI5.md
+    - "02 - Desafio CSS": aulas/02-desafio-css.md
+    - "03 - Servidor JS" : entregas/03-servidor-js.md
+  - Projetos:
+    - "Projeto 1A": 
+      - "Enunciado": projetos/projeto1/projeto1a.md
+      - "Tarefas": projetos/projeto1/projeto1a/tarefas-projeto1a.md
+    - "Projeto 1B":
+      - "Enunciado": projetos/projeto1/projeto1b.md
+      - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
+      - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
+      - "Tarefa 03": projetos/projeto1/projeto1b/tarefa03.md
+      - "Tarefa 04": projetos/projeto1/projeto1b/tarefa04.md
+    - "Projeto 2": 
+      - "Enunciado": projetos/projeto2.md
+      - "Dicas": projetos/projeto2/dicas.md
+      - "Deploy": projetos/projeto2/deploy.md
+    - "Projeto 3": 
+      - "Enunciado": projetos/projeto3.md
+      - "Teamwork": projetos/teamwork.md
+  - Simulado:
+    - "Avaliação Intermediária": simulado/ai.md
+    - "Avaliação Final": simulado/AF-simulado.pdf
+   
+  
+markdown_extensions:
+  - abbr
+  - tables
+  - attr_list
+  - def_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: material/aulas
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+    
+
+ 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/progress-check.js
+  - javascripts/quiz.js
+  - javascripts/short-questions.js
+  - javascripts/translate-admonitions.js
+  - javascripts/webhook-config.js
+
+
+extra_css:
+  - css/printing.css
+  - css/tecweb.css
+
+plugins:
+  - search
+  - glightbox
+
+watch:
+  - includes

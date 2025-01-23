@@ -1,0 +1,29 @@
+:root > * {
+  --md-code-hl-color: #d8ddff;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.md-typeset h3.admonition-title::before {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    min-width: 100%;
+  }
+}
+
+.cardset {
+  display: flex;
+  justify-content: center;
+}
+
+.cardset .card {
+  max-width: 100px;
+  margin: 0 10px;
+}
