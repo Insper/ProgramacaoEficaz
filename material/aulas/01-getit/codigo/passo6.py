@@ -1,11 +1,8 @@
-import socket
+from flask import Flask, request
 
-SERVER_HOST = '0.0.0.0'
-SERVER_PORT = 8080
+app = Flask(__name__)
 
-RESPONSE_TEMPLATE = '''HTTP/1.1 200 OK
-
-<!DOCTYPE html>
+RESPONSE_TEMPLATE = '''<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -51,22 +48,13 @@ RESPONSE_TEMPLATE = '''HTTP/1.1 200 OK
 </html>
 '''
 
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server_socket.bind((SERVER_HOST, SERVER_PORT))
-server_socket.listen()
+@app.route('/')
+def index():
+    print(request.method)
+    print(request.headers)
 
-print(f'Servidor escutando em (ctrl+click): http://{SERVER_HOST}:{SERVER_PORT}')
+    return RESPONSE_TEMPLATE
 
-while True:
-    client_connection, client_address = server_socket.accept()
 
-    request = client_connection.recv(1024).decode()
-    print('*'*100)
-    print(request)
-
-    client_connection.sendall(RESPONSE_TEMPLATE.encode())
-
-    client_connection.close()
-
-server_socket.close()
+if __name__ == '__main__':
+    app.run(debug=True)

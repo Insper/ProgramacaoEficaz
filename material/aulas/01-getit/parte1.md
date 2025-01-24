@@ -34,48 +34,70 @@ Essa é uma lista bastante simplificada do que acontece, mas talvez esse último
 
 Eu sei, me desculpe. Agora sim, vamos começar!
 
-Vamos implementar um servidor **bastante** simplificado em Python puro, sem nenhuma biblioteca. Para isso, crie uma nova pasta em seu computador e crie dentro dela um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo (o exemplo deste handout foi baseado [neste código](https://www.codementor.io/@joaojonesventura/building-a-basic-http-server-from-scratch-in-python-1cedkg0842)):
-
-!!!danger "Atenção"
-    É possível que o endereço `0.0.0.0` não funcione no seu computador. Se isso acontecer, ao invés de acessar `0.0.0.0:8080`, acesse umas das opções a seguir:
-
-    - `localhost:8080`
-    - `127.0.0.0:8080`
-    
+Vamos implementar um servidor **bastante** simplificado utilizando a biblioteca Flask. Para isso, crie dentro da pasta `getit` criada anteriormente um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo:
+   
 ```python
 --8<-- "01-getit/codigo/passo1.py"
 ```
     
-Antes de tentarmos entender o código, execute-o para vermos o que ele faz. O primeiro `#!python print` deve ter sido executado, mas o segundo não.
+Antes de tentarmos entender o código, execute-o para vermos o que ele faz. Para isso, abra um terminal, ative o ambiente virtual e execute o arquivo `servidor.py`:
 
-Abra o navegador de sua preferência e entre no endereço apresentado pelo seu programa. **Uma página de erro deve aparecer, mas não se desespere (se você me chamar porque não leu esta frase eu vou só apontar para ela e vou embora).**
+```bash
+python servidor.py
+```
+
+Você deve ver uma mensagem parecida com esta:
+
+```bash
+ModuleNotFoundError: No module named 'flask'
+```
+
+O erro ocorreu porque o Flask não está instalado no seu ambiente virtual. Para corrigir isso, instale o Flask utilizando o `pip`:
+
+```bash
+pip install flask
+```
+
+Agora sim, execute o servidor novamente. Se tudo ocorrer bem, você verá uma mensagem parecida com esta:
+
+```
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 100-429-768
+```
+
+Essa mensagem indica que o servidor está rodando e pronto para receber requisições.
+
+Abra o navegador de sua preferência e entre no endereço apresentado pelo seu programa. No exemplo acima, o endereço é `http://127.0.0.1:5000`
 
 !!! danger "Atenção"
     Alguns navegadores podem não funcionar como esperado. Desta forma, teste em outros navegadores.
 
-Agora que você chegou nesta linha sem se desesperar, olhe para o terminal. O último `#!python print` foi executado (caso contrário, agora você pode me chamar)!
+Você deve estar vendo uma página em branco. Se não estiver, tente acessar o endereço a partir de outro navegador. Se mesmo assim não funcionar, verifique se o servidor está rodando e se o endereço está correto.
 
 ## Muito bem, agora vamos entender o código acima
 
-O módulo `#!python socket` é utilizado para lidar com chamadas de rede em baixo nível. A [documentação oficial](https://docs.python.org/3/library/socket.html) pode ser útil para entender as funções utilizadas.
+Flask é um microframework web escrito em Python, projetado para ser leve, flexível e fácil de usar. Ele é amplamente utilizado para desenvolver aplicações web, permitindo que os desenvolvedores construam projetos de forma rápida e eficiente. É possível ver nele algumas características que vimos no Django, mas de forma mais simplificada.
 
-As constantes `#!python SERVER_HOST` e `#!python SERVER_PORT` definem o endereço do servidor (no caso, `0.0.0.0`) e a porta. Um computador pode ser acessado via rede através de uma porta. Por enquanto basta sabermos que um mesmo computador possui muitas portas e é necessário especificar qual porta queremos usar para a nossa conexão.
+- `app = Flask(__name__)` cria uma instância da classe Flask, que será a base da aplicação. O argumento `__name__` é uma variável pré-definida em Python que contém o nome do módulo atual. Flask usa o nome do módulo para determinar a localização dos arquivos estáticos (como imagens e arquivos html).
 
-As outras linhas antes do primeiro `#!python print` basicamente dizem para o programa se conectar à porta desejada e aguardar requisições. O método `#!python accept()` trava a execução do programa até que uma requisição seja recebida.
+- `@app.route('/')`: Define a rota principal da aplicação, ou seja, o que acontece quando você acessa `http://127.0.0.1:5000/` no navegador. A função logo abaixo é chamada toda vez que alguém acessa essa rota.
+- `print(request.method)`: Exibe no terminal o método HTTP usado na requisição, como GET, POST, etc.
+- `print(request.headers)`: Exibe no terminal todos os cabeçalhos da requisição HTTP, que incluem informações como o tipo de navegador, o tipo de conteúdo aceito e outras configurações do cliente.
+- `return ""`: Retorna uma resposta vazia para o cliente, ou seja, não renderiza nada no navegador.
 
-Quando um cliente se conecta ao servidor (isso ainda não é a requisição), o programa realiza o segundo `#!python print`, fecha todas as conexões e termina. Note que o nosso servidor não enviou nenhuma resposta para o cliente e por isso o navegador mostrou a página de erro, dizendo que a página solicitada está inacessível.
+O restante do código inicia o servidor Flask e habilita o modo de depuração (debug mode), que recarrega automaticamente o servidor ao modificar o código e exibe mensagens detalhadas de erro no navegador, úteis para desenvolvimento.
 
-## Entendi, mas então como eu envio a resposta?
+## Entendi, mas então como eu faço algo aparecer no navegador?
 
 Calma, pequeno gafanhoto. Antes de prosseguir, vamos entender mais alguns detalhes do que aconteceu até o momento.
 
-Uma conexão foi criada, mas o servidor ainda não visualizou a requisição. Modifique o seu programa da seguinte maneira:
+Quando acessamos o endereço `http://127.0.0.1:5000/` no navegador, o navegador enviou uma requisição para o servidor. O servidor recebeu essa requisição e identificou qual a rota requisitada. No nosso caso, a rota requisitada foi a raiz do servidor, ou seja, a rota `/`. O servidor então executou a função associada a essa rota e retornou uma resposta vazia.
 
-```python hl_lines="13-16"
---8<-- "01-getit/codigo/passo2.py"
-```
-
-Agora sim estamos lendo os dados enviados pelo cliente. No comando utilizado indicamos que queremos ler no máximo 1024 bytes. O resultado é devolvido como um valor do tipo `#!python bytes`, portanto convertemos ele para uma string utilizando o método `#!python decode()` (se tiver curiosidade, teste novamente sem o `#!python decode()` para ver o resultado).
+Dentro da função associada à rota `/`, existem dois prints. O primeiro printa o método HTTP utilizado na requisição, que no nosso caso é o método GET. O segundo printa os cabeçalhos da requisição, que contém informações como o tipo de navegador, o tipo de conteúdo aceito e outras configurações do cliente. Toda vez que um navegador quer se comunicar com um servidor, ele envia uma requisição HTTP contendo essas informações.
 
 O seu terminal deve ter mostrado uma saída parecida com esta (testei nos dispositivos que eu tinha disponíveis no momento):
 
@@ -141,7 +163,7 @@ Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com 
         Accept-Encoding: gzip, deflate
         Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
 
-    Escolhe o opção verdadeira:
+    Escolha o opção verdadeira:
 
     - [ ] O texto representa um Servidor de Nome de Domínio.
     - [ ] O texto representa uma resposta HTTP.
@@ -153,14 +175,15 @@ Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com 
 
 ## E agora, já podemos enviar a resposta?
 
-Sim! Agora estamos prontos. Sem mais delongas, adicione as seguintes linhas ao seu código:
+Sim! Agora estamos prontos. Sem mais delongas, altere a seguinte linha no seu código:
 
-```python hl_lines="18-19"
+```python hl_lines="10"
 --8<-- "01-getit/codigo/passo3.py"
 ```
 
-É essencial que existam duas quebras de linha (`#!python '\n'`) entre o `#!python 'HTTP/1.1 200 OK'` e o `#!python 'Hello World'`. Se houvesse apenas uma, o `#!python 'Hello World'` seria considerado como parte do cabeçalho da resposta.
+Acesse novamente a página pelo seu navegador. Pronto, nosso primeiro servidor está funcionando e retornando uma resposta!
 
-Execute o servidor novamente e acesse a página pelo seu navegador. Pronto, nosso primeiro servidor está funcionando!
+!!! danger "Importante"
+    Servidores são como programas em loop infinito. Se quiser parar de rodar, basta encerrar o programa com ++ctrl+c++.
 
-É só seguir para a [parte 2 deste handout](parte2.md).
+Agora é só seguir para a [parte 2 deste handout](parte2.md).
