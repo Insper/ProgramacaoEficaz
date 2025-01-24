@@ -1,0 +1,854 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Marcio F. Stabile Jr.">
+      
+      
+        <link rel="canonical" href="https://insper.github.io/progeficaz/auxiliar/git/">
+      
+      
+        <link rel="prev" href="../terminal/">
+      
+      
+        <link rel="next" href="../venv/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Usando o Git - Programação Eficaz - Insper 2025/1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/printing.css">
+    
+      <link rel="stylesheet" href="../../css/tecweb.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ferramentas-basicas-git" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programação Eficaz - Insper 2025/1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Usando o Git
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Programação Eficaz - Insper 2025/1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cálculo da média
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Aulas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 - Get-it
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 - Get-it
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aulas/01-getit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aulas/01-getit/parte0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 0: Antes de começar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aulas/01-getit/parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Criando o servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aulas/01-getit/parte2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Respondendo com páginas HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aulas/01-getit/parte3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Separando algumas responsabilidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aulas/01-getit/parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: Fazendo um formulário de criação de anotação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Material Auxiliar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Material Auxiliar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usando o Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Usando o Git
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../venv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usando Python com ambientes virtuais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Entregas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Entregas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entregas/01-ELI5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01 - ELI5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ferramentas-basicas-git">Ferramentas Básicas: Git</h1>
+<p>Responsável: Sarti</p>
+<h1 id="git-ou-github">Git ou GitHub:</h1>
+<p>Vocês já tiveram contato com o GitHub no primeiro semestre, mas agora iremos realmente explorar o Git, uma ferramenta do cotidiano de todo desenvolvedor. E uma informação importante, Git e GitHub <strong>NÃO</strong> são a mesma coisa. Por conta do primeiro semestre e da superficialidade com a qual o tema é abordado, ambos podem se confundir, mas Git é a ferramenta de controle de versão, enquanto GitHub é apenas um portal de compartilhamento de repositórios Gits, pertencente à Microsoft. O mais famoso de todos, mas apenas mais um portal, tendo múltiplos outros concorrentes, como por exemplo o projeto open source GitLab.</p>
+<h1 id="como-baixar-o-git">Como baixar o Git:</h1>
+<p>Se você por algum motivo não possui o git instalado, no site do Git (<a href="https://git-scm.com/">https://git-scm.com/</a>) clique em downloads e siga os passos para seu sistema operacional. Este pode variar um pouco de um sistema para outro, mas em todos deve ser um processo simples e intuitivo, pela popularidade da ferramenta.</p>
+<p><a class="glightbox" href="Untitled.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Untitled" src="Untitled.png" /></a></p>
+<h1 id="qual-a-funcao-do-git-e-por-que-usa-lo">Qual a função do Git e por que usá-lo?:</h1>
+<p>O Git é uma ferramenta de controle de versão, ou seja, ela serve para salvar seu código ao longo do desenvolvimento em, idealmente, toda versão estável do projeto. Isso permite que, caso algum erro ou bug venha a aparecer em seu código, a rastreabilidade do erro se torne mais fácil, além de possibilitar o retorno do código para uma versão estável, caso necessário. Outra vantagem do Git é facilitar o compartilhamento e trabalho conjunto em um código, pois podemos garantir que todos os envolvidos terão exatamente o mesmo código com as exatas mesmas alterações.</p>
+<h3 id="o-lado-obscuro-do-git">O lado obscuro do Git:</h3>
+<p>Apesar de no papel o Git ser uma ferramenta fenomenal, maravilhosa e milagrosa, ela está mais próxima de "A melhor solução ruim para um problema" do que realmente "Uma ótima solução de um problema". Uma frase bem comum, principalmente para quem está aprendendo Git, é "Git é ruim, só não temos uma solução melhor". Isso se deve à grande complexidade de entender o Git completamente e todos os problemas que surgem quando muitas pessoas tentam mexer em um mesmo sistema ao mesmo tempo. Desde conflitos de Merge com coisas simples até Rebases de código e fetch/fast-forwards impossíveis, iremos nos atrapalhar com o Git enquanto não tivermos entendido muito bem o que está acontecendo. Para evitar esses problemas, sigam algumas regras ao trabalhar com Git:</p>
+<ul>
+<li>Nunca editar o mesmo arquivo ou função do colega, até que o mesmo dê merge.</li>
+<li>Commits e merges constantes, seja em algum branch Auxiliar ou na Main.</li>
+<li>Utilizar branches. Apesar de confuso no começo e parecer só atrapalhar, a ideia de "codar todo mundo direto no main" só é boa até 4 pessoas diferentes darem push commit ao mesmo tempo no mesmo branch com várias edições importantes no mesmo arquivo. É comum as coisas darem errado no código ou no merge, então é melhor que deem errado no seu branch pessoal do que na main do projeto inteiro.</li>
+<li>Nunca deixe para dar "pull main" mais tarde, caso haja uma atualização em um arquivo que você está utilizando. Faça questão de sempre manter o Main o mais atualizado possível, mesmo que isso implique em comitar um código incompleto em SEU branch apenas para dar pull e continuar seu código.</li>
+</ul>
+<h3 id="o-maior-problema-do-git">O maior problema do Git:</h3>
+<p>Como pôde ser visto no tópico anterior, o Git pode ser bem traumático para quem está aprendendo, principalmente quando você precisa entregar um trabalho às 23:59, mas um conflito de merge desconhecido envolvendo 200 linhas de código aparece do nada às 23:20, pois alguém deu um commit na main sem avisar o grupo... Caso ainda não tenham percebido, o Git é uma ferramenta muito boa, mas tem um grande problema que pode transformar todas as suas qualidades em dores de cabeça: o trabalho em equipe e o erro humano. Sem uma boa comunicação, trabalho em equipe e constante transferências de código, problemas começam a aparecer, principalmente quando muitas pessoas trabalham ao mesmo tempo. Então lembrem-se: sempre se comuniquem e estejam com seu código atualizado.</p>
+<h1 id="merge-conflict">Merge Conflict:</h1>
+<p>Este é o erro mais comum e cansativo de corrigir que encontrarão, principalmente quando o grupo não tem uma boa comunicação. Para resolver isso, ou o branch que está causando conflito é abandonado e as mudanças são refeitas a partir do commit mais recente da branch main, ou algum membro do grupo deverá resolver o conflito de merge. Para resolver o conflito, sugiro o uso da extensão do VSCode para resolver conflitos. Ao clicar no arquivo com conflito, o VSCode irá mostrar as duas versões do código e a versão final, e você poderá escolher qual versão manter e qual deletar. Após isso, basta salvar o arquivo e dar commit.</p>
+<h1 id="comandos-git-terminal">Comandos Git: Terminal</h1>
+<p>Apesar de ter uma interface com o VSCode, o git foi construído para ser usado via terminal. Entender como o Git funciona via terminal é fundamental pois a interface do VSCode não é tão completa quanto a do terminal e não possui todos os comandos do Git.</p>
+<p>Os comandos mais importantes do git são: </p>
+<ul>
+<li><code>git init</code>: Cria uma pasta <code>.git</code> que contém aquivos responsáveis por monitorar as pastas e arquivos, iniciando um novo repositório.</li>
+<li><code>git clone REP</code>: Substitua o REP pela chave do repositório, seja ela SSH ou HTTPS. Clona um repositório do GitHub ou concorrentes para sua máquina local.</li>
+<li>
+<p><code>git add ELEMENTO</code>: Adiciona mudanças no repositório para serem salvas (staged changes). Troque ELEMENTO pelo que deseja salvar, seja um arquivo, pasta, ou qualquer coisa que foi alterada.</p>
+<p>obs: Utilize “.” no lugar de elemento para adicionar todas as mudanças existentes no repositório.</p>
+</li>
+<li>
+<p><code>git commit -m "MENSAGEM"</code>: Faz o commit <strong>LOCAL</strong> de todas as mudanças marcadas para commit (staged changes). Após isso o commit ficara salvo localmente e deverá ser enviado para o remote.</p>
+</li>
+<li>
+<p><code>git pull/push origin BRANCH</code>: Os comandos fundamentais do Git, substitua BRANCH pelo branch em questão (normalmente será main). Push envia o seu último commit para o origin(remote) do branch apontado, e Pull puxa o último commit dele.</p>
+<p>obs: Remote/origin refere-se ao repositório nuvem de origem. Basicamente este é o nosso repositório do GitHub.</p>
+</li>
+</ul>
+<p>Existem muitos outros comandos Git para utilizar, mas estes vocês podem pesquisar caso necessário. Assim como o terminal, sua documentação é bem farta e extensa para resumir tudo aqui. </p>
+<h1 id="video-introdutorio-de-git">Video Introdutório de Git:</h1>
+<p>É importante que todos entendam o conceito de Git Trees e o funcionamento do Git para seu uso adequado. Os vídeos a seguir talvez tenham uma abordagem mais amigável:</p>
+<h3 id="videos-curtos">Vídeos curtos:</h3>
+<p><a href="https://www.youtube.com/watch?v=hwP7WQkmECE">https://www.youtube.com/watch?v=hwP7WQkmECE</a></p>
+<p><a href="https://www.youtube.com/watch?v=e9lnsKot_SQ">https://www.youtube.com/watch?v=e9lnsKot_SQ</a></p>
+<h3 id="video-longo">Vídeo longo:</h3>
+<p><a href="https://www.youtube.com/watch?v=mJ-qvsxPHpY">https://www.youtube.com/watch?v=mJ-qvsxPHpY</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+<script>
+    window.site_url = "https://insper.github.io/progeficaz/";
+</script>
+
+
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/progress-check.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+        <script src="../../javascripts/short-questions.js"></script>
+      
+        <script src="../../javascripts/translate-admonitions.js"></script>
+      
+        <script src="../../javascripts/webhook-config.js"></script>
+      
+    
+<!-- Add scripts that need to run afterwards here -->
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
