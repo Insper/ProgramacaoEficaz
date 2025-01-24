@@ -1,38 +1,17 @@
-import socket
-from pathlib import Path
-from utils import extract_route, read_file
-from views import index
+from flask import Flask, render_template_string
+import views
 
-CUR_DIR = Path(__file__).parent
-SERVER_HOST = '0.0.0.0'
-SERVER_PORT = 8080
 
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server_socket.bind((SERVER_HOST, SERVER_PORT))
-server_socket.listen()
+app = Flask(__name__)
 
-print(f'Servidor escutando em (ctrl+click): http://{SERVER_HOST}:{SERVER_PORT}')
+# Configurando a pasta de arquivos estáticos
+app.static_folder = 'static'
 
-while True:
-    client_connection, client_address = server_socket.accept()
+@app.route('/')
+def index():
 
-    request = client_connection.recv(1024).decode()
-    print('*'*100)
-    print(request)
+    return render_template_string(views.index())
 
-    route = extract_route(request)
 
-    filepath = CUR_DIR / route
-    if filepath.is_file():
-        response = read_file(filepath)
-    elif route == '':
-        response = index()
-    else:
-        response = bytes()
-
-    client_connection.sendall('HTTP/1.1 200 OK\n\n'.encode() + response)
-
-    client_connection.close()
-
-server_socket.close()
+if __name__ == '__main__':
+    app.run(debug=True)

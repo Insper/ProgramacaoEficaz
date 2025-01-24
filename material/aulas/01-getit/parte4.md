@@ -9,13 +9,13 @@ Vamos implementar agora a funcionalidade de adicionar anotações. O objetivo é
 
 Para começar, modifique o template `index.html` para adicionar o `#!html <form>`:
 
-```html
+```html hl_lines="6-12"
 <!-- DOCTYPE, HTML, HEAD DEVEM CONTINUAR AQUI -->
 <body>
-  <img src="img/logo-getit.png">
+  <img src="{{{{ url_for('static', filename='img/logo-getit.png') }}}}">
   <p>Como o Post-it, mas com outro verbo</p>
 
-  <form method="post">
+  <form action="/submit" method="POST">
     <label for="titulo">Título</label>
     <input id="titulo" type="text" name="titulo" />
     <label for="detalhes">Detalhes</label>
@@ -31,140 +31,56 @@ Seu código do programa principal não precisa ser modificado ainda.
     Execute o servidor e teste a página.
 
     !!! danger "Importante"
-        Quando você for testar a página, ao clicar em `submit` a página simplesmente vai recarregar. É isso mesmo que deve ocorrer. Nos próximos passos nós vamos usar essa informação.
+        Quando você for testar a página, ao clicar em `submit` deve aparecer o erro `Not Found`. É isso mesmo que deve ocorrer. Nos próximos passos nós vamos resolver essa situação.
 
 ## Usando os dados recebidos do formulário
 
 Talvez você tenha notado que no formulário (`<form>`) existe um atributo `method="post"`. Isso quer dizer que os dados do formulário serão enviados utilizando o método HTTP POST (veremos mais detalhes sobre ele no futuro). O que você precisa saber por enquanto é que até o momento nós sempre enviamos requisições do tipo GET para o servidor. Para entender melhor o que está acontecendo, observe a saída do seu terminal. Deve haver uma requisição parecida com essa:
 
 ```
-POST / HTTP/1.1
-Host: 0.0.0.0:8080
-Connection: keep-alive
-Content-Length: 25
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-Origin: http://0.0.0.0:8080
-Content-Type: application/x-www-form-urlencoded
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Referer: http://0.0.0.0:8080/
-Accept-Encoding: gzip, deflate
-Accept-Language: en-US,en;q=0.9,pt;q=0.8
-
-titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.
+127.0.0.1 - - [24/Jan/2025 15:35:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jan/2025 15:35:41] "GET /static/img/logo-getit.png HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jan/2025 15:35:41] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [24/Jan/2025 15:35:45] "POST /submit HTTP/1.1" 404 -
 ```
 
-Há dois pontos importantes:
+Perceba que a última linha da requisição está diferente das outras. Existe um `POST` ao invés de `GET`. Isso significa que o navegador está enviando dados para o servidor. O servidor, por sua vez, não sabe o que fazer com esses dados e responde com um erro `404`.
 
-1. A primeira linha da requisição está diferente. Existe um `POST` ao invés de `GET`, mas a rota é a mesma (`/`).
-2. O corpo da requisição (última linha) possui os dados que o usuário digitou no formulário html.
+Queremos pegar os dados do formulário e extrair o título e os detalhes da anotação. No `form` do arquivo `index.html`, o campo `action` está apontando para `/submit`. Precisamos criar uma nova rota no servidor para lidar com essa requisição.
 
-Queremos pegar o corpo da requisição, `titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.` e extrair o título e os detalhes da anotação. 
-
-Note que o que vem após `titulo=` é o que o usuário digitou no campo referente ao título. Porém o texto está codificado. O texto `Sorvete+de+banana` deveria ser `Sorvete de banana`. 
-
-Além disso, há o símbolo `&` indicando que um outro valor será apresentado em seguido.
-
-Em seguida, nos deparamos com o texto `detalhes=` que representa o texto digitado pelo usuário no campo `input` referente aos detalhes da anotação.
-
-O mesmo ocorre com o campo `detalhes`. O texto `Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.` deveria ser `Coloque uma banana no congelador e espere. Pronto!`.
-
-Para remover esses caracteres especiais, vamos utilizar a função `#!python urllib.parse.unquote_plus` [(veja a documentação aqui)](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus).
-
-!!! example "EXERCÍCIO"
-    Vamos utilizar o começo da string de requisição para saber o seu tipo (`GET` ou `POST`).
-
-    Modifique a sua função `index` no arquivo `views.py` para conter o seguinte conteúdo:
-
-    ```python hl_lines="1-15"
-    def index(request):
-        # A string de request sempre começa com o tipo da requisição (ex: GET, POST)
-        if request.startswith('POST'):
-            request = request.replace('\r', '')  # Remove caracteres indesejados
-            # Cabeçalho e corpo estão sempre separados por duas quebras de linha
-            partes = request.split('\n\n')
-            corpo = partes[1]
-            params = {}
-            # Preencha o dicionário params com as informações do corpo da requisição
-            # O dicionário conterá dois valores, o título e a descrição.
-            # Posteriormente pode ser interessante criar uma função que recebe a
-            # requisição e devolve os parâmetros para desacoplar esta lógica.
-            # Dica: use o método split da string e a função unquote_plus
-            for chave_valor in corpo.split('&'):
-                # AQUI É COM VOCÊ
-
-        # O RESTO DO CÓDIGO DA FUNÇÃO index CONTINUA DAQUI PARA BAIXO...
-    ```
-
-    Você deverá escrever algum código, onde está escrito `# AQUI É COM VOCÊ`.
-
-    Seu objetivo é preencher o dicionário `params` com os valores recebidos do formulário html. 
-
-    Por exemplo, se o corpo da requisição for `titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.`, o dicionário `params` deve ser preenchido com `{'titulo': 'Sorvete de banana', 'detalhes': 'Coloque uma banana no congelador e espere. Pronto! 1+1=2.'}`.
-
-!!! danger "IMPORTANTE"
-    Note que a função `index` agora está recebendo o `request` como argumento (`index(request)`).
-
-    Será necessário alterar o arquivo `servidor.py` para passar o `request`.
-
-    ```python hl_lines="4"
-    if filepath.is_file():
-        response = read_file(filepath)
-    elif route == '':
-        response = index(request)
-    else:
-        response = bytes()
-    ```
-
-!!! example "EXERCÍCIO"
-    Ainda na função `#!python index(request)` do arquivo `views.py`, adicione a nova anotação (que deverá estar armazenada em `#!python params['titulo']` e `#!python params['detalhes']`) ao arquivo `notes.json`.
-
-    Dica: crie uma função no arquivo `utils.py` que recebe a nova anotação e a adiciona à lista do arquivo `notes.json`.
-
-## Última refatoração
-
-Envie novamente uma nova anotação e recarregue a página. O navegador deve perguntar se você quer reenviar o formulário. Se você confirmar, a anotação deve ser adicionada mais uma vez, ficando duplicada no arquivo `notes.json`. Por que isso acontece? Como podemos corrigir? Para isso vamos precisar entender um pouco sobre códigos de status de respostas HTTP.
-
-Desde a [parte 1](parte1.md) deste handout, nós começamos o cabeçalho das nossas respostas com `#!python 'HTTP/1.1 200 OK'`. O código `200` é [um dos possíveis códigos de status resposta](https://httpstatusdogs.com/). Ele diz para o navegador que a requisição foi processada com sucesso. Para avisarmos para o navegador que depois de enviar a anotação ele deve recarregar a lista de anotações, vamos precisar do código `303`, que pede para o navegador se redirecionar para outra página após receber a resposta. No nosso caso, vamos redirecionar para a mesma página, mas a nova requisição será novamente do tipo GET (para saber um pouco mais [leia este artigo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Redirecionamento#redirecionamentos_tempor%C3%A1rios)).
-
-Até o momento o nosso servidor sempre utiliza o cabeçalho fixo com código 200. Precisamos refatorá-lo para que possamos responder com códigos diferentes.
-
-!!! example "EXERCÍCIO"
-    Implemente a função `#!python build_response` no arquivo `utils.py`. Ele deve receber os seguintes argumentos: `#!python build_response(body='', code=200, reason='OK', headers='')` (talvez você queira ler isso: https://docs.python.org/3/tutorial/controlflow.html#default-argument-values).
-
-    Acesse o link a seguir para ver um exemplo de `response`: [https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses){target="_blank"}
-
-    Lembre-se de testar a sua função com `python test_utils.py`.
-
-Agora que você implementou a função `#!python build_response`, vamos refatorar o código para utilizá-la.
-
-Modifique seu programa principal da seguinte maneira:
-
-!!! danger "Atenção"
-    O código abaixo funcionará somente após finalizar o exercício abaixo.
-
-```python hl_lines="3 28 32 34"
+```python hl_lines="1 15-21"
 --8<-- "01-getit/codigo/passo11.py"
 ```
 
+Essa nova rota `/submit` foi definida para somente aceitar o método `POST`. Veja o que acontece se tentarmos acessar no navegador o endereço `http://localhost:5000/submit`. Leia a mensagem de erro e tente entender o que está acontecendo.
+
+Chamar essa rota só vai fazer sentido se estivermos passando dados para ela. Por isso, deixamos ela responder somente a requisições do tipo `POST`. Utilizamos os comandos `request.form.get` para pegar os dados enviados pelo formulário. O método `get` é utilizado para pegar o valor de uma chave de um dicionário. Se a chave não existir, ele retorna `None`. `request.form`, assim como o `request.headers` que vimos anteriormente, é um dicionário que contém os dados enviados pelo navegador.
+
+Assim como fazíamos no Django, toda requisição precisa ter uma resposta. Como não queremos ter nenhuma outra página após criar a nota, vamos retornar para a página inicial. Para isso, usamos o comando `return redirect('/')` assim como no Django.
+
 !!! example "EXERCÍCIO"
-    Modifique a função `#!python index` no arquivo `views.py` para que ela utilize a função `#!python build_response`.
+    Crie uma função `#!python submit(titulo, detalhes)` no arquivo `views.py`, que adicione a nova anotação (que deverá estar armazenada em `#!python params['titulo']` e `#!python params['detalhes']`) ao arquivo `notes.json`.
 
-    Será necessário fazer duas alterações na função `index`:
+    Dica: crie uma função no arquivo `utils.py` que recebe a nova anotação e a adiciona à lista do arquivo `notes.json`.
 
-    1. No retorno principal, será necessário alterar a última linha `#!python return load_template('index.html').format(notes=notes).encode()` para utilizar a função `build_response`. Certifique-se de não estar chamando a função `encode` duas vezes.
-    2. No caso de requisição com o método `POST`, você deve devolver o resultado de `#!python build_response(code=303, reason='See Other', headers='Location: /')`.
+Teste seu servidor e verifique se as anotações estão sendo salvas corretamente. Se tudo estiver funcionando, a anotação deve estar aparecendo e no terminal você deve ver a seguinte mensagem:
 
-Se tudo estiver correto você pode preencher o formulário e enviar. A lista de anotações deve ser atualizada e, ao recarregar a página, o navegador não deve perguntar novamente se você quer reenviar o formulário.
+```
+127.0.0.1 - - [24/Jan/2025 16:12:42] "POST /submit HTTP/1.1" 302 -
+127.0.0.1 - - [24/Jan/2025 16:12:42] "GET / HTTP/1.1" 200 -
+```
+
+Isso significa que o servidor recebeu a requisição do tipo `POST` e redirecionou para a página inicial. O número 302 é o código de status HTTP que indica que a requisição foi redirecionada. Isso também vai fazer com que atualizar a página não envie novamente os dados do formulário, assim como acontecia no Django.
 
 ## Desafio
 
-O handout acabou, mas se quiser praticar um pouco mais você pode fazer o servidor devolver uma resposta com o código 404 quando a requisição é feita a uma página/recurso que não existe (dica: você só vai precisar modificar uma linha).
+O handout acabou, mas se quiser praticar um pouco mais você pode fazer o servidor devolver uma resposta com o código 404 quando a requisição é feita a uma página/recurso que não existe.
+
+Além disso, você pode usar os arquivos HTML e CSS que construiu semestre passado para estilizar a página de anotações.
 
 ## Ufa, cansei
 
-Parabéns! Agora você pode tentar fazer alguma das receitas da nossa lista de anotações. Depois disso, se ainda tiver pique, é um bom momento para dar aquela relembrada em CSS para a próxima aula com essa lista de jogos:
+Parabéns! Agora você pode tentar fazer alguma das receitas da nossa lista de anotações. Depois disso, se ainda tiver pique, é um bom momento para dar aquela relembrada em CSS com essa lista de jogos:
 
 - [Flexbox Defense](http://www.flexboxdefense.com/)
 - [Flexbox Froggy](https://flexboxfroggy.com)
