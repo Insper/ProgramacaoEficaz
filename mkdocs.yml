@@ -92,32 +92,23 @@ nav:
     - "Usando o Terminal": auxiliar/terminal.md
     - "Usando o Git": auxiliar/git.md
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
-    - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
-    - Heroku: aulas/heroku.md
+    # - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
+    # - Heroku: aulas/heroku.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
-    - "02 - Desafio CSS": aulas/02-desafio-css.md
-    - "03 - Servidor JS" : entregas/03-servidor-js.md
   - Projetos:
-    - "Projeto 1A": 
-      - "Enunciado": projetos/projeto1/projeto1a.md
-      - "Tarefas": projetos/projeto1/projeto1a/tarefas-projeto1a.md
-    - "Projeto 1B":
-      - "Enunciado": projetos/projeto1/projeto1b.md
-      - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
-      - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
-      - "Tarefa 03": projetos/projeto1/projeto1b/tarefa03.md
-      - "Tarefa 04": projetos/projeto1/projeto1b/tarefa04.md
-    - "Projeto 2": 
-      - "Enunciado": projetos/projeto2.md
-      - "Dicas": projetos/projeto2/dicas.md
-      - "Deploy": projetos/projeto2/deploy.md
-    - "Projeto 3": 
-      - "Enunciado": projetos/projeto3.md
-      - "Teamwork": projetos/teamwork.md
-  - Simulado:
-    - "Avaliação Intermediária": simulado/ai.md
-    - "Avaliação Final": simulado/AF-simulado.pdf
+    - "Projeto 1": 
+      - "Enunciado": projetos/projeto1/index.md
+      - "Tarefas": projetos/projeto1/tarefas-projeto1.md
+  #   - "Projeto 1B":
+  #     - "Enunciado": projetos/projeto1/projeto1b.md
+  #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
+  #     - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
+  #     - "Tarefa 03": projetos/projeto1/projeto1b/tarefa03.md
+  #     - "Tarefa 04": projetos/projeto1/projeto1b/tarefa04.md
+  # - Simulado:
+  #   - "Avaliação Intermediária": simulado/ai.md
+  #   - "Avaliação Final": simulado/AF-simulado.pdf
    
   
 markdown_extensions:
