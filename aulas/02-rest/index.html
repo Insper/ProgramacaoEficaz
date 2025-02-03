@@ -10,7 +10,7 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/projetos/backup-wsl/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/02-rest/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Backup wsl - Programação Eficaz - Insper 2025/1</title>
+        <title>O que é REST - Programação Eficaz - Insper 2025/1</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guia-de-instalacao-do-docker-windows" class="md-skip">
+        <a href="#o-que-e-rest" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backup wsl
+              O que é REST
             
           </span>
         </div>
@@ -356,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -377,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/" class="md-nav__link">
+      <a href="../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte0/" class="md-nav__link">
+      <a href="../01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projeto1/" class="md-nav__link">
+      <a href="../../projetos/projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projeto1/tarefas-projeto1/" class="md-nav__link">
+      <a href="../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,6 +794,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projetos/aps1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APS 1
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -826,56 +847,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#passo-1-atualizando-o-wsl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Passo 1 - Atualizando o WSL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Passo 1 - Atualizando o WSL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1a-windows-10-e-11" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.a - Windows 10 e 11
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1b-versoes-anteriores-do-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.b: Versões Anteriores do Windows
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passo-2-instalando-o-docker-no-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Passo 2: Instalando o Docker no Windows
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -889,53 +860,96 @@
                   
 
 
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><strong>Lab</strong></th>
-<th style="text-align: center;"><strong>Data</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Laboratório Ágil</td>
-<td style="text-align: center;">2023</td>
-</tr>
-</tbody>
-</table>
-<h1 id="guia-de-instalacao-do-docker-windows">Guia de Instalacao do Docker - Windows</h1>
-<p>Guia para instalação e atualização do Docker para o Windows, descrevendo como instalar uma distribuição Linux no WSL2.</p>
-<h2 id="passo-1-atualizando-o-wsl">Passo 1 - Atualizando o WSL</h2>
-<h3 id="1a-windows-10-e-11">1.a - Windows 10 e 11</h3>
-<p>Estas versões do Windows ja possuem o WSL instalado, porém ao rodar o comando <code>wsl</code> dentro do Prompt de Comando, teremos um aviso como o abaixo, dizendo que o wsl ainda não possui uma distribuição Linux associada para uso.</p>
-<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225308152-447da342-ebff-44e1-8bf8-f1034586c099.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225308152-447da342-ebff-44e1-8bf8-f1034586c099.png" /></a></p>
-<p>Porém, antes de instalarmos uma distribuição, precisamos atualizar o WSL para ele utilizar por padrão as distribuições com arquitetura WSL2, que é a utilizada pelo Docker no Windows.</p>
-<p>Para isso, primeiramente iremos rodar no prompt de comando(preferencialmente com permissão administrativa) o comando abaixo:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wsl --update
+<h1 id="o-que-e-rest">O que é REST</h1>
+<p>Responsável: Andre Oliveira
+Tags: Guias e Processos, Teoria</p>
+<p><strong>Referências:</strong></p>
+<ul>
+<li>
+<p><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/REST">https://developer.mozilla.org/pt-BR/docs/Glossary/REST</a></p>
+</li>
+<li>
+<p><strong>“REST</strong> (Representational State Transfer) refere-se a um grupo de restrições de design dentro da arquitetura de software que geram sistemas distribuídos eficientes, confiáveis e escaláveis. Um sistema é denominado RESTful quando adere a todas essas restrições.”</p>
+</li>
+<li>
+<p>“A ideia básica do REST é que um recurso, por exemplo um documento, seja transferido com seu estado bem definido, padronização de operações e formatos.”</p>
+</li>
+<li>
+<p><strong>Recurso</strong> ⇒ “Um recurso é um elemento abstrato e que nos permite mapear qualquer coisa do mundo real como um elemento para acesso via Web.”</p>
+</li>
+<li>
+<p>Uso explicito dos verbos HTTP</p>
+<ul>
+<li>GET ⇒ Buscar/Pegar informações de um recurso especificado na url da requisição (ex: /itens)</li>
+<li>POST ⇒ Criar um recurso especificado na url da requisição (ex: /itens)</li>
+<li>DELETE ⇒ Deleta um recurso especificado na url da requisição (ex: /itens/<id>)</li>
+<li>PUT ⇒ Atualiza um recurso especificado na url da requisição (ex: /itens/<id>)</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Código gerado com o ChatGPT</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">request</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Representação do banco de dados </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Estudar Python&quot;</span><span class="p">,</span> <span class="s2">&quot;done&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Fazer compras&quot;</span><span class="p">,</span> <span class="s2">&quot;done&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">]</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># Observe como que os recursos são representados dentro da URL de requisição, ou seja, apenas lendo o caminho do recurso + seu verbo HTTP é possível ter uma ideia do que essa rota deve retornar e fazer</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">def</span> <span class="nf">get_tasks</span><span class="p">():</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;tasks&quot;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">})</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">def</span> <span class="nf">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">task</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">task</span> <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">tasks</span> <span class="k">if</span> <span class="n">task</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="k">if</span> <span class="n">task</span><span class="p">:</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;task&quot;</span><span class="p">:</span> <span class="n">task</span><span class="p">})</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Tarefa não encontrada&quot;</span><span class="p">}),</span> <span class="mi">404</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">def</span> <span class="nf">create_task</span><span class="p">():</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="n">new_task</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_task</span><span class="p">)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Tarefa criada com sucesso&quot;</span><span class="p">}),</span> <span class="mi">201</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PUT&#39;</span><span class="p">])</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="k">def</span> <span class="nf">update_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="n">task</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">task</span> <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">tasks</span> <span class="k">if</span> <span class="n">task</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="k">if</span> <span class="n">task</span><span class="p">:</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>        <span class="n">task</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Tarefa atualizada com sucesso&quot;</span><span class="p">})</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Tarefa não encontrada&quot;</span><span class="p">}),</span> <span class="mi">404</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DELETE&#39;</span><span class="p">])</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="k">def</span> <span class="nf">delete_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">task</span> <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">tasks</span> <span class="k">if</span> <span class="n">task</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">task_id</span><span class="p">]</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Tarefa excluída com sucesso&quot;</span><span class="p">})</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
-⚠️Caso esteja utilizando a Rede interna do Insper de Alunos ou Colaboradores, pode acontecer do download da atualização não iniciar dependendo do servidor da Microsoft em que a requisição de download chegar. Para evitar problemas, é recomendado executar os comandos deste passo do guia em uma Rede externa.</p>
-<p>Após a conclusão da atualização, dando um novo comando <code>wsl</code> teremos uma tela como a abaixo:</p>
-<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225321510-0360b75e-9ae0-4ff8-98db-959e6da804dd.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="chrome_xXk1sh20bw" src="https://user-images.githubusercontent.com/18387737/225321510-0360b75e-9ae0-4ff8-98db-959e6da804dd.png" /></a></p>
-<p>Agora nosso WSL está atualizado para a arquitetura WSL2. Para instalar uma distribuição Linux, vamos utilizar o comando <code>wsl.exe install &lt;distribuição&gt;</code>. Para saber o nome da distribuição que voçê quer instalar, podemos puxar uma lista dos subsistemas disponíveis com o comando abaixo:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wsl.exe --list --online
-</span></code></pre></div>
-<a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225322426-c473659e-8182-4f12-bf8e-8e95fdad961b.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225322426-c473659e-8182-4f12-bf8e-8e95fdad961b.png" /></a></p>
-<p>Depois de escolher sua versão (por padrão, escolha o Ubuntu), basta trocar o campo <code>&lt;distribuição&gt;</code> do comando acima pelo nome da distribuição na primeira coluna da lista exibida:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>wsl.exe install Ubuntu
-</span></code></pre></div></p>
-<p>Aguarde o fim da instalação, e então será pedido para você criar um usuário e senha para o subsistema. Anote em um lugar seguro o que você escolher caso seja necessário utilizar futuramente, mas agora seu WSL está pronto para ser utilizado pelo Docker. Caso ainda não tenha instalado ele no seu computador, siga para o <a href="#passo-2-instalando-o-docker-no-windows">passo 2</a>.</p>
-<h3 id="1b-versoes-anteriores-do-windows">1.b: Versões Anteriores do Windows</h3>
-<p>Caso você esteja utilizando o Windows 8 ou anterior como seu OS, os passos acima podem não funcionar corretamente, então recomendamos seguir o guia da Microsoft para a instalação e atualização do WSL: https://learn.microsoft.com/pt-br/windows/wsl/install-manual</p>
-<p>Atualmente, o Docker só possui suporte para as versões do Windows que estão dentro de sua LifeCycle Policy, portanto recomendamos atualizar seu Sistema Operacional para o Windows 10 ou 11, e utilizar o passo <a href="#1a---windows-10-e-11">1.a</a> do guia.</p>
-<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225332421-c1f52e9e-236b-45b8-a284-3f4cf7baf576.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="chrome_6eRyRAOKGa" src="https://user-images.githubusercontent.com/18387737/225332421-c1f52e9e-236b-45b8-a284-3f4cf7baf576.png" /></a></p>
-<h2 id="passo-2-instalando-o-docker-no-windows">Passo 2: Instalando o Docker no Windows</h2>
-<p>Para instalar o Docker, iremos utilizar o executável do Docker Desktop para Windows, que pode ser encontrado para download neste link: https://docs.docker.com/desktop/install/windows-install/</p>
-<p>Basta seguir o Instalador e o Docker ja estará pronto para ser usado na sua máquina. Caso ainda não tenha atualizado seu WSL, o aviso abaixo irá aparecer sempre que abrir o Docker Desktop:</p>
-<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225328678-ab7325f8-e196-44a6-bbd3-b3bdfec3f3ca.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225328678-ab7325f8-e196-44a6-bbd3-b3bdfec3f3ca.png" /></a></p>
-<p>para corrigir este problema, utilize o <a href="#passo-1---atualizando-o-wsl">Passo 1</a> deste tutorial. Após concluir a configuração do WSL2, ele deverá estar desta forma:</p>
-<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225329477-e9052219-3df3-4ec3-905e-054c37802724.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225329477-e9052219-3df3-4ec3-905e-054c37802724.png" /></a></p>
-<p>Com isso, você ja está pronto para usar o Docker. Caso queira testar no terminal se ele está instalado, basta digitar <code>docker</code>, e uma lista como a abaixo deverá aparecer:</p>
-<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225329924-75af2ded-cd49-4244-86b7-610d93aae373.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225329924-75af2ded-cd49-4244-86b7-610d93aae373.png" /></a></p>
+</li>
+<li>
+<p><strong>Stateless</strong> ⇒ “Não é armazenado nenhum estado no servidor.” Não dependem de dados armazenados de outra requisição para poder executar a requisição atual. Todos os dados necessários para requisição se completar devem ser enviados e armazenados pelo cliente</p>
+</li>
+<li>
+<p><strong>Representação</strong> ⇒ JSON - <em>Os dados normalmente chegam e retornam em JSON</em></p>
+</li>
+<li>
+<p><strong>Respostas HTTP</strong> coerentes com o estado da requisição:</p>
+<ul>
+<li>
+<p>Referencia para consulta das respostas: 
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status">https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status</a></p>
+<p><a class="glightbox" href="O%20que%20e%CC%81%20REST%20b628d032f093445e8dcf7d159476daad/Untitled.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Untitled" src="O%20que%20e%CC%81%20REST%20b628d032f093445e8dcf7d159476daad/Untitled.png" /></a></p>
+</li>
+</ul>
+</li>
+</ul>
 
 
 

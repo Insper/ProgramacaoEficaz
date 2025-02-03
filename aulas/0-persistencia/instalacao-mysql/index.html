@@ -10,24 +10,24 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/auxiliar/FAQ/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/0-persistencia/instalacao-mysql/">
       
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>FAQ - Programação Eficaz - Insper 2025/1</title>
+        <title>MySQL Workbench: Instalação - Programação Eficaz - Insper 2025/1</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,18 +52,18 @@
       
     
     
-      <link rel="stylesheet" href="../../css/printing.css">
+      <link rel="stylesheet" href="../../../css/printing.css">
     
-      <link rel="stylesheet" href="../../css/tecweb.css">
+      <link rel="stylesheet" href="../../../css/tecweb.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -72,7 +72,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -90,6 +90,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mysql-workbench-instalacao" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -122,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FAQ
+              MySQL Workbench: Instalação
             
           </span>
         </div>
@@ -223,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -241,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -261,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../notas/" class="md-nav__link">
+      <a href="../../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -351,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/" class="md-nav__link">
+      <a href="../../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte0/" class="md-nav__link">
+      <a href="../../01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminal/" class="md-nav__link">
+      <a href="../../../auxiliar/terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../../auxiliar/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../venv/" class="md-nav__link">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/aps1/" class="md-nav__link">
+      <a href="../../../projetos/aps1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -839,6 +844,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aviso" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVISO:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -853,9 +877,88 @@
                   
 
 
-  <h1>FAQ</h1>
-
-
+<h1 id="mysql-workbench-instalacao">MySQL Workbench: Instalação</h1>
+<p>Responsável: Sarti</p>
+<h3 id="aviso">AVISO:</h3>
+<p>Este guia serve para ajudar vocês a baixar e configurar o ambiente utilizado ao longo do semestre para MySQL. Para questões teóricas relacionadas a Bancos de Dados Relacionais, consulte o outro material.</p>
+<p>Neste semestre do curso, utilizaremos o MySQL como banco de dados relacional para nossos estudos. Este guia serve para ajudá-los a baixar o MySQL Workbench e o Aiven, que será nosso banco de dados em nuvem.</p>
+<p>Podemos iniciar tanto pelo Aiven quanto pelo MySQL Workbench; escolha por onde desejar começar.</p>
+<p>O tutorial está sendo feito em um Fedora Linux, podendo ser levemente diferente de acordo com o seu sistema operacional. Atenha-se a pequenos detalhes.</p>
+<h1 id="mysql-workbench">MySQL Workbench</h1>
+<p>MySQL Workbench é a plataforma de UI que utilizaremos para <strong>queries</strong> durante o semestre. O processo de instalação pode variar dependendo <strong>do</strong> seu sistema operacional, mas está todo documentado e guiado no site.</p>
+<ul>
+<li>Acesse o site oficial do MySQL Workbench (<a href="https://www.mysql.com/products/workbench/">https://www.mysql.com/products/workbench/</a>)</li>
+<li>Ao acessar o site, clique em “Download Now”. Você será redirecionado para uma página de download.</li>
+<li>
+<p>Escolha o sistema operacional do seu computador e a versão correspondente, e baixe o respectivo pacote (em caso de dúvida, geralmente é o primeiro):</p>
+<p><a class="glightbox" href="../img/setup-0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-0.png" /></a></p>
+<p><strong>IMPORTANTE:</strong> Usuários de Windows notarão uma tela levemente diferente, oferecendo o MySQL Installer. Este pode ser utilizado, mas recomendo baixar primeiro o arquivo MSI Installer, oferecido logo abaixo.</p>
+</li>
+<li>
+<p>Ao clicar em Download, o site irá pedir para você realizar um login. Esta etapa é desnecessária; basta clicar em “No, just start my download” e ele irá baixar o arquivo.</p>
+<p><a class="glightbox" href="../img/setup-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-1.png" /></a></p>
+</li>
+<li>
+<p>Tendo o arquivo baixado, siga os passos de instalação defaults de seu sistema operacional:</p>
+<ul>
+<li>Windows: Execute o arquivo como administrador e siga os passsos</li>
+<li>Linux (Ubuntu): $ sudo apt-get install Downloads/<em>nome do arquivo</em>.rpm</li>
+<li>Linux (Fedora): $ sudo dnf install Downloads/<em>nome do arquivo</em>.rpm</li>
+</ul>
+</li>
+</ul>
+<p>Após isso, o programa deve estar baixado em seu computador e funcionando normalmente. Tente abrir e irá se deparar com a tela inicial:</p>
+<p><a class="glightbox" href="../img/setup-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-2.png" /></a></p>
+<h1 id="aiven">Aiven</h1>
+<p>Aiven será a plataforma que utilizaremos para hospedar nosso banco de dados MySQL. Todos os passos de criação de conta aqui demonstrados utilizam um e-mail temporário descartável para o tutorial.</p>
+<p><strong>UTILIZE SEU EMAIL E NÃO PERCA O SEU BANCO DE DADOS</strong></p>
+<ul>
+<li>
+<p>Acesse o site oficial do Aiven e crie sua conta (<a href="https://console.aiven.io/signup">https://console.aiven.io/signup</a>) ou faça login com seu GitHub.</p>
+<p><a class="glightbox" href="../img/setup-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-3.png" /></a></p>
+</li>
+<li>
+<p>Após criar sua conta, prossiga para fazer login na plataforma. No seu primeiro login, ela pedirá para selecionar se sua conta é Pessoal ou Empresarial. Selecione Pessoal.</p>
+<p><a class="glightbox" href="../img/setup-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-4.png" /></a></p>
+</li>
+<li>
+<p>Após essa etapa, você será direcionado para um painel com vários serviços disponíveis. Selecione a opção MySQL.</p>
+</li>
+<li>
+<p>Nas configurações do seu banco de dados, selecione o plano gratuito e configure seu banco da seguinte maneira:</p>
+<p><a class="glightbox" href="../img/setup-5.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-5.jpg" /></a></p>
+</li>
+<li>
+<p>Após criar seu banco gratuito, ele irá te direcionar para uma tela de conexões. Em seguida, baixe o MySQL Workbench, se ainda não o tiver, e prossiga para a etapa de conexão.</p>
+</li>
+</ul>
+<h1 id="conectando">Conectando</h1>
+<p>Após criar seu banco de dados e baixar o MySQL Workbench, vamos realizar a conexão entre as duas plataformas.</p>
+<ul>
+<li>Para isso, abra ambas em sua tela inicial (no caso do Aiven, abra a página de visão geral do seu banco de dados)</li>
+<li>
+<p>No painel de visão geral do seu banco de dados no Aiven, você terá todas as informações necessárias para conectar ao banco, como na imagem abaixo.</p>
+<p><a class="glightbox" href="../img/setup-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-6.png" /></a></p>
+</li>
+<li>
+<p>Opcionalmente, você também pode clicar em Quick Connect para ver um passo a passo de como conectar ao banco de diversas maneiras. Selecione MySQL Workbench e siga os passos.</p>
+</li>
+<li>No seu workbench, clique no “+” em “MySQL Connections” para adicionar uma nova conexão.</li>
+<li>
+<p>Na tela de nova conexão, preencha os campos com as informações do seu banco de dados (listadas no passo a passo do Quick Connect).</p>
+<p><a class="glightbox" href="../img/setup-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-7.png" /></a></p>
+</li>
+<li>
+<p>Após preencher os campos, baixe o CA certificate no site do Aiven (veja o Quick Connect se precisar de ajuda) e faça o upload do CA certificate na aba SSL.</p>
+<p><a class="glightbox" href="../img/setup-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-8.png" /></a></p>
+</li>
+<li>
+<p>Após isso, clique em “Test Connection”. Se funcionar, clique em Ok para criar a conexão.</p>
+<p><strong>AVISO:</strong> O Workbench provavelmente pedirá uma senha para você; essa senha está na aba de visão geral do seu banco de dados. Também pode ser encontrada na aba Users do Aiven.</p>
+<p>Após realizar a conexão, se tudo der certo, você se deparará com esta tela. A partir daqui, siga as instruções do professor:</p>
+<p><a class="glightbox" href="../img/setup-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../img/setup-9.png" /></a></p>
+</li>
+</ul>
 
 
 
@@ -902,7 +1005,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -910,23 +1013,23 @@
 </script>
 
 
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/progress-check.js"></script>
+        <script src="../../../javascripts/progress-check.js"></script>
       
-        <script src="../../javascripts/quiz.js"></script>
+        <script src="../../../javascripts/quiz.js"></script>
       
-        <script src="../../javascripts/short-questions.js"></script>
+        <script src="../../../javascripts/short-questions.js"></script>
       
-        <script src="../../javascripts/translate-admonitions.js"></script>
+        <script src="../../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../../javascripts/webhook-config.js"></script>
+        <script src="../../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->

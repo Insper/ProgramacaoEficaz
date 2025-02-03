@@ -10,24 +10,24 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/auxiliar/FAQ/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/0-persistencia/mysql-overview/">
       
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>FAQ - Programação Eficaz - Insper 2025/1</title>
+        <title>MySQL - Overview - Programação Eficaz - Insper 2025/1</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,18 +52,18 @@
       
     
     
-      <link rel="stylesheet" href="../../css/printing.css">
+      <link rel="stylesheet" href="../../../css/printing.css">
     
-      <link rel="stylesheet" href="../../css/tecweb.css">
+      <link rel="stylesheet" href="../../../css/tecweb.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -72,7 +72,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -90,6 +90,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mysql-overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -122,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FAQ
+              MySQL - Overview
             
           </span>
         </div>
@@ -223,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -241,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -261,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../notas/" class="md-nav__link">
+      <a href="../../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -351,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/" class="md-nav__link">
+      <a href="../../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte0/" class="md-nav__link">
+      <a href="../../01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminal/" class="md-nav__link">
+      <a href="../../../auxiliar/terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/" class="md-nav__link">
+      <a href="../../../auxiliar/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../venv/" class="md-nav__link">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/aps1/" class="md-nav__link">
+      <a href="../../../projetos/aps1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -839,6 +844,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -853,9 +860,239 @@
                   
 
 
-  <h1>FAQ</h1>
-
-
+<h1 id="mysql-overview">MySQL - Overview</h1>
+<p>Responsável: Licia Sales</p>
+<h1 id="mysql">MySQL</h1>
+<p>A ideia deste material é explicar como o Python, o MySQL na nuvem (usando Aiven), e o MySQL Workbench trabalham juntos para gerenciar os dados das nossas aplicações.</p>
+<h3 id="o-python"><strong>O Python</strong></h3>
+<p>O código que vocês estão escrevendo em Python é responsável por gerenciar a aplicação e se comunicar com o banco de dados. Quando escrevemos um código para criar, ler, atualizar ou deletar dados <strong>(o famoso CRUD)</strong>, o Python envia essas instruções para o banco de dados MySQL que está na nuvem, hospedado no Aiven.</p>
+<h3 id="aiven"><strong>Aiven</strong></h3>
+<p>O Aiven é o serviço que está hospedando o MySQL na nuvem. Ele é o “coração” do nosso sistema de dados, onde tudo o que vocês manipulam através do código é realmente armazenado. Quando o Python faz <strong>uma requisição</strong>, como “adicionar um novo item”, “buscar dados” ou “atualizar um registro”, <strong>essa requisição</strong> vai para o MySQL que está na nuvem. O Aiven garante que o banco de dados está sempre disponível, seguro e funcionando corretamente. Isso facilita o acesso aos dados de qualquer lugar, já que está na nuvem.</p>
+<h3 id="mysql-workbench"><strong>MySQL Workbench</strong></h3>
+<p>O MySQL Workbench é a ferramenta gráfica para visualizar e gerenciar o banco de dados. Pense nele como uma janela que nos permite ver o que está acontecendo dentro do MySQL que está na nuvem. Ele se conecta ao MySQL no Aiven e permite que vocês visualizem as tabelas, rodem queries, façam backups e até criem novas tabelas manualmente. Isso é muito útil para ver se o que vocês programaram em Python realmente funcionou. Muitas vezes, o código não dá o feedback visual que a gente precisa. O Workbench permite ver os dados em tempo real e verificar se o que o Python fez está correto. Ele é uma ferramenta de apoio essencial para garantir que o banco de dados está configurado e operando corretamente.</p>
+<p><a class="glightbox" href="../img/overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img/overview.png" src="../img/overview.png" /></a></p>
+<h3 id="como-tudo-funciona-junto"><strong>Como Tudo Funciona Junto</strong></h3>
+<p><strong>O Python</strong> é o nosso ponto de partida. Escrevemos o código que manda as instruções para o banco de dados.</p>
+<p><strong>O Aiven (MySQL Server)</strong> na nuvem é quem recebe essas instruções e faz o trabalho de armazenar, atualizar e gerenciar os dados.</p>
+<p><strong>O MySQL Workbench</strong> é a nossa interface gráfica, onde conseguimos visualizar tudo isso acontecendo, verificar se os dados foram corretamente inseridos ou atualizados e gerenciar o banco de dados de uma maneira mais amigável.</p>
+<h3 id="porque-aprender-isso"><strong>Porque aprender isso?</strong></h3>
+<ul>
+<li><strong>Entender a Comunicação Completa:</strong> Vocês precisam entender como o Python conversa com o banco de dados na nuvem e como o Workbench nos ajuda a visualizar e gerenciar esses dados.</li>
+<li><strong>Identificar e Corrigir Erros:</strong> Muitas vezes, os erros de código se refletem no banco de dados. Com o Workbench, conseguimos visualizar o que deu certo ou errado e ajustar nosso código Python.</li>
+<li><strong>Preparação para o Mundo Real:</strong> Este fluxo é muito comum em ambientes profissionais. Saber como cada peça funciona é essencial para quem quer trabalhar com desenvolvimento de software, APIs e bancos de dados.</li>
+</ul>
+<h3 id="sobre-registros-tabelas-e-relacionamentos"><strong>Sobre Registros, Tabelas e Relacionamentos…</strong></h3>
+<p>Para entender como o Python interage com o banco de dados e como o MySQL Workbench nos auxilia, é importante compreender como os registros, tabelas e relacionamentos funcionam dentro do banco de dados MySQL. </p>
+<h3 id="registros-no-banco-de-dados"><strong>Registros no Banco de Dados</strong></h3>
+<p>Registros são as linhas de dados que estão armazenadas em uma tabela dentro do banco de dados. Cada registro representa uma entrada única, com valores específicos para cada coluna da tabela. </p>
+<p><strong>Exemplo:</strong> Em uma tabela de "Usuários", cada linha (registro) poderia representar um usuário específico, contendo colunas como ID, Nome, E-mail, e Idade.</p>
+<h3 id="tabela-de-usuarios">Tabela de Usuários</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Email</th>
+<th>Idade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alice</td>
+<td><a href="mailto:alice@example.com">alice@example.com</a></td>
+<td>30</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bob</td>
+<td><a href="mailto:bob@example.com">bob@example.com</a></td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p>Os registros são manipulados usando comandos SQL (ex: <code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code>, <code>DELETE</code>) que o Python envia para o banco de dados. Esses comandos permitem adicionar novos registros, buscar informações, atualizar dados existentes e remover registros.</p>
+<h3 id="tabelas-no-banco-de-dados"><strong>Tabelas no Banco de Dados</strong></h3>
+<p>Tabelas são a estrutura básica de armazenamento no banco de dados. Cada tabela armazena um conjunto de registros que compartilham a mesma estrutura (colunas).</p>
+<h3 id="relacionamentos-entre-tabelas"><strong>Relacionamentos Entre Tabelas</strong></h3>
+<p>Relacionamentos definem como as tabelas se conectam entre si. Isso é importante para criar um banco de dados relacional onde as informações devem ser ligadas e acessadas de forma eficiente.</p>
+<h3 id="tipos-de-relacionamentos"><strong>Tipos de Relacionamentos:</strong></h3>
+<p><strong>Relacionamento 1:1 (Um para Um):</strong> Cada registro em uma tabela está associado a um e apenas um registro em outra tabela.</p>
+<p><strong>Exemplo:</strong> Imagine duas tabelas, <strong>Usuários</strong> e <strong>Perfis</strong>, conectadas por uma linha direta entre dois registros. Cada <strong>Usuário</strong> tem um <strong>Perfil</strong> associado, e vice-versa</p>
+<h3 id="tabela-de-usuarios_1">Tabela de Usuários</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alice</td>
+<td><a href="mailto:alice@example.com">alice@example.com</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabela-de-perfis">Tabela de Perfis</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Foto</th>
+<th>Bio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>foto1.jpg</td>
+<td>"Developer"</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Relacionamento: Cada usuário tem um perfil exclusivo.
+</p>
+</blockquote>
+<p><strong>Relacionamento 1:N (Um para Muitos)</strong></p>
+<p>Um registro em uma tabela está associado a muitos registros em outra tabela, mas os registros na segunda tabela estão associados a apenas um registro na primeira.</p>
+<p><strong>Exemplo:</strong> Um "Usuário" pode ter muitos "Pedidos". Aqui, a tabela de “Usuários” tem um relacionamento 1:N com a tabela de “Pedidos”. O relacionamento é geralmente implementado adicionando uma chave estrangeira na tabela dos “Pedidos” que aponta para o “ID do Usuário”.</p>
+<h3 id="tabela-de-usuarios_2">Tabela de Usuários</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alice</td>
+<td><a href="mailto:alice@example.com">alice@example.com</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabela-de-pedidos">Tabela de Pedidos</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Produto</th>
+<th>Data</th>
+<th>Usuario_ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Laptop</td>
+<td>2023-01-15</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mouse</td>
+<td>2023-01-20</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Relacionamento: O usuário "Alice" (ID 1) fez dois pedidos (Laptop e Mouse).
+</p>
+</blockquote>
+<p><strong>Relacionamento N:M (Muitos para Muitos)</strong></p>
+<p>Muitos registros em uma tabela estão associados a muitos registros em outra tabela.</p>
+<p><strong>Exemplo:</strong> Uma tabela “Alunos” e uma tabela “Cursos” podem ter um relacionamento N:M, onde um aluno pode estar inscrito em vários cursos e cada curso pode ter muitos alunos inscritos. Esse tipo de relacionamento geralmente requer uma <strong>tabela intermediária</strong> (ex: “Inscrições”) para armazenar as chaves estrangeiras de ambas as tabelas.</p>
+<h3 id="tabela-de-alunos">Tabela de Alunos</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alice</td>
+<td><a href="mailto:alice@example.com">alice@example.com</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bob</td>
+<td><a href="mailto:bob@example.com">bob@example.com</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabela-de-cursos">Tabela de Cursos</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome Curso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>Python</td>
+</tr>
+<tr>
+<td>102</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Design</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabela-intermediaria-inscricoes">Tabela Intermediária (Inscrições)</h3>
+<table>
+<thead>
+<tr>
+<th>Aluno_ID</th>
+<th>Curso_ID</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>101</td>
+<td>A</td>
+</tr>
+<tr>
+<td>1</td>
+<td>102</td>
+<td>B+</td>
+</tr>
+<tr>
+<td>2</td>
+<td>103</td>
+<td>A-</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Relacionamento: A tabela de Inscrições conecta alunos a cursos, criando um relacionamento N:M.
+</p>
+</blockquote>
+<h3 id="e-o-mysql-workbench"><strong>E o MySQL Workbench?</strong></h3>
+<p>No MySQL Workbench, vocês podem visualizar todas as tabelas do banco de dados e ver como elas estão conectadas. Ele oferece ferramentas visuais para criar e ajustar esses relacionamentos de maneira gráfica. Através do Workbench, é possível criar chaves primárias e estrangeiras que estabelecem essas conexões entre tabelas, garantindo a integridade dos dados e a correta estruturação das informações.</p>
+<h3 id="por-que-isso-e-importante"><strong>Por que isso é importante?</strong></h3>
+<ul>
+<li><strong>Organização de Dados:</strong> Relacionamentos permitem que os dados sejam organizados de forma lógica e estruturada, o que facilita a recuperação de informações complexas.</li>
+<li><strong>Eficiência e Consistência:</strong> Usar relacionamentos evita a duplicação de dados e mantém o banco de dados consistente, o que é crucial para operações complexas e integridade dos dados.</li>
+<li><strong>Facilita a Programação:</strong> Com um banco de dados bem estruturado, o código Python se torna mais simples e eficiente, pois vocês podem buscar e manipular os dados com menos esforço e de maneira mais intuitiva.</li>
+</ul>
 
 
 
@@ -902,7 +1139,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -910,23 +1147,23 @@
 </script>
 
 
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/progress-check.js"></script>
+        <script src="../../../javascripts/progress-check.js"></script>
       
-        <script src="../../javascripts/quiz.js"></script>
+        <script src="../../../javascripts/quiz.js"></script>
       
-        <script src="../../javascripts/short-questions.js"></script>
+        <script src="../../../javascripts/short-questions.js"></script>
       
-        <script src="../../javascripts/translate-admonitions.js"></script>
+        <script src="../../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../../javascripts/webhook-config.js"></script>
+        <script src="../../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->
