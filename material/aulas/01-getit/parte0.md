@@ -26,8 +26,8 @@ O Git e o GitHub são ferramentas já conhecidas que foram bastante usadas em De
 Agora que você já leu os materiais sobre o terminal e o Git, é hora de colocar em prática o que aprendeu. Para isso, siga os passos abaixo:
 
 1. Abra o terminal e crie uma pasta chamada `programacao-eficaz` em alguma pasta de sua preferência.
-2. Acesse o site do GitHub e crie um repositório **público** chamado `getit`. Certifique-se de marcar a opção de inicializar o repositório com um arquivo `README.md` e de adicionar um arquivo `.gitignore` para Python.
-3. Clone o repositório `getit` para a pasta `programacao-eficaz` que você criou no passo 1 utilizando o terminal.
+2. Acesse o site do [GitHub Classroom](https://classroom.github.com/a/T4ARETPP) e crie o repositório.
+3. Clone o repositório para a pasta `programacao-eficaz` que você criou no passo 1 utilizando o terminal.
 4. Crie um ambiente virtual chamado `env` dentro da pasta `programacao-eficaz/getit` utilizando o terminal.
 
 Se você não souber o que é um ambiente virtual ou como criá-lo via terminal, leia o material disponível abaixo:

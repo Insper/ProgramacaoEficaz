@@ -22,7 +22,7 @@ Ao finalizar esta etapa, a página deve estar com o estilo CSS e com as funciona
 
 ## **2. Persistência de dados** :material-dice-6:
 
-Nesta etapa, você deverá implementar a persistência dos dados com MySQL utilizando os comandos aprendidos na APS 1.
+Nesta etapa, você deverá implementar a persistência dos dados com SQLite utilizando os comandos aprendidos na APS 1.
 
 **Dica** :material-alarm-light:
 

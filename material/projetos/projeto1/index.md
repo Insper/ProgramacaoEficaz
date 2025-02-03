@@ -7,14 +7,14 @@
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via :point_right: GitHub. Envie o link do seu repositório no Blackboard.
+    :simple-github: Entrega via :point_right: [GitHub Classroom](https://classroom.github.com/a/T4ARETPP)
  
 ## Objetivos :octicons-goal-16:
 
 Durante o primeiro handout nós desenvolvemos o [Get-it](../../aulas/01-getit.md) com as funcionalidades de listagem e criação de anotações. Na primeira APS, você aprendeu a armazenar e recuperar dados de um banco de dados relacional. Agora, no Projeto 1, o seu objetivo é aplicar o que aprendeu nos handouts e na APS para adicionar as seguintes funcionalidades ao sistema:
 
 1. Estilo da página (utilizando o CSS que você já fez ou adicionando um novo estilo);
-2. Armazenamento em banco de dados MySql ao invés de um arquivo texto;
+2. Armazenamento em banco de dados SQLite ao invés de um arquivo texto;
 3. Apagar anotações;
 4. Editar anotações;
 

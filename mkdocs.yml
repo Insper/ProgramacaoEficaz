@@ -45,9 +45,12 @@ nav:
       - "Handout Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
       - "Handout Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
       - "Handout Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
-    # - "02 - Desafio CSS": 
-    #   - "Slides": "aulas/02-desafio-css/Aula02.pdf"
-    #   - "Enunciado": aulas/02-desafio-css.md
+    # - "02 - REST": 
+      # - "Instalação do Workbench": aulas/02-persistencia/02-instalacao-mysql.md
+      # - "MySQL - Overview": aulas/02-persistencia/02-mysql-overview.md
+    # - "02 - Persistência de dados": 
+    #   - "Instalação do Workbench": aulas/02-persistencia/02-instalacao-mysql.md
+    #   - "MySQL - Overview": aulas/02-persistencia/02-mysql-overview.md
     # - "03 - Persistência de dados":
     #   - "Handout": aulas/03-persistencia-de-dados.md
     #   - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
@@ -100,6 +103,7 @@ nav:
     - "Projeto 1": 
       - "Enunciado": projetos/projeto1/index.md
       - "Tarefas": projetos/projeto1/tarefas-projeto1.md
+    - "APS 1": projetos/aps1.md
   #   - "Projeto 1B":
   #     - "Enunciado": projetos/projeto1/projeto1b.md
   #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
