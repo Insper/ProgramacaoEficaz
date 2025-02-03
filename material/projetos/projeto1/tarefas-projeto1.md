@@ -33,6 +33,8 @@ Nesta etapa, você deverá implementar a persistência dos dados com SQLite util
 
 - Ao finalizar esta etapa, caso não utilize mais o arquivo `notes.json`, apague o arquivo do repositório.
 
+- Material de apoio: [https://www.vrsofttech.com/python-flask/flask-with-sqlite-crud-application](https://www.vrsofttech.com/python-flask/flask-with-sqlite-crud-application)
+
 
 ## **3. Apagar anotações** :material-delete:
 
