@@ -45,7 +45,12 @@ nav:
       - "Handout Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
       - "Handout Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
       - "Handout Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
-    # - "02 - REST": 
+    - "02 - REST": 
+      - "Slides": "aulas/02-rest/REST.pdf"
+      - "O que é REST": aulas/02-rest/index.md
+    - "03 - Testes manuais com Postman":
+      - "Instalação": aulas/03-postman/instalacao.md
+      - "Como usar": aulas/03-postman/como-usar.md
       # - "Instalação do Workbench": aulas/02-persistencia/02-instalacao-mysql.md
       # - "MySQL - Overview": aulas/02-persistencia/02-mysql-overview.md
     # - "02 - Persistência de dados": 

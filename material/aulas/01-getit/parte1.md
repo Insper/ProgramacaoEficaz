@@ -34,7 +34,7 @@ Essa é uma lista bastante simplificada do que acontece, mas talvez esse último
 
 Eu sei, me desculpe. Agora sim, vamos começar!
 
-Vamos implementar um servidor **bastante** simplificado utilizando a biblioteca Flask. Para isso, crie dentro da pasta `getit` criada anteriormente um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo:
+Vamos implementar um servidor **bastante** simplificado utilizando a biblioteca Flask. Para isso, crie dentro da pasta do seu repositório criada anteriormente um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo:
    
 ```python
 --8<-- "01-getit/codigo/passo1.py"

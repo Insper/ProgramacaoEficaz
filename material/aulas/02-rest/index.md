@@ -77,5 +77,3 @@ Tags: Guias e Processos, Teoria
 - **Respostas HTTP** coerentes com o estado da requisição:
     - Referencia para consulta das respostas: 
     [https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
-        
-        ![Untitled](O%20que%20e%CC%81%20REST%20b628d032f093445e8dcf7d159476daad/Untitled.png)

@@ -28,7 +28,7 @@ Agora que você já leu os materiais sobre o terminal e o Git, é hora de coloca
 1. Abra o terminal e crie uma pasta chamada `programacao-eficaz` em alguma pasta de sua preferência.
 2. Acesse o site do [GitHub Classroom](https://classroom.github.com/a/T4ARETPP) e crie o repositório.
 3. Clone o repositório para a pasta `programacao-eficaz` que você criou no passo 1 utilizando o terminal.
-4. Crie um ambiente virtual chamado `env` dentro da pasta `programacao-eficaz/getit` utilizando o terminal.
+4. Crie um ambiente virtual chamado `env` dentro da pasta do repositório utilizando o terminal.
 
 Se você não souber o que é um ambiente virtual ou como criá-lo via terminal, leia o material disponível abaixo:
 
