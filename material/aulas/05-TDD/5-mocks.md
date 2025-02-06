@@ -173,3 +173,5 @@ Agora garantimos que a função **lida corretamente com falhas na API**.
 ✅ Quando o código depende de **APIs externas**.  
 ✅ Quando queremos **simular erros** sem realmente causar falhas.  
 ✅ Quando precisamos **testar código que depende de outros códigos**.  
+
+Chegamos então no passo final. Agora que sabemos tudo sobre testes automatizados, vamos aplicar esse conhecimento construindo [Testes para APIs Flask](6-flask.md).
