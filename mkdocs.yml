@@ -48,6 +48,7 @@ nav:
     - "02 - REST": 
       - "Slides": "aulas/02-rest/REST.pdf"
       - "O que é REST": aulas/02-rest/index.md
+      - "Fazendo requisições via Python": aulas/02-rest/requisicoes.md
     - "03 - Testes manuais com Postman":
       - "Instalação": aulas/03-postman/instalacao.md
       - "Como usar": aulas/03-postman/como-usar.md
