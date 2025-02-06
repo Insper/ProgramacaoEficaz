@@ -52,11 +52,13 @@ nav:
     - "03 - Testes manuais com Postman":
       - "Instalação": aulas/03-postman/instalacao.md
       - "Como usar": aulas/03-postman/como-usar.md
-      # - "Instalação do Workbench": aulas/02-persistencia/02-instalacao-mysql.md
-      # - "MySQL - Overview": aulas/02-persistencia/02-mysql-overview.md
-    # - "02 - Persistência de dados": 
-    #   - "Instalação do Workbench": aulas/02-persistencia/02-instalacao-mysql.md
-    #   - "MySQL - Overview": aulas/02-persistencia/02-mysql-overview.md
+    - "04 - Persistência de dados": 
+      - "Instalação do Workbench": aulas/04-persistencia/instalacao-mysql.md
+      - "MySQL - Overview": aulas/04-persistencia/mysql-overview.md
+    - "05 - Testes automatizados":
+      - "TDD": aulas/05-TDD/0-tdd.md
+      - "Pytest": aulas/05-TDD/1-pytest.md
+      - "Boas práticas": aulas/05-TDD/2-boaspraticas.md
     # - "03 - Persistência de dados":
     #   - "Handout": aulas/03-persistencia-de-dados.md
     #   - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
