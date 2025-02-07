@@ -99,4 +99,6 @@ def test_calcula_media_lista_com_tres_elementos_positivos(lista, esperado):
 
 Nesse exemplo, utilizamos o `@pytest.mark.parametrize` para definir diferentes conjuntos de dados e resultados esperados. A função de teste será executada para cada combinação, verificando se a função `calcula_media` se comporta corretamente em todos os cenários.
 
+Se estiver gostando do assunto, você pode ler um pouquinho mais sobre boas práticas de testes [aqui](https://emimartin.me/pytest_best_practices){:target="_blank"}.
+
 A seguir, vamos ver como [lidar com exceções](3-exceptions.md).
