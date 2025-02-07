@@ -1,4 +1,4 @@
-# **Entendendo e Usando Fixtures no pytest**
+# Entendendo e Usando Fixtures no pytest
 
 ## 📌 **O que são Fixtures e por que usá-las?**  
 

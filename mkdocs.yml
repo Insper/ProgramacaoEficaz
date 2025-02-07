@@ -59,6 +59,10 @@ nav:
       - "TDD": aulas/05-TDD/0-tdd.md
       - "Pytest": aulas/05-TDD/1-pytest.md
       - "Boas práticas": aulas/05-TDD/2-boaspraticas.md
+      - "Exceptions": aulas/05-TDD/3-exceptions.md
+      - "Fixtures": aulas/05-TDD/4-fixtures.md
+      - "Mocks": aulas/05-TDD/5-mocks.md
+      - "Testando APIs": aulas/05-TDD/6-flask.md
     # - "03 - Persistência de dados":
     #   - "Handout": aulas/03-persistencia-de-dados.md
     #   - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md

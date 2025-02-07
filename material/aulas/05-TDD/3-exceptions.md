@@ -51,7 +51,7 @@ def test_divide_por_zero_gera_exception():
         # When
         solucao = divide(a, b)
         # Then
-        assert solucao
+        #aqui não é necessário fazer nada, pois o teste passa se a exceção for lançada
 ```
 
 Nesse teste, utilizamos o bloco `with pytest.raises(Exception):` para verificar se a função `divide()` lança uma exceção do tipo `Exception`. Se a exceção for lançada, o teste passa. Caso contrário, ele falha.

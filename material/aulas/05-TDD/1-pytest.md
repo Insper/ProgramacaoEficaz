@@ -137,8 +137,7 @@ A função funciona, mas podemos utilizar técnicas mais avançadas para simplif
 
 ```python
 def calcula_media(lista):
-    return 0 if lista == []
-    return sum(lista) / len(lista)
+    return 0 if lista == [] else sum(lista) / len(lista)
 ```
 
 ## 🔹 **Resumo do Processo**

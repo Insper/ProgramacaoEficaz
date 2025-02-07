@@ -1,4 +1,4 @@
-# **Entendendo e Usando Mocks no pytest**
+# Entendendo e Usando Mocks no pytest
 
 ## 📌 **O que são Mocks e por que usá-los?**  
 

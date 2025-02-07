@@ -1,4 +1,4 @@
-# **Testando APIs Flask com pytest e Mocks**
+# Testando APIs Flask com pytest e Mocks
 
 Assim como qualquer outro código, APIs Flask precisam ser testadas para garantir que funcionem corretamente. No entanto, testar APIs que dependem de um banco de dados real pode ser complicado. Felizmente, já temos todas as ferramentas necessárias!
 
