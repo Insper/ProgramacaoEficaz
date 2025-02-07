@@ -5,6 +5,9 @@ extra:
   materia: Programação Eficaz
   professor: Marcio F. Stabile Jr.
   semestre: 2025/1
+  custom_variables:
+    pl_root: https://us.prairielearn.com/pl/course_instance/177857
+    pl_testes: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
 
 theme:
   name: material
@@ -63,6 +66,7 @@ nav:
       - "Fixtures": aulas/05-TDD/4-fixtures.md
       - "Mocks": aulas/05-TDD/5-mocks.md
       - "Testando APIs": aulas/05-TDD/6-flask.md
+      - Exercícios: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
     # - "03 - Persistência de dados":
     #   - "Handout": aulas/03-persistencia-de-dados.md
     #   - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
@@ -182,6 +186,7 @@ extra_css:
 plugins:
   - search
   - glightbox
+  - macros
 
 watch:
   - includes

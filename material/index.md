@@ -38,3 +38,7 @@ Boas vindas ao curso de Programação Eficaz 2025/1
 - ~~29/10: Entrega do [Projeto 2]~~
 - 03/11: Entrega do [Projeto 2](projetos/projeto2.md)
 - 19/11: Entrega do [Projeto 3](projetos/projeto3.md) -->
+
+**Links Úteis**
+
+Exercícios no Prairie Learn: [{{custom_variables.pl_root}}]({{custom_variables.pl_root}}){:target="_blank"}
