@@ -10,13 +10,13 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/01-getit/parte1/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/05-TDD/5-mocks/">
       
       
-        <link rel="prev" href="../parte0/">
+        <link rel="prev" href="../4-fixtures/">
       
       
-        <link rel="next" href="../parte2/">
+        <link rel="next" href="../6-flask/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Handout Parte 1: Criando o servidor - Programação Eficaz - Insper 2025/1</title>
+        <title>Mocks - Programação Eficaz - Insper 2025/1</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#01-get-it-o-retorno" class="md-skip">
+        <a href="#entendendo-e-usando-mocks-no-pytest" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Handout Parte 1: Criando o servidor
+              Mocks
             
           </span>
         </div>
@@ -324,19 +324,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -350,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             01 - Get-it
@@ -364,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aula01.pdf" class="md-nav__link">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte0/" class="md-nav__link">
+      <a href="../../01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,30 +422,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Handout Parte 1: Criando o servidor
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,80 +434,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#parte-1-criando-o-servidor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parte 1: Criando o servidor
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comecando-pelo-comeco" class="md-nav__link">
-    <span class="md-ellipsis">
-      Começando pelo começo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#voce-disse-que-seria-mao-na-massa-mas-ainda-nao-toquei-no-codigo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Você disse que seria mão na massa, mas ainda não toquei no código!
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#muito-bem-agora-vamos-entender-o-codigo-acima" class="md-nav__link">
-    <span class="md-ellipsis">
-      Muito bem, agora vamos entender o código acima
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entendi-mas-entao-como-eu-faco-algo-aparecer-no-navegador" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entendi, mas então como eu faço algo aparecer no navegador?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-agora-ja-podemos-enviar-a-resposta" class="md-nav__link">
-    <span class="md-ellipsis">
-      E agora, já podemos enviar a resposta?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -542,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte2/" class="md-nav__link">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -563,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte3/" class="md-nav__link">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte4/" class="md-nav__link">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,17 +790,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -910,7 +816,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             05 - Testes automatizados
@@ -924,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/0-tdd/" class="md-nav__link">
+      <a href="../0-tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -945,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/1-pytest/" class="md-nav__link">
+      <a href="../1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -966,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/2-boaspraticas/" class="md-nav__link">
+      <a href="../2-boaspraticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -987,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/3-exceptions/" class="md-nav__link">
+      <a href="../3-exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1008,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/4-fixtures/" class="md-nav__link">
+      <a href="../4-fixtures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,10 +932,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../05-TDD/5-mocks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Mocks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1038,6 +964,212 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-mocks-e-por-que-usa-los" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 O que são Mocks e por que usá-los?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-um-mock" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 O que é um Mock?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-inicial-testando-uma-funcao-que-depende-de-outra" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Exemplo inicial: Testando uma Função que Depende de Outra
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Exemplo inicial: Testando uma Função que Depende de Outra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcao-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Função Principal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      O problema:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucao-usar-um-mock-para-funcao_secundaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solução: Usar um Mock para funcao_secundaria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicando-o-codigo-do-mock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicando o Código do Mock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-pratico-testando-uma-funcao-que-faz-requisicoes-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Exemplo Prático: Testando uma Função que Faz Requisições HTTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Exemplo Prático: Testando uma Função que Faz Requisições HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-1-criando-a-funcao-que-depende-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Passo 1: Criando a Função que Depende da API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-problema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      O problema:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-2-criando-um-mock-para-a-requisicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Passo 2: Criando um Mock para a Requisição
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicando-o-codigo-do-mock_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Explicando o Código do Mock
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Explicando o Código do Mock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-o-mock-esta-fazendo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ O que o Mock está fazendo?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testando-um-erro-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Testando um Erro da API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Resumo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Resumo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-mocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar Mocks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1050,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/6-flask/" class="md-nav__link">
+      <a href="../6-flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1443,56 +1575,188 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parte-1-criando-o-servidor" class="md-nav__link">
+  <a href="#o-que-sao-mocks-e-por-que-usa-los" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 1: Criando o servidor
+      📌 O que são Mocks e por que usá-los?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comecando-pelo-comeco" class="md-nav__link">
+  <a href="#o-que-e-um-mock" class="md-nav__link">
     <span class="md-ellipsis">
-      Começando pelo começo
+      🔹 O que é um Mock?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#voce-disse-que-seria-mao-na-massa-mas-ainda-nao-toquei-no-codigo" class="md-nav__link">
+  <a href="#exemplo-inicial-testando-uma-funcao-que-depende-de-outra" class="md-nav__link">
     <span class="md-ellipsis">
-      Você disse que seria mão na massa, mas ainda não toquei no código!
+      📌 Exemplo inicial: Testando uma Função que Depende de Outra
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Exemplo inicial: Testando uma Função que Depende de Outra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcao-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Função Principal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      O problema:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucao-usar-um-mock-para-funcao_secundaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solução: Usar um Mock para funcao_secundaria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicando-o-codigo-do-mock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicando o Código do Mock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-pratico-testando-uma-funcao-que-faz-requisicoes-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Exemplo Prático: Testando uma Função que Faz Requisições HTTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Exemplo Prático: Testando uma Função que Faz Requisições HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-1-criando-a-funcao-que-depende-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Passo 1: Criando a Função que Depende da API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-problema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      O problema:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-2-criando-um-mock-para-a-requisicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Passo 2: Criando um Mock para a Requisição
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicando-o-codigo-do-mock_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Explicando o Código do Mock
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Explicando o Código do Mock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-o-mock-esta-fazendo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ O que o Mock está fazendo?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testando-um-erro-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Testando um Erro da API
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#muito-bem-agora-vamos-entender-o-codigo-acima" class="md-nav__link">
+  <a href="#resumo" class="md-nav__link">
     <span class="md-ellipsis">
-      Muito bem, agora vamos entender o código acima
+      📌 Resumo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Resumo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-mocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar Mocks?
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#entendi-mas-entao-como-eu-faco-algo-aparecer-no-navegador" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entendi, mas então como eu faço algo aparecer no navegador?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-agora-ja-podemos-enviar-a-resposta" class="md-nav__link">
-    <span class="md-ellipsis">
-      E agora, já podemos enviar a resposta?
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1511,180 +1775,155 @@
                   
 
 
-<h1 id="01-get-it-o-retorno">01 - Get-it - O retorno</h1>
-<h2 id="parte-1-criando-o-servidor">Parte 1: Criando o servidor</h2>
-<p>Vamos começar nosso curso com um exemplo de implementação de uma página bem simples. Durante o desenvolvimento discutiremos alguns dos detalhes e conceitos envolvidos. O objetivo deste handout é introduzir alguns conceitos de Programação Eficaz que serão importantes ao longo do curso a partir de uma abordagem mão na massa.</p>
-<p>Após o final deste handout você terá um protótipo do Get-it, nosso conhecido sistema de bloco de notas feito utilizando uma nova tecnologia.</p>
-<h2 id="comecando-pelo-comeco">Começando pelo começo</h2>
-<p>Lembra que semestre passado nós aprendemos sobre os diferentes tipos de teste de software? Vamos começar definindo uma história de usuário. O objetivo não é fazer uma revisão de Design, então vamos assumir que temos uma persona pronta e o seu nome é Fábio:</p>
-<div class="admonition danger">
-<p class="admonition-title">Lista de anotações</p>
-<p><strong>SENDO</strong> o Fábio</p>
-<p><strong>POSSO</strong> digitar o endereço do Get-it no navegador e visualizar a lista de anotações</p>
-<p><strong>PARA</strong> lembrar os detalhes da minha próxima tarefa</p>
-</div>
-<p>Muito bem. Agora podemos começar a desenvolver o nosso protótipo.</p>
-<p>Isso nos leva à primeira pergunta: ok, o Fábio vai digitar o endereço no navegador e apertar <em>Enter</em>, mas o que acontece depois disso?</p>
-<p>MUITA coisa. Vamos começar com uma explicação bastante simplista, mas que deve dar uma ideia geral dos passos. Se você tiver curiosidade, a Mozilla possui um <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona">material muito didático</a> para quem está iniciando no desenvolvimento web.</p>
-<ol>
-<li>O navegador precisa dos dados da página a ser mostrada, mas a informação está em outro computador, o servidor, que está (muito provavelmente) fisicamente distante. Por isso, o endereço digitado no navegador é utilizado para encontrar a localização do servidor utilizando o <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona#dns_explicado">DNS</a>.</li>
-<li>Agora que o cliente (o computador do Fábio) sabe onde encontrar o servidor, ele entra em contato com o servidor pedindo os dados. Esse pedido é o que chamamos de <strong>requisição</strong>.</li>
-<li>Ao receber a requisição, o servidor responde com a página solicitada.</li>
-<li>O navegador recebe as partes que formam a página (HTML, CSS, Javascript, imagens, etc.) e mostra (renderiza) para o Fábio.</li>
-</ol>
-<p>Essa é uma lista bastante simplificada do que acontece, mas talvez esse último passo tenha sido simplificado demais. Cada parte que forma a página (os arquivos CSS, Javascript, imagens, etc.) deve ser solicitada separadamente para o servidor. Então os passos 1 a 3 são repetidos para cada uma delas.</p>
-<h2 id="voce-disse-que-seria-mao-na-massa-mas-ainda-nao-toquei-no-codigo">Você disse que seria mão na massa, mas ainda não toquei no código!</h2>
-<p>Eu sei, me desculpe. Agora sim, vamos começar!</p>
-<p>Vamos implementar um servidor <strong>bastante</strong> simplificado utilizando a biblioteca Flask. Para isso, crie dentro da pasta do seu repositório criada anteriormente um arquivo chamado <code>servidor.py</code> (pode ser o nome que você preferir) com o seguinte conteúdo:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<h1 id="entendendo-e-usando-mocks-no-pytest">Entendendo e Usando Mocks no pytest</h1>
+<h2 id="o-que-sao-mocks-e-por-que-usa-los">📌 <strong>O que são Mocks e por que usá-los?</strong></h2>
+<p>Quando escrevemos testes, às vezes precisamos testar código que <strong>depende de recursos externos</strong>, como:  </p>
+<p>✅ Chamadas a APIs externas.<br />
+✅ Interações com arquivos ou sistemas de terceiros.<br />
+✅ Funções que consomem muito tempo ou recursos.  </p>
+<p>Esses componentes podem ser difíceis de testar diretamente porque:<br />
+❌ <strong>São lentos</strong> – Uma API pode demorar segundos para responder.<br />
+❌ <strong>São imprevisíveis</strong> – Um serviço externo pode estar fora do ar.<br />
+❌ <strong>Não queremos modificar dados reais</strong> – Testar algo que pode afetar usuários reais pode ser perigoso.  </p>
+<p>Para resolver isso, usamos <strong>Mocks</strong>.  </p>
+<h2 id="o-que-e-um-mock">🔹 <strong>O que é um Mock?</strong></h2>
+<p>Um <strong>Mock</strong> é um objeto falso que <strong>simula</strong> o comportamento de um objeto real. Ele permite testar código <strong>sem precisar da dependência real</strong>.  </p>
+<p>Em Python, podemos usar a biblioteca <strong><code>unittest.mock</code></strong>, que permite criar <strong>Mocks</strong> para substituir funções e objetos reais nos testes.  </p>
+<p>✅ <strong>Vantagens dos Mocks:</strong><br />
+- Testamos apenas o código <strong>que queremos validar</strong>, sem depender de APIs, arquivos ou serviços externos.<br />
+- Os testes ficam <strong>rápidos</strong>, pois não precisam esperar por respostas externas.<br />
+- Podemos simular <strong>diferentes cenários</strong>, como erros ou respostas inesperadas.  </p>
+<h2 id="exemplo-inicial-testando-uma-funcao-que-depende-de-outra">📌 <strong>Exemplo inicial: Testando uma Função que Depende de Outra</strong></h2>
+<h3 id="cenario"><strong>Cenário:</strong></h3>
+<p>Temos uma função que depende de outra função para funcionar. Queremos testar a primeira função <strong>sem chamar a segunda</strong>.</p>
+<h3 id="funcao-principal"><strong>Função Principal:</strong></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">funcao_secundaria</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Função que a função principal depende.&quot;&quot;&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">return</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">10</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">return</span> <span class="s2">&quot;&quot;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">def</span> <span class="nf">funcao_principal</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Depende de outra função para funcionar.&quot;&quot;&quot;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">resultado</span> <span class="o">=</span> <span class="n">funcao_secundaria</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">return</span> <span class="n">resultado</span> <span class="o">*</span> <span class="mi">2</span>
 </span></code></pre></div>
-<p>Antes de tentarmos entender o código, execute-o para vermos o que ele faz. Para isso, abra um terminal, ative o ambiente virtual e execute o arquivo <code>servidor.py</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>servidor.py
+<h3 id="o-problema"><strong>O problema:</strong></h3>
+<p>Quando testamos <code>funcao_principal</code>, <strong>ela chama <code>funcao_secundaria</code> de verdade</strong>. Se houver um problema em <code>funcao_secundaria</code>, nosso teste falhará, mesmo que <code>funcao_principal</code> esteja correta.</p>
+<h3 id="solucao-usar-um-mock-para-funcao_secundaria"><strong>Solução: Usar um Mock para <code>funcao_secundaria</code></strong></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">patch</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span> <span class="nf">test_funcao_principal</span><span class="p">():</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Testa a função principal sem chamar a secundária.&quot;&quot;&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="c1"># Criamos um Mock para funcao_secundaria</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s2">&quot;__main__.funcao_secundaria&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">mock_secundaria</span><span class="p">:</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="c1"># Definimos um comportamento falso para o mock</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">mock_secundaria</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="mi">20</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="c1"># Agora, quando chamarmos a função principal, ela usará o Mock em vez da real</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="n">resultado</span> <span class="o">=</span> <span class="n">funcao_principal</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="k">assert</span> <span class="n">resultado</span> <span class="o">==</span> <span class="mi">40</span>
 </span></code></pre></div>
-<p>Você deve ver uma mensagem parecida com esta:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ModuleNotFoundError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span><span class="s1">&#39;flask&#39;</span>
+<h3 id="explicando-o-codigo-do-mock"><strong>Explicando o Código do Mock</strong></h3>
+<ol>
+<li><strong><code>patch("__main__.funcao_secundaria")</code></strong> → Substitui temporariamente <code>funcao_secundaria</code> por um Mock.</li>
+<li><strong><code>mock_secundaria.return_value = 20</code></strong> → Simula o retorno da função secundária.</li>
+<li><strong>Chamamos <code>funcao_principal(10)</code></strong>, mas agora <strong>a função secundária não é chamada de verdade</strong>.</li>
+<li><strong>O teste verifica se a função retorna <code>40</code> como esperado.</strong></li>
+</ol>
+<p>Faça um teste mudando a função <code>funcao_secundaria</code> para retornar outra coisa e veja se o teste continua funcionando.</p>
+<h2 id="exemplo-pratico-testando-uma-funcao-que-faz-requisicoes-http">📌 <strong>Exemplo Prático: Testando uma Função que Faz Requisições HTTP</strong></h2>
+<h3 id="cenario_1"><strong>Cenário:</strong></h3>
+<p>Temos uma função que obtém a previsão do tempo de uma API externa. Queremos testá-la <strong>sem realmente chamar a API</strong>.  </p>
+<p>Se não usarmos Mocks, cada vez que rodarmos o teste, ele chamará a API de verdade, o que pode ser:<br />
+❌ Lento (depende da resposta da API).<br />
+❌ Instável (a API pode estar fora do ar).<br />
+❌ Caro (se a API for paga).  </p>
+<p>Com <strong>Mocks</strong>, podemos substituir a chamada real por uma <strong>resposta simulada</strong>, garantindo que o teste sempre rode rápido e previsível.  </p>
+<h3 id="passo-1-criando-a-funcao-que-depende-da-api">🔹 <strong>Passo 1: Criando a Função que Depende da API</strong></h3>
+<p>Esta função faz uma requisição a uma API externa para obter a previsão do tempo.  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">def</span> <span class="nf">obter_previsao_tempo</span><span class="p">(</span><span class="n">cidade</span><span class="p">):</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Consulta uma API externa para obter a previsão do tempo.&quot;&quot;&quot;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://api.previsao-tempo.com/</span><span class="si">{</span><span class="n">cidade</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">resposta</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="k">if</span> <span class="n">resposta</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="k">return</span> <span class="n">resposta</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;previsao&quot;</span><span class="p">]</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="k">return</span> <span class="s2">&quot;Erro ao obter previsão&quot;</span>
 </span></code></pre></div>
-<p>O erro ocorreu porque o Flask não está instalado no seu ambiente virtual. Para corrigir isso, instale o Flask utilizando o <code>pip</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>flask
+<h3 id="o-problema_1"><strong>O problema:</strong></h3>
+<p>Quando testamos essa função, <strong>ela faz uma requisição real para a API</strong>. Queremos testá-la sem depender da API externa.  </p>
+<h3 id="passo-2-criando-um-mock-para-a-requisicao">🔹 <strong>Passo 2: Criando um Mock para a Requisição</strong></h3>
+<p>Usamos <strong>Mocks</strong> para substituir <code>requests.get()</code> por uma versão falsa que retorna sempre a mesma resposta.  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">patch</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">def</span> <span class="nf">test_obter_previsao_tempo</span><span class="p">():</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Testa a função sem chamar a API de verdade.&quot;&quot;&quot;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="c1"># Criamos um Mock para requests.get</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s2">&quot;requests.get&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">mock_get</span><span class="p">:</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="c1"># Definimos um comportamento falso para o mock</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="n">mock_get</span><span class="o">.</span><span class="n">return_value</span><span class="o">.</span><span class="n">status_code</span> <span class="o">=</span> <span class="mi">200</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="n">mock_get</span><span class="o">.</span><span class="n">return_value</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;previsao&quot;</span><span class="p">:</span> <span class="s2">&quot;Ensolarado&quot;</span><span class="p">}</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="c1"># Agora, quando chamarmos a função, ela usará o Mock em vez da API real</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        <span class="n">resultado</span> <span class="o">=</span> <span class="n">obter_previsao_tempo</span><span class="p">(</span><span class="s2">&quot;São Paulo&quot;</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="k">assert</span> <span class="n">resultado</span> <span class="o">==</span> <span class="s2">&quot;Ensolarado&quot;</span>
 </span></code></pre></div>
-<p>Agora sim, execute o servidor novamente. Se tudo ocorrer bem, você verá uma mensagem parecida com esta:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a> * Running on http://127.0.0.1:5000
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Press CTRL+C to quit
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a> * Restarting with stat
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a> * Debugger is active!
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a> * Debugger PIN: 100-429-768
+<h2 id="explicando-o-codigo-do-mock_1">🔹 <strong>Explicando o Código do Mock</strong></h2>
+<h3 id="o-que-o-mock-esta-fazendo">🛠️ <strong>O que o Mock está fazendo?</strong></h3>
+<ol>
+<li><strong><code>patch("requests.get")</code></strong> → Substitui temporariamente <code>requests.get</code> por um Mock.  </li>
+<li><strong><code>mock_get.return_value.status_code = 200</code></strong> → Simula uma resposta bem-sucedida da API.  </li>
+<li><strong><code>mock_get.return_value.json.return_value = {"previsao": "Ensolarado"}</code></strong> → Simula o JSON retornado pela API.  </li>
+<li><strong>Chamamos <code>obter_previsao_tempo("São Paulo")</code></strong>, mas agora <strong>a API não é chamada de verdade</strong>.  </li>
+<li><strong>O teste verifica se a função retorna <code>"Ensolarado"</code> como esperado.</strong>  </li>
+</ol>
+<h2 id="testando-um-erro-da-api">🔹 <strong>Testando um Erro da API</strong></h2>
+<p>Podemos testar <strong>diferentes cenários</strong>, como a API retornando erro:  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">test_obter_previsao_tempo_erro</span><span class="p">():</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Testa o que acontece se a API falhar.&quot;&quot;&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s2">&quot;requests.get&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">mock_get</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="n">mock_get</span><span class="o">.</span><span class="n">return_value</span><span class="o">.</span><span class="n">status_code</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># Simulamos um erro da API</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="n">resultado</span> <span class="o">=</span> <span class="n">obter_previsao_tempo</span><span class="p">(</span><span class="s2">&quot;São Paulo&quot;</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="k">assert</span> <span class="n">resultado</span> <span class="o">==</span> <span class="s2">&quot;Erro ao obter previsão&quot;</span>
 </span></code></pre></div>
-<p>Essa mensagem indica que o servidor está rodando e pronto para receber requisições.</p>
-<p>Abra o navegador de sua preferência e entre no endereço apresentado pelo seu programa. No exemplo acima, o endereço é <code>http://127.0.0.1:5000</code></p>
-<div class="admonition danger">
-<p class="admonition-title">Atenção</p>
-<p>Alguns navegadores podem não funcionar como esperado. Desta forma, teste em outros navegadores.</p>
-</div>
-<p>Você deve estar vendo uma página em branco. Se não estiver, tente acessar o endereço a partir de outro navegador. Se mesmo assim não funcionar, verifique se o servidor está rodando e se o endereço está correto.</p>
-<h2 id="muito-bem-agora-vamos-entender-o-codigo-acima">Muito bem, agora vamos entender o código acima</h2>
-<p>Flask é um microframework web escrito em Python, projetado para ser leve, flexível e fácil de usar. Ele é amplamente utilizado para desenvolver aplicações web, permitindo que os desenvolvedores construam projetos de forma rápida e eficiente. É possível ver nele algumas características que vimos no Django, mas de forma mais simplificada.</p>
-<ul>
-<li>
-<p><code>app = Flask(__name__)</code> cria uma instância da classe Flask, que será a base da aplicação. O argumento <code>__name__</code> é uma variável pré-definida em Python que contém o nome do módulo atual. Flask usa o nome do módulo para determinar a localização dos arquivos estáticos (como imagens e arquivos html).</p>
-</li>
-<li>
-<p><code>@app.route('/')</code>: Define a rota principal da aplicação, ou seja, o que acontece quando você acessa <code>http://127.0.0.1:5000/</code> no navegador. A função logo abaixo é chamada toda vez que alguém acessa essa rota.</p>
-</li>
-<li><code>print(request.method)</code>: Exibe no terminal o método HTTP usado na requisição, como GET, POST, etc.</li>
-<li><code>print(request.headers)</code>: Exibe no terminal todos os cabeçalhos da requisição HTTP, que incluem informações como o tipo de navegador, o tipo de conteúdo aceito e outras configurações do cliente.</li>
-<li><code>return ""</code>: Retorna uma resposta vazia para o cliente, ou seja, não renderiza nada no navegador.</li>
-</ul>
-<p>O restante do código inicia o servidor Flask e habilita o modo de depuração (debug mode), que recarrega automaticamente o servidor ao modificar o código e exibe mensagens detalhadas de erro no navegador, úteis para desenvolvimento.</p>
-<h2 id="entendi-mas-entao-como-eu-faco-algo-aparecer-no-navegador">Entendi, mas então como eu faço algo aparecer no navegador?</h2>
-<p>Calma, pequeno gafanhoto. Antes de prosseguir, vamos entender mais alguns detalhes do que aconteceu até o momento.</p>
-<p>Quando acessamos o endereço <code>http://127.0.0.1:5000/</code> no navegador, o navegador enviou uma requisição para o servidor. O servidor recebeu essa requisição e identificou qual a rota requisitada. No nosso caso, a rota requisitada foi a raiz do servidor, ou seja, a rota <code>/</code>. O servidor então executou a função associada a essa rota e retornou uma resposta vazia.</p>
-<p>Dentro da função associada à rota <code>/</code>, existem dois prints. O primeiro printa o método HTTP utilizado na requisição, que no nosso caso é o método GET. O segundo printa os cabeçalhos da requisição, que contém informações como o tipo de navegador, o tipo de conteúdo aceito e outras configurações do cliente. Toda vez que um navegador quer se comunicar com um servidor, ele envia uma requisição HTTP contendo essas informações.</p>
-<p>O seu terminal deve ter mostrado uma saída parecida com esta (testei nos dispositivos que eu tinha disponíveis no momento):</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">MacOS - Safari</label><label for="__tabbed_1_2">MacOS - Firefox</label><label for="__tabbed_1_3">Android - Chrome</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>GET / HTTP/1.1
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Host: 0.0.0.0:8080
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Upgrade-Insecure-Requests: 1
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Accept-Language: en-us
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Accept-Encoding: gzip, deflate
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Connection: keep-alive
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>GET / HTTP/1.1
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Host: localhost:8080
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:83.0) Gecko/20100101 Firefox/83.0
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Accept-Encoding: gzip, deflate
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Connection: keep-alive
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>Cookie: _ga=GA1.1.16347193.1542986176
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Upgrade-Insecure-Requests: 1
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>GET / HTTP/1.1
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Host: 192.168.15.14:8080
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Connection: keep-alive
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Save-Data: on
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Upgrade-Insecure-Requests: 1
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>Accept-Encoding: gzip, deflate
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<p>Sugiro que você também tente acessar o mesmo endereço a partir de navegadores e dispositivos diferentes. Caso você queira testar o acesso de um dispositivo diferente você vai precisar descobrir o IP do servidor.</p>
-<p>Nos testes acima eu acessei o servidor a partir do Android e, no meu laptop, do Firefox e do Safari. É importante notar que cada um desses navegadores foi desenvolvido por empresas diferentes, no caso, Google, Mozilla e Apple. Mas então como todos eles conseguem se comunicar com o nosso servidor? É aí que entra o tal do HTTP.</p>
-<p>Os 3 exemplos mostrados acima são muito semelhantes, apesar de virem de fabricantes diferentes. Isso acontece porque todos eles seguem o mesmo <em>protocolo</em>, o <b>H</b>yper <b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol. O que precisamos saber por enquanto é que ele define como devem ser as requisições e respostas nessa comunicação. Como o HTTP é padronizado, se o seu servidor souber se comunicar em HTTP ele poderá se comunicar com qualquer navegador, independente das implementações específicas.</p>
-<p>Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com um dicionário: chaves, dois pontos e os valores. Esse conjunto de chaves e valores é o <strong>cabeçalho (header)</strong> da requisição <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#requests">(request)</a> ou resposta <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses">(response)</a>. Como sempre, incentivo que você procure por conta própria mais detalhes sobre esse protocolo. Essa é apenas uma breve introdução.</p>
-<div class="admonition question choice">
-<p class="admonition-title">Question</p>
-<p>Considere o texto a seguir:</p>
-<div class="language-text highlight"><pre><span></span><code>GET / HTTP/1.1
-Host: 192.168.15.14:8080
-Connection: keep-alive
-Save-Data: on
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate
-Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
-</code></pre></div>
-<p>Escolha o opção verdadeira:</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O texto representa um Servidor de Nome de Domínio.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O texto representa uma resposta HTTP.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> O texto representa uma requisição HTTP.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O texto representa os dados enviados pelo Cliente.</li>
-</ul>
-<div class="admonition details">
-<p class="admonition-title">Resposta</p>
-<p>O texto representa uma requisição HTTP. Para mais detalhes veja <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#requests">(request)</a>. </p>
-</div>
-</div>
-<h2 id="e-agora-ja-podemos-enviar-a-resposta">E agora, já podemos enviar a resposta?</h2>
-<p>Sim! Agora estamos prontos. Sem mais delongas, altere a seguinte linha no seu código:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="hll">    <span class="k">return</span> <span class="s1">&#39;Hello World&#39;</span>
-</span></span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Acesse novamente a página pelo seu navegador. Pronto, nosso primeiro servidor está funcionando e retornando uma resposta!</p>
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Servidores são como programas em loop infinito. Se quiser parar de rodar, basta encerrar o programa com <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>.</p>
-</div>
-<p>Agora é só seguir para a <a href="../parte2/">parte 2 deste handout</a>.</p>
+<p>Agora garantimos que a função <strong>lida corretamente com falhas na API</strong>.</p>
+<h2 id="resumo">📌 <strong>Resumo</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>O que os Mocks fazem?</strong></th>
+<th><strong>Vantagens</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substituem funções ou objetos reais nos testes</td>
+<td>Testes mais rápidos e previsíveis</td>
+</tr>
+<tr>
+<td>Simulam diferentes respostas (sucesso, erro, timeout)</td>
+<td>Testamos cenários difíceis de simular com código real</td>
+</tr>
+<tr>
+<td>Evitam dependências externas como APIs ou arquivos</td>
+<td>Testes independentes de servidores externos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quando-usar-mocks"><strong>Quando usar Mocks?</strong></h3>
+<p>✅ Quando o código depende de <strong>APIs externas</strong>.<br />
+✅ Quando queremos <strong>simular erros</strong> sem realmente causar falhas.<br />
+✅ Quando precisamos <strong>testar código que depende de outros códigos</strong>.  </p>
+<p>Chegamos então no passo final. Agora que sabemos tudo sobre testes automatizados, vamos aplicar esse conhecimento construindo <a href="../6-flask/">Testes para APIs Flask</a>.</p>
 
 
 

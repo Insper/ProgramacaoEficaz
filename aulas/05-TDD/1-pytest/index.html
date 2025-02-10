@@ -10,13 +10,13 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/01-getit/parte1/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/05-TDD/1-pytest/">
       
       
-        <link rel="prev" href="../parte0/">
+        <link rel="prev" href="../0-tdd/">
       
       
-        <link rel="next" href="../parte2/">
+        <link rel="next" href="../2-boaspraticas/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Handout Parte 1: Criando o servidor - Programação Eficaz - Insper 2025/1</title>
+        <title>Pytest - Programação Eficaz - Insper 2025/1</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#01-get-it-o-retorno" class="md-skip">
+        <a href="#introducao-ao-pytest" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Handout Parte 1: Criando o servidor
+              Pytest
             
           </span>
         </div>
@@ -324,19 +324,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -350,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             01 - Get-it
@@ -364,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aula01.pdf" class="md-nav__link">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte0/" class="md-nav__link">
+      <a href="../../01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,30 +422,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Handout Parte 1: Criando o servidor
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,80 +434,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#parte-1-criando-o-servidor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parte 1: Criando o servidor
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comecando-pelo-comeco" class="md-nav__link">
-    <span class="md-ellipsis">
-      Começando pelo começo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#voce-disse-que-seria-mao-na-massa-mas-ainda-nao-toquei-no-codigo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Você disse que seria mão na massa, mas ainda não toquei no código!
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#muito-bem-agora-vamos-entender-o-codigo-acima" class="md-nav__link">
-    <span class="md-ellipsis">
-      Muito bem, agora vamos entender o código acima
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#entendi-mas-entao-como-eu-faco-algo-aparecer-no-navegador" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entendi, mas então como eu faço algo aparecer no navegador?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#e-agora-ja-podemos-enviar-a-resposta" class="md-nav__link">
-    <span class="md-ellipsis">
-      E agora, já podemos enviar a resposta?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -542,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte2/" class="md-nav__link">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -563,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte3/" class="md-nav__link">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte4/" class="md-nav__link">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,17 +790,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -910,7 +816,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             05 - Testes automatizados
@@ -924,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/0-tdd/" class="md-nav__link">
+      <a href="../0-tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -942,10 +848,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../05-TDD/1-pytest/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pytest
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -954,6 +880,185 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-pytest" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é pytest?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-instalar-o-pytest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como instalar o pytest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-escrever-um-teste-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como escrever um teste básico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como escrever um teste básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-um-teste-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Exemplo de um teste simples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-rodar-os-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como rodar os testes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-green-refactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Red-Green-Refactor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Red-Green-Refactor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-1-criar-a-funcao-de-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Ciclo 1 - Criar a função de média
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Ciclo 1 - Criar a função de média">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-red-escrevemos-um-teste-que-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Red (Escrevemos um teste que falha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-green-fazemos-o-teste-passar-com-o-codigo-mais-simples-possivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Green (Fazemos o teste passar com o código mais simples possível)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-refactor-melhoramos-o-codigo-se-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Refactor (Melhoramos o código, se necessário)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-2-lidar-com-listas-vazias" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Ciclo 2 - Lidar com listas vazias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Ciclo 2 - Lidar com listas vazias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-red-escrevemos-um-novo-teste-que-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Red (Escrevemos um novo teste que falha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-green-fazemos-o-teste-passar-com-a-solucao-mais-simples-possivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Green (Fazemos o teste passar com a solução mais simples possível)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-refactor-melhoramos-a-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Refactor (Melhoramos a implementação)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-do-processo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Resumo do Processo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -966,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/2-boaspraticas/" class="md-nav__link">
+      <a href="../2-boaspraticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -987,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/3-exceptions/" class="md-nav__link">
+      <a href="../3-exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1008,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/4-fixtures/" class="md-nav__link">
+      <a href="../4-fixtures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1029,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/5-mocks/" class="md-nav__link">
+      <a href="../5-mocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/6-flask/" class="md-nav__link">
+      <a href="../6-flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1443,54 +1548,159 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parte-1-criando-o-servidor" class="md-nav__link">
+  <a href="#o-que-e-pytest" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 1: Criando o servidor
+      O que é pytest?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comecando-pelo-comeco" class="md-nav__link">
+  <a href="#como-instalar-o-pytest" class="md-nav__link">
     <span class="md-ellipsis">
-      Começando pelo começo
+      Como instalar o pytest
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#voce-disse-que-seria-mao-na-massa-mas-ainda-nao-toquei-no-codigo" class="md-nav__link">
+  <a href="#como-escrever-um-teste-basico" class="md-nav__link">
     <span class="md-ellipsis">
-      Você disse que seria mão na massa, mas ainda não toquei no código!
+      Como escrever um teste básico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como escrever um teste básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-um-teste-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Exemplo de um teste simples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-rodar-os-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como rodar os testes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#muito-bem-agora-vamos-entender-o-codigo-acima" class="md-nav__link">
+  <a href="#red-green-refactor" class="md-nav__link">
     <span class="md-ellipsis">
-      Muito bem, agora vamos entender o código acima
+      Red-Green-Refactor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Red-Green-Refactor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-1-criar-a-funcao-de-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Ciclo 1 - Criar a função de média
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Ciclo 1 - Criar a função de média">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-red-escrevemos-um-teste-que-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Red (Escrevemos um teste que falha)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#entendi-mas-entao-como-eu-faco-algo-aparecer-no-navegador" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-green-fazemos-o-teste-passar-com-o-codigo-mais-simples-possivel" class="md-nav__link">
     <span class="md-ellipsis">
-      Entendi, mas então como eu faço algo aparecer no navegador?
+      2️⃣ Green (Fazemos o teste passar com o código mais simples possível)
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#3-refactor-melhoramos-o-codigo-se-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Refactor (Melhoramos o código, se necessário)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-2-lidar-com-listas-vazias" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Ciclo 2 - Lidar com listas vazias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Ciclo 2 - Lidar com listas vazias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-red-escrevemos-um-novo-teste-que-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Red (Escrevemos um novo teste que falha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-green-fazemos-o-teste-passar-com-a-solucao-mais-simples-possivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Green (Fazemos o teste passar com a solução mais simples possível)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-refactor-melhoramos-a-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Refactor (Melhoramos a implementação)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#e-agora-ja-podemos-enviar-a-resposta" class="md-nav__link">
+  <a href="#resumo-do-processo" class="md-nav__link">
     <span class="md-ellipsis">
-      E agora, já podemos enviar a resposta?
+      🔹 Resumo do Processo
     </span>
   </a>
   
@@ -1511,180 +1721,148 @@
                   
 
 
-<h1 id="01-get-it-o-retorno">01 - Get-it - O retorno</h1>
-<h2 id="parte-1-criando-o-servidor">Parte 1: Criando o servidor</h2>
-<p>Vamos começar nosso curso com um exemplo de implementação de uma página bem simples. Durante o desenvolvimento discutiremos alguns dos detalhes e conceitos envolvidos. O objetivo deste handout é introduzir alguns conceitos de Programação Eficaz que serão importantes ao longo do curso a partir de uma abordagem mão na massa.</p>
-<p>Após o final deste handout você terá um protótipo do Get-it, nosso conhecido sistema de bloco de notas feito utilizando uma nova tecnologia.</p>
-<h2 id="comecando-pelo-comeco">Começando pelo começo</h2>
-<p>Lembra que semestre passado nós aprendemos sobre os diferentes tipos de teste de software? Vamos começar definindo uma história de usuário. O objetivo não é fazer uma revisão de Design, então vamos assumir que temos uma persona pronta e o seu nome é Fábio:</p>
-<div class="admonition danger">
-<p class="admonition-title">Lista de anotações</p>
-<p><strong>SENDO</strong> o Fábio</p>
-<p><strong>POSSO</strong> digitar o endereço do Get-it no navegador e visualizar a lista de anotações</p>
-<p><strong>PARA</strong> lembrar os detalhes da minha próxima tarefa</p>
-</div>
-<p>Muito bem. Agora podemos começar a desenvolver o nosso protótipo.</p>
-<p>Isso nos leva à primeira pergunta: ok, o Fábio vai digitar o endereço no navegador e apertar <em>Enter</em>, mas o que acontece depois disso?</p>
-<p>MUITA coisa. Vamos começar com uma explicação bastante simplista, mas que deve dar uma ideia geral dos passos. Se você tiver curiosidade, a Mozilla possui um <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona">material muito didático</a> para quem está iniciando no desenvolvimento web.</p>
+<h1 id="introducao-ao-pytest">Introdução ao <strong>pytest</strong></h1>
+<p>O <strong>pytest</strong> é um dos frameworks de teste mais populares para Python. Ele é simples de usar, mas poderoso o suficiente para escrever testes complexos. Com <strong>pytest</strong>, você pode testar funções, classes e até mesmo aplicações inteiras com facilidade.  </p>
+<h2 id="o-que-e-pytest">O que é pytest?</h2>
+<p>O <strong>pytest</strong> é um framework que facilita a escrita e execução de testes automatizados em Python. Ele é mais intuitivo do que o módulo padrão <code>unittest</code>, permitindo que você escreva testes com menos código e mais clareza.  </p>
+<h2 id="como-instalar-o-pytest">Como instalar o pytest</h2>
+<p>Para começar a usar o <code>pytest</code>, primeiro você precisa instalá-lo. <strong>Dentro do ambiente virtual</strong>, basta rodar:  </p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest
+</span></code></pre></div>
+<p>Após a instalação, você pode verificar se o <code>pytest</code> está disponível com:  </p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pytest<span class="w"> </span>--version
+</span></code></pre></div>
+<h2 id="como-escrever-um-teste-basico">Como escrever um teste básico</h2>
+<p>Os testes no <code>pytest</code> são escritos como funções normais e utilizam <strong>assertivas (<code>assert</code>)</strong> para verificar se os resultados são os esperados.  </p>
+<h3 id="exemplo-de-um-teste-simples">📌 <strong>Exemplo de um teste simples</strong></h3>
+<p>Crie um arquivo chamado <strong><code>test_math.py</code></strong> e adicione o seguinte código:  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">():</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">assert</span> <span class="n">soma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">assert</span> <span class="n">soma</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">assert</span> <span class="n">soma</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</span></code></pre></div>
+<p>Aqui, estamos testando se a função <code>soma(a, b)</code> retorna os valores corretos para diferentes entradas.  </p>
+<h2 id="como-rodar-os-testes">Como rodar os testes</h2>
+<p>Para executar os testes, basta rodar o seguinte comando no terminal:  </p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pytest
+</span></code></pre></div>
+<p>Se tudo estiver correto, você verá uma saída semelhante a:  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>============================= test session starts =============================
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>collected 1 item                                                               
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>test_math.py .                                                       [100%]
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>============================== 1 passed in 0.01s ==============================
+</span></code></pre></div>
+<p>Mas como o <code>pytest</code> sabe que o arquivo <code>test_math.py</code> contém testes? Ele segue uma convenção de nomenclatura: os arquivos de teste devem começar com <code>test_</code> ou terminar com <code>_test</code>. Por causa disso, não é comum que tenhamos testes e o código principal no mesmo arquivo.</p>
+<p>O mais usual seria ter um arquivo <code>math.py</code> com a implementação da função <code>soma</code> e um arquivo <code>test_math.py</code> com os testes.</p>
+<h2 id="red-green-refactor">Red-Green-Refactor</h2>
+<p>Para exemplificar o fluxo <strong>Red-Green-Refactor</strong> com <code>pytest</code>, vamos criar testes para uma função chamada <code>calcula_media</code> que deve receber uma lista de inteiros e retornar a média dos valores. Para isso, vamos seguir os seguintes passos:</p>
 <ol>
-<li>O navegador precisa dos dados da página a ser mostrada, mas a informação está em outro computador, o servidor, que está (muito provavelmente) fisicamente distante. Por isso, o endereço digitado no navegador é utilizado para encontrar a localização do servidor utilizando o <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona#dns_explicado">DNS</a>.</li>
-<li>Agora que o cliente (o computador do Fábio) sabe onde encontrar o servidor, ele entra em contato com o servidor pedindo os dados. Esse pedido é o que chamamos de <strong>requisição</strong>.</li>
-<li>Ao receber a requisição, o servidor responde com a página solicitada.</li>
-<li>O navegador recebe as partes que formam a página (HTML, CSS, Javascript, imagens, etc.) e mostra (renderiza) para o Fábio.</li>
+<li>Crie um arquivo <code>funcoes.py</code>.</li>
+<li>Crie um arquivo chamado <code>test_funcoes.py</code>.</li>
 </ol>
-<p>Essa é uma lista bastante simplificada do que acontece, mas talvez esse último passo tenha sido simplificado demais. Cada parte que forma a página (os arquivos CSS, Javascript, imagens, etc.) deve ser solicitada separadamente para o servidor. Então os passos 1 a 3 são repetidos para cada uma delas.</p>
-<h2 id="voce-disse-que-seria-mao-na-massa-mas-ainda-nao-toquei-no-codigo">Você disse que seria mão na massa, mas ainda não toquei no código!</h2>
-<p>Eu sei, me desculpe. Agora sim, vamos começar!</p>
-<p>Vamos implementar um servidor <strong>bastante</strong> simplificado utilizando a biblioteca Flask. Para isso, crie dentro da pasta do seu repositório criada anteriormente um arquivo chamado <code>servidor.py</code> (pode ser o nome que você preferir) com o seguinte conteúdo:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">return</span> <span class="s2">&quot;&quot;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<h3 id="ciclo-1-criar-a-funcao-de-media">🔹 <strong>Ciclo 1 - Criar a função de média</strong></h3>
+<h4 id="1-red-escrevemos-um-teste-que-falha"><strong>1️⃣ Red (Escrevemos um teste que falha)</strong></h4>
+<p>Antes de criar a função, escrevemos um teste no arquivo <code>test_funcoes.py</code> para garantir que a média de <code>[2, 4, 6]</code> seja <code>4.0</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">funcoes</span> <span class="kn">import</span> <span class="n">calcula_media</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">def</span> <span class="nf">test_calcula_media</span><span class="p">():</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="k">assert</span> <span class="n">calcula_media</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span> <span class="o">==</span> <span class="mf">4.0</span>
 </span></code></pre></div>
-<p>Antes de tentarmos entender o código, execute-o para vermos o que ele faz. Para isso, abra um terminal, ative o ambiente virtual e execute o arquivo <code>servidor.py</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>servidor.py
+<p>🚨 <strong>O teste falha</strong> porque <code>calcula_media</code> ainda não existe.</p>
+<h4 id="2-green-fazemos-o-teste-passar-com-o-codigo-mais-simples-possivel"><strong>2️⃣ Green (Fazemos o teste passar com o código mais simples possível)</strong></h4>
+<p>Agora criamos a função <strong>mais simples possível</strong> no arquivo <code>funcoes.py</code> para passar no teste:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">calcula_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="n">total</span> <span class="o">+=</span> <span class="n">num</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">return</span> <span class="n">total</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Você deve ver uma mensagem parecida com esta:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ModuleNotFoundError:<span class="w"> </span>No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span><span class="s1">&#39;flask&#39;</span>
+<p>✅ <strong>Agora o teste passa!</strong></p>
+<h4 id="3-refactor-melhoramos-o-codigo-se-necessario"><strong>3️⃣ Refactor (Melhoramos o código, se necessário)</strong></h4>
+<p>Agora que saímos de DevLife, podemos utilizar as funções prontas do Python para simplificar o código:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">calcula_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
 </span></code></pre></div>
-<p>O erro ocorreu porque o Flask não está instalado no seu ambiente virtual. Para corrigir isso, instale o Flask utilizando o <code>pip</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>flask
+<h3 id="ciclo-2-lidar-com-listas-vazias">🔹 <strong>Ciclo 2 - Lidar com listas vazias</strong></h3>
+<p>Agora, queremos melhorar a função para que <strong>não quebre</strong> caso receba uma lista vazia.</p>
+<h4 id="1-red-escrevemos-um-novo-teste-que-falha"><strong>1️⃣ Red (Escrevemos um novo teste que falha)</strong></h4>
+<p>Adicionamos um novo caso de teste para listas vazias:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">test_calcula_media_lista_vazia</span><span class="p">():</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="k">assert</span> <span class="n">calcula_media</span><span class="p">([])</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># Esperamos que a média de uma lista vazia seja 0</span>
 </span></code></pre></div>
-<p>Agora sim, execute o servidor novamente. Se tudo ocorrer bem, você verá uma mensagem parecida com esta:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a> * Running on http://127.0.0.1:5000
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Press CTRL+C to quit
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a> * Restarting with stat
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a> * Debugger is active!
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a> * Debugger PIN: 100-429-768
+<p>🚨 <strong>O teste falha!</strong> O código atual gera um erro de <strong>divisão por zero</strong>.</p>
+<h4 id="2-green-fazemos-o-teste-passar-com-a-solucao-mais-simples-possivel"><strong>2️⃣ Green (Fazemos o teste passar com a solução mais simples possível)</strong></h4>
+<p>Agora, alteramos a função para tratar listas vazias:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">calcula_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="k">if</span> <span class="n">lista</span> <span class="o">==</span> <span class="p">[]:</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="k">return</span> <span class="mi">0</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Essa mensagem indica que o servidor está rodando e pronto para receber requisições.</p>
-<p>Abra o navegador de sua preferência e entre no endereço apresentado pelo seu programa. No exemplo acima, o endereço é <code>http://127.0.0.1:5000</code></p>
-<div class="admonition danger">
-<p class="admonition-title">Atenção</p>
-<p>Alguns navegadores podem não funcionar como esperado. Desta forma, teste em outros navegadores.</p>
-</div>
-<p>Você deve estar vendo uma página em branco. Se não estiver, tente acessar o endereço a partir de outro navegador. Se mesmo assim não funcionar, verifique se o servidor está rodando e se o endereço está correto.</p>
-<h2 id="muito-bem-agora-vamos-entender-o-codigo-acima">Muito bem, agora vamos entender o código acima</h2>
-<p>Flask é um microframework web escrito em Python, projetado para ser leve, flexível e fácil de usar. Ele é amplamente utilizado para desenvolver aplicações web, permitindo que os desenvolvedores construam projetos de forma rápida e eficiente. É possível ver nele algumas características que vimos no Django, mas de forma mais simplificada.</p>
-<ul>
-<li>
-<p><code>app = Flask(__name__)</code> cria uma instância da classe Flask, que será a base da aplicação. O argumento <code>__name__</code> é uma variável pré-definida em Python que contém o nome do módulo atual. Flask usa o nome do módulo para determinar a localização dos arquivos estáticos (como imagens e arquivos html).</p>
-</li>
-<li>
-<p><code>@app.route('/')</code>: Define a rota principal da aplicação, ou seja, o que acontece quando você acessa <code>http://127.0.0.1:5000/</code> no navegador. A função logo abaixo é chamada toda vez que alguém acessa essa rota.</p>
-</li>
-<li><code>print(request.method)</code>: Exibe no terminal o método HTTP usado na requisição, como GET, POST, etc.</li>
-<li><code>print(request.headers)</code>: Exibe no terminal todos os cabeçalhos da requisição HTTP, que incluem informações como o tipo de navegador, o tipo de conteúdo aceito e outras configurações do cliente.</li>
-<li><code>return ""</code>: Retorna uma resposta vazia para o cliente, ou seja, não renderiza nada no navegador.</li>
-</ul>
-<p>O restante do código inicia o servidor Flask e habilita o modo de depuração (debug mode), que recarrega automaticamente o servidor ao modificar o código e exibe mensagens detalhadas de erro no navegador, úteis para desenvolvimento.</p>
-<h2 id="entendi-mas-entao-como-eu-faco-algo-aparecer-no-navegador">Entendi, mas então como eu faço algo aparecer no navegador?</h2>
-<p>Calma, pequeno gafanhoto. Antes de prosseguir, vamos entender mais alguns detalhes do que aconteceu até o momento.</p>
-<p>Quando acessamos o endereço <code>http://127.0.0.1:5000/</code> no navegador, o navegador enviou uma requisição para o servidor. O servidor recebeu essa requisição e identificou qual a rota requisitada. No nosso caso, a rota requisitada foi a raiz do servidor, ou seja, a rota <code>/</code>. O servidor então executou a função associada a essa rota e retornou uma resposta vazia.</p>
-<p>Dentro da função associada à rota <code>/</code>, existem dois prints. O primeiro printa o método HTTP utilizado na requisição, que no nosso caso é o método GET. O segundo printa os cabeçalhos da requisição, que contém informações como o tipo de navegador, o tipo de conteúdo aceito e outras configurações do cliente. Toda vez que um navegador quer se comunicar com um servidor, ele envia uma requisição HTTP contendo essas informações.</p>
-<p>O seu terminal deve ter mostrado uma saída parecida com esta (testei nos dispositivos que eu tinha disponíveis no momento):</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">MacOS - Safari</label><label for="__tabbed_1_2">MacOS - Firefox</label><label for="__tabbed_1_3">Android - Chrome</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>GET / HTTP/1.1
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Host: 0.0.0.0:8080
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Upgrade-Insecure-Requests: 1
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Accept-Language: en-us
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Accept-Encoding: gzip, deflate
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Connection: keep-alive
+<p>✅ <strong>Agora o teste passa!</strong></p>
+<h4 id="3-refactor-melhoramos-a-implementacao"><strong>3️⃣ Refactor (Melhoramos a implementação)</strong></h4>
+<p>A função funciona, mas podemos utilizar técnicas mais avançadas para simplificar o código:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">calcula_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">lista</span> <span class="o">==</span> <span class="p">[]</span> <span class="k">else</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>GET / HTTP/1.1
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Host: localhost:8080
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:83.0) Gecko/20100101 Firefox/83.0
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Accept-Language: pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Accept-Encoding: gzip, deflate
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Connection: keep-alive
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>Cookie: _ga=GA1.1.16347193.1542986176
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Upgrade-Insecure-Requests: 1
+<h2 id="resumo-do-processo">🔹 <strong>Resumo do Processo</strong></h2>
+<p>🔴 <strong>Red</strong> – Criamos um teste antes da implementação e verificamos que ele falha.<br />
+🟢 <strong>Green</strong> – Implementamos o código mais simples possível para fazer o teste passar.<br />
+🛠️ <strong>Refactor</strong> – Melhoramos o código sem alterar o comportamento esperado.  </p>
+<p>E qual é a melhor maneira de estruturarmos os testes? Vamos ver isso <a href="../2-boaspraticas/">a seguir!</a></p>
+<!-- ## Recursos úteis do pytest  
+
+### 1️⃣ **Testes paramétricos** (rodar o mesmo teste com vários valores)  
+Podemos usar `@pytest.mark.parametrize` para testar múltiplos casos de forma eficiente:  
+
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;a, b, resultado&quot;</span><span class="p">,</span> <span class="p">[</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">])</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">resultado</span><span class="p">):</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="k">assert</span> <span class="n">soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado</span>
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>GET / HTTP/1.1
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Host: 192.168.15.14:8080
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Connection: keep-alive
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Save-Data: on
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Upgrade-Insecure-Requests: 1
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>Accept-Encoding: gzip, deflate
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+
+### 2️⃣ **Testes com exceções** (testando erros)  
+Podemos verificar se uma função levanta uma exceção esperada com `pytest.raises()`:  
+
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Divisão por zero não permitida!&quot;</span><span class="p">)</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">def</span> <span class="nf">test_divide</span><span class="p">():</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </span></code></pre></div>
-</div>
-</div>
-</div>
-<p>Sugiro que você também tente acessar o mesmo endereço a partir de navegadores e dispositivos diferentes. Caso você queira testar o acesso de um dispositivo diferente você vai precisar descobrir o IP do servidor.</p>
-<p>Nos testes acima eu acessei o servidor a partir do Android e, no meu laptop, do Firefox e do Safari. É importante notar que cada um desses navegadores foi desenvolvido por empresas diferentes, no caso, Google, Mozilla e Apple. Mas então como todos eles conseguem se comunicar com o nosso servidor? É aí que entra o tal do HTTP.</p>
-<p>Os 3 exemplos mostrados acima são muito semelhantes, apesar de virem de fabricantes diferentes. Isso acontece porque todos eles seguem o mesmo <em>protocolo</em>, o <b>H</b>yper <b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol. O que precisamos saber por enquanto é que ele define como devem ser as requisições e respostas nessa comunicação. Como o HTTP é padronizado, se o seu servidor souber se comunicar em HTTP ele poderá se comunicar com qualquer navegador, independente das implementações específicas.</p>
-<p>Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com um dicionário: chaves, dois pontos e os valores. Esse conjunto de chaves e valores é o <strong>cabeçalho (header)</strong> da requisição <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#requests">(request)</a> ou resposta <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses">(response)</a>. Como sempre, incentivo que você procure por conta própria mais detalhes sobre esse protocolo. Essa é apenas uma breve introdução.</p>
-<div class="admonition question choice">
-<p class="admonition-title">Question</p>
-<p>Considere o texto a seguir:</p>
-<div class="language-text highlight"><pre><span></span><code>GET / HTTP/1.1
-Host: 192.168.15.14:8080
-Connection: keep-alive
-Save-Data: on
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-Accept-Encoding: gzip, deflate
-Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
-</code></pre></div>
-<p>Escolha o opção verdadeira:</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O texto representa um Servidor de Nome de Domínio.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O texto representa uma resposta HTTP.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> O texto representa uma requisição HTTP.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O texto representa os dados enviados pelo Cliente.</li>
-</ul>
-<div class="admonition details">
-<p class="admonition-title">Resposta</p>
-<p>O texto representa uma requisição HTTP. Para mais detalhes veja <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#requests">(request)</a>. </p>
-</div>
-</div>
-<h2 id="e-agora-ja-podemos-enviar-a-resposta">E agora, já podemos enviar a resposta?</h2>
-<p>Sim! Agora estamos prontos. Sem mais delongas, altere a seguinte linha no seu código:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">)</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="hll">    <span class="k">return</span> <span class="s1">&#39;Hello World&#39;</span>
-</span></span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+### 3️⃣ **Rodando apenas um teste específico**  
+Se quiser rodar apenas um teste específico, use:  
+
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pytest<span class="w"> </span>test_math.py::test_soma
 </span></code></pre></div>
-<p>Acesse novamente a página pelo seu navegador. Pronto, nosso primeiro servidor está funcionando e retornando uma resposta!</p>
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Servidores são como programas em loop infinito. Se quiser parar de rodar, basta encerrar o programa com <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>.</p>
-</div>
-<p>Agora é só seguir para a <a href="../parte2/">parte 2 deste handout</a>.</p>
+
+### 4️⃣ **Obter um relatório mais detalhado**  
+Para ver mensagens detalhadas sobre os testes, use a opção `-v`:  
+
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>pytest<span class="w"> </span>-v
+</span></code></pre></div>
+
+
+## Conclusão  
+
+O `pytest` é uma ferramenta essencial para quem quer escrever testes de forma simples e eficiente em Python. Com uma sintaxe intuitiva e diversas funcionalidades úteis, ele facilita a criação e execução de testes automatizados, garantindo que seu código funcione corretamente.  
+
+Agora que você conhece o básico, experimente escrever seus próprios testes e explorar mais recursos do `pytest`! 🚀 -->
 
 
 

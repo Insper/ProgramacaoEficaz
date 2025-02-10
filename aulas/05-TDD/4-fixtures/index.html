@@ -10,13 +10,13 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/03-postman/instalacao/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/05-TDD/4-fixtures/">
       
       
-        <link rel="prev" href="../../02-rest/requisicoes/">
+        <link rel="prev" href="../3-exceptions/">
       
       
-        <link rel="next" href="../como-usar/">
+        <link rel="next" href="../5-mocks/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Instalação - Programação Eficaz - Insper 2025/1</title>
+        <title>Fixtures - Programação Eficaz - Insper 2025/1</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ferramentas-basicas-postman-instalacao" class="md-skip">
+        <a href="#entendendo-e-usando-fixtures-no-pytest" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalação
+              Fixtures
             
           </span>
         </div>
@@ -620,19 +620,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -646,7 +644,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             03 - Testes manuais com Postman
@@ -657,19 +655,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../03-postman/instalacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -678,7 +667,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -691,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../como-usar/" class="md-nav__link">
+      <a href="../../03-postman/como-usar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -802,17 +790,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -826,7 +816,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             05 - Testes automatizados
@@ -840,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/0-tdd/" class="md-nav__link">
+      <a href="../0-tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -861,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/1-pytest/" class="md-nav__link">
+      <a href="../1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/2-boaspraticas/" class="md-nav__link">
+      <a href="../2-boaspraticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -903,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/3-exceptions/" class="md-nav__link">
+      <a href="../3-exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -921,10 +911,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../05-TDD/4-fixtures/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fixtures
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -933,6 +943,173 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-fixtures-e-por-que-usa-las" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 O que são Fixtures e por que usá-las?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-uma-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 O que é uma Fixture?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 O que é uma Fixture?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens-das-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens das Fixtures:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-pratico-testando-um-sistema-de-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Exemplo Prático: Testando um Sistema de Pedidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Exemplo Prático: Testando um Sistema de Pedidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-1-criando-a-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Passo 1: Criando a Fixture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Passo 1: Criando a Fixture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-acontece-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que acontece aqui?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-2-usando-a-fixture-nos-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Passo 2: Usando a Fixture nos Testes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Passo 2: Usando a Fixture nos Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-acontece-aqui_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que acontece aqui?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-usar-a-fixture-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Por que usar a Fixture aqui?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-3-melhorando-a-fixture-com-multiplos-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Passo 3: Melhorando a Fixture com múltiplos pedidos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Resumo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Resumo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar Fixtures?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -945,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/5-mocks/" class="md-nav__link">
+      <a href="../5-mocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -966,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-TDD/6-flask/" class="md-nav__link">
+      <a href="../6-flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1352,6 +1529,161 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-fixtures-e-por-que-usa-las" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 O que são Fixtures e por que usá-las?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-uma-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 O que é uma Fixture?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 O que é uma Fixture?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens-das-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens das Fixtures:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-pratico-testando-um-sistema-de-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Exemplo Prático: Testando um Sistema de Pedidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Exemplo Prático: Testando um Sistema de Pedidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-1-criando-a-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Passo 1: Criando a Fixture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Passo 1: Criando a Fixture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-acontece-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que acontece aqui?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-2-usando-a-fixture-nos-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Passo 2: Usando a Fixture nos Testes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Passo 2: Usando a Fixture nos Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-acontece-aqui_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que acontece aqui?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-usar-a-fixture-aqui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Por que usar a Fixture aqui?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-3-melhorando-a-fixture-com-multiplos-pedidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Passo 3: Melhorando a Fixture com múltiplos pedidos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Resumo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Resumo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar Fixtures?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1365,32 +1697,134 @@
                   
 
 
-<h1 id="ferramentas-basicas-postman-instalacao">Ferramentas Básicas: Postman - Instalação</h1>
-<p>Responsável: Sarti</p>
-<h1 id="por-que-postman">Por que Postman?</h1>
-<p>A partir do segundo semestre, uma das ferramentas que vai nos acompanhar pelo resto do curso são as Aplicações de Teste de API, dentre as várias existentes no segundo semestre utilizamos a Postman especificamente. </p>
-<p>O principal motivo de precisarmos de aplicações como essa é o teste isolado do Backend de um sistema API. Como devem lembrar ao longo do seu projeto de sprint session em Django no semestre passado, sempre que testávamos uma nova rota, uma nova função ou qualquer coisa nova, precisávamos abrir o navegador, entrar no link e ver as mudanças no HTML/Frontend da aplicação. E se eu falasse que esse é um método muito pouco eficiente de testar um sistema? Apesar de funcional, ele requer que percamos muito tempo trabalhando em um frontend que serve apenas para nos mostrar se o backend funciona ou não, e nem mostra todas as informações (além de que dev backend odeia front né…)</p>
-<p>Para resolver esse problema, utilizamos o Postman, que nos permite realizar requisições para qualquer link e nos exibe o seu retorno completo. Assim, podemos pular a etapa de ficar testando no HTML do site, além de conseguirmos mais informações. Principalmente, pois como iremos ver depois do curso, Back e Frontend são coisas distintas e independentes, e o Postman é essencial para esta separação do Back.</p>
-<h1 id="instalacao-e-setup">Instalação e Setup:</h1>
-<p>Para instalar o Postman, baixe os arquivos necessários do site (<a href="https://www.postman.com/">https://www.postman.com/</a>) e siga os passos. </p>
-<p><a class="glightbox" href="instalacao0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Untitled" src="instalacao0.png" /></a></p>
-<p>Windows, Mac e Linux:</p>
-<p>Baixe o executável x64, ele deve por padrão ir para sua pasta de Download. Execute e o programa deve ser instalado automaticamente. </p>
-<p>Linux (Se não der certo o passo acima):</p>
-<p>Para estes passos presumo que seja uma plataforma x64 baseada em Debian, caso contrário busque os passos para sua máquina. Baixe o arquivo, ele por padrão estará em sua aba de Downloads e deve vir no formato de compressão “.tar.gz.” </p>
-<p>Após isso abra seu terminal e realoque para a aba onde estiver o “arquivo .tar.gz”, no exemplo Downloads. Após isso execute no terminal os seguintes comandos: </p>
-<p>1) “tar -xzf postman.tar.gz” Obs: O seu arquivo provavelmente se chamara postman… onde os pontos são outras palavras referentes ao OS ou versão. Basta escrever postman e apertar Tab para o Auto Complete.</p>
-<p>2) “sudo mv Postman /opt”</p>
-<p>3)”sudo ln -s /opt/Postman/Postman /usr/local/bin/postman”</p>
-<p><a class="glightbox" href="instalacao1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Untitled" src="instalacao1.png" /></a></p>
-<p>Com estes comandos estamos, respectivamente, descompactando o programa na sua aba de Download (ele ja estaria funcional), movendo-o para alguma outra pasta de nossa escolha (por padrão deixei a pasta /opt, por estar próximo ao root e ser onde eu costumo guardar symbolic links, mas pode ser a pasta que quiser) e por fim criamos um link simbólico do postman. Caso queira aprender como links simbólicos funcionam, vale a pesquisa mais tarde, mas basicamente atribuímos uma palavra para a execução do programa via terminal (assim como “code” inicia o vscode). Agora basta escreve “postman” no terminal para abrir ele. </p>
-<h3 id="setup">Setup:</h3>
-<p>Após baixar o postman, será necessário criar uma conta e logar para ter acesso à algumas features, dentre elas as collections que vamos utilizar em provas e testes. Crie sua conta e faça login, este é o único setup necessário. </p>
-<h1 id="como-utilizar-o-postman-primeiros-passos">Como utilizar o Postman - Primeiros Passos:</h1>
-<p>Ao longo da disciplina o uso do postman vai ficar mais intuitivo, tal como a necessidade dele mais clara, mas por enquanto podemos focar no passo a passo básico. Já estando logado, sua tela inicial deve estar vazia (sem testes) e pronta para uso. Iniciamos criando uma collection, que é basicamente uma pasta que irá guardar nossos testes. Basta clicar em “New” no botão do lado superior esquerdo da tela que um menu aparecera, selecione “Collection”. </p>
-<p><a class="glightbox" href="instalacao2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Untitled" src="instalacao2.png" /></a></p>
-<p>Após criar nossa collection, passe o mouse por cima dela na aba esquerda da tela e clique nos “…”. Selecione “Add request”. Assim criaremos um request, nossa unidade de testes.</p>
-<p>Para um guia de como utilizar o postman, siga para “Ferramentas Básicas: Postman - Como Usar”</p>
+<h1 id="entendendo-e-usando-fixtures-no-pytest">Entendendo e Usando Fixtures no pytest</h1>
+<h2 id="o-que-sao-fixtures-e-por-que-usa-las">📌 <strong>O que são Fixtures e por que usá-las?</strong></h2>
+<p>Quando escrevemos testes, frequentemente precisamos <strong>preparar um ambiente de teste</strong> antes de rodá-los. Isso pode envolver a criação de objetos, a configuração de variáveis ou a inicialização de serviços.  </p>
+<p>Podemos fazer isso dentro de cada teste, mas isso <strong>gera código repetitivo</strong>. Para evitar essa repetição e tornar os testes mais organizados, usamos <strong>Fixtures</strong> no <code>pytest</code>.  </p>
+<h2 id="o-que-e-uma-fixture">🔹 <strong>O que é uma Fixture?</strong></h2>
+<p>No <code>pytest</code>, uma <strong>Fixture</strong> é uma função especial que:<br />
+- <strong>Configura um ambiente de teste antes do teste rodar</strong>.<br />
+- <strong>Fornece dados ou objetos necessários para o teste</strong>.<br />
+- <strong>Pode incluir código de limpeza (teardown) para rodar após o teste</strong>.  </p>
+<h3 id="vantagens-das-fixtures"><strong>Vantagens das Fixtures:</strong></h3>
+<p>✅ Evita repetição de código entre testes.<br />
+✅ Facilita a manutenção, pois todas as configurações ficam centralizadas.<br />
+✅ Torna os testes mais organizados e modulares.<br />
+✅ Pode ser configurada para rodar automaticamente em vários testes.  </p>
+<h2 id="exemplo-pratico-testando-um-sistema-de-pedidos">📌 <strong>Exemplo Prático: Testando um Sistema de Pedidos</strong></h2>
+<h3 id="cenario"><strong>Cenário:</strong></h3>
+<p>Temos um sistema que gerencia pedidos de um restaurante. Cada pedido tem um nome do cliente, uma lista de itens e um status (<code>"pendente"</code>, <code>"em preparo"</code> ou <code>"entregue"</code>).  </p>
+<p>Queremos testar a funcionalidade de:<br />
+1. Criar pedidos.<br />
+2. Alterar o status do pedido.  </p>
+<p>Se não usarmos Fixtures, teríamos que criar objetos de pedido <strong>manualmente em cada teste</strong>. Isso tornaria o código repetitivo.  </p>
+<p>Com Fixtures, podemos criar automaticamente um pedido de teste antes de cada teste rodar.  </p>
+<h2 id="passo-1-criando-a-fixture">🔹 <strong>Passo 1: Criando a Fixture</strong></h2>
+<p>Aqui, criamos uma Fixture chamada <code>pedido_teste</code> que retorna um <strong>pedido pronto para ser usado nos testes</strong>.</p>
+<p>No arquivo <code>pedidos.py</code>, temos a classe <code>Pedido</code> que representa um pedido do restaurante:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Pedido</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cliente</span><span class="p">,</span> <span class="n">itens</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cliente</span> <span class="o">=</span> <span class="n">cliente</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">itens</span> <span class="o">=</span> <span class="n">itens</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;pendente&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">def</span> <span class="nf">atualizar_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">novo_status</span><span class="p">):</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">novo_status</span>
+</span></code></pre></div></p>
+<p>Agora, vamos criar a Fixture no arquivo <code>test_pedidos.py</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span> <span class="nf">pedido_teste</span><span class="p">():</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Cria um pedido de teste antes de cada teste rodar.&quot;&quot;&quot;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">return</span> <span class="n">Pedido</span><span class="p">(</span><span class="n">cliente</span><span class="o">=</span><span class="s2">&quot;João&quot;</span><span class="p">,</span> <span class="n">itens</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Pizza&quot;</span><span class="p">,</span> <span class="s2">&quot;Suco&quot;</span><span class="p">])</span>
+</span></code></pre></div>
+<h3 id="o-que-acontece-aqui"><strong>O que acontece aqui?</strong></h3>
+<p>🔹 Criamos a classe <code>Pedido</code>, que contém um cliente, itens e um status inicial como <code>"pendente"</code>.<br />
+🔹 Criamos uma Fixture chamada <code>pedido_teste</code>, que <strong>retorna um pedido pronto</strong> para ser usado nos testes.<br />
+🔹 Como essa Fixture será chamada antes de cada teste, evitamos <strong>repetição de código</strong> nos testes.  </p>
+<h2 id="passo-2-usando-a-fixture-nos-testes">🔹 <strong>Passo 2: Usando a Fixture nos Testes</strong></h2>
+<p>Agora podemos usar <code>pedido_teste</code> simplesmente passando-a como argumento nas funções de teste.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">test_criacao_pedido</span><span class="p">(</span><span class="n">pedido_teste</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Testa se um pedido é criado corretamente.&quot;&quot;&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">assert</span> <span class="n">pedido_teste</span><span class="o">.</span><span class="n">cliente</span> <span class="o">==</span> <span class="s2">&quot;João&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">assert</span> <span class="n">pedido_teste</span><span class="o">.</span><span class="n">itens</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;Pizza&quot;</span><span class="p">,</span> <span class="s2">&quot;Suco&quot;</span><span class="p">]</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">assert</span> <span class="n">pedido_teste</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;pendente&quot;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">def</span> <span class="nf">test_atualizar_status_pedido</span><span class="p">(</span><span class="n">pedido_teste</span><span class="p">):</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Testa se conseguimos atualizar o status do pedido.&quot;&quot;&quot;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">pedido_teste</span><span class="o">.</span><span class="n">atualizar_status</span><span class="p">(</span><span class="s2">&quot;em preparo&quot;</span><span class="p">)</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">assert</span> <span class="n">pedido_teste</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;em preparo&quot;</span>
+</span></code></pre></div>
+<h3 id="o-que-acontece-aqui_1"><strong>O que acontece aqui?</strong></h3>
+<p>✅ Em <strong><code>test_criacao_pedido</code></strong>, verificamos se o pedido foi criado corretamente.<br />
+✅ Em <strong><code>test_atualizar_status_pedido</code></strong>, testamos se conseguimos mudar o status do pedido corretamente.  </p>
+<h3 id="por-que-usar-a-fixture-aqui"><strong>Por que usar a Fixture aqui?</strong></h3>
+<p>Sem a Fixture, precisaríamos criar um novo <code>Pedido</code> em cada teste, assim:  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">test_criacao_pedido</span><span class="p">():</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">pedido</span> <span class="o">=</span> <span class="n">Pedido</span><span class="p">(</span><span class="n">cliente</span><span class="o">=</span><span class="s2">&quot;João&quot;</span><span class="p">,</span> <span class="n">itens</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Pizza&quot;</span><span class="p">,</span> <span class="s2">&quot;Suco&quot;</span><span class="p">])</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">assert</span> <span class="n">pedido</span><span class="o">.</span><span class="n">cliente</span> <span class="o">==</span> <span class="s2">&quot;João&quot;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="k">assert</span> <span class="n">pedido</span><span class="o">.</span><span class="n">itens</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;Pizza&quot;</span><span class="p">,</span> <span class="s2">&quot;Suco&quot;</span><span class="p">]</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">assert</span> <span class="n">pedido</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;pendente&quot;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">def</span> <span class="nf">test_atualizar_status_pedido</span><span class="p">():</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">pedido</span> <span class="o">=</span> <span class="n">Pedido</span><span class="p">(</span><span class="n">cliente</span><span class="o">=</span><span class="s2">&quot;João&quot;</span><span class="p">,</span> <span class="n">itens</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Pizza&quot;</span><span class="p">,</span> <span class="s2">&quot;Suco&quot;</span><span class="p">])</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">pedido</span><span class="o">.</span><span class="n">atualizar_status</span><span class="p">(</span><span class="s2">&quot;em preparo&quot;</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">assert</span> <span class="n">pedido</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;em preparo&quot;</span>
+</span></code></pre></div>
+<p>Isso <strong>repetiria o código de criação do pedido</strong> em cada teste.  </p>
+<p>Com a <strong>Fixture</strong>, garantimos que o objeto de teste sempre existe e está pronto antes dos testes rodarem.  </p>
+<h2 id="passo-3-melhorando-a-fixture-com-multiplos-pedidos">📌 <strong>Passo 3: Melhorando a Fixture com múltiplos pedidos</strong></h2>
+<p>Se quisermos testar diferentes pedidos, podemos modificar a Fixture para <strong>receber parâmetros</strong> e criar pedidos com diferentes clientes e itens.  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">def</span> <span class="nf">pedido_teste</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Cria um pedido com diferentes valores, dependendo do teste.&quot;&quot;&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">cliente</span><span class="p">,</span> <span class="n">itens</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">return</span> <span class="n">Pedido</span><span class="p">(</span><span class="n">cliente</span><span class="o">=</span><span class="n">cliente</span><span class="p">,</span> <span class="n">itens</span><span class="o">=</span><span class="n">itens</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Agora, podemos criar múltiplos pedidos sem duplicar código:  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;pedido_teste&quot;</span><span class="p">,</span> <span class="p">[</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="p">(</span><span class="s2">&quot;João&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Pizza&quot;</span><span class="p">,</span> <span class="s2">&quot;Suco&quot;</span><span class="p">]),</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="p">(</span><span class="s2">&quot;Maria&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Hambúrguer&quot;</span><span class="p">,</span> <span class="s2">&quot;Refrigerante&quot;</span><span class="p">]),</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="p">(</span><span class="s2">&quot;Carlos&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Salada&quot;</span><span class="p">,</span> <span class="s2">&quot;Água&quot;</span><span class="p">])</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">],</span> <span class="n">indirect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">def</span> <span class="nf">test_atualizar_status_pedido</span><span class="p">(</span><span class="n">pedido_teste</span><span class="p">):</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">pedido</span><span class="o">.</span><span class="n">atualizar_status</span><span class="p">(</span><span class="s2">&quot;em preparo&quot;</span><span class="p">)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="k">assert</span> <span class="n">pedido</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;em preparo&quot;</span>
+</span></code></pre></div>
+<p>Agora testamos <strong>vários pedidos diferentes</strong> sem precisar criar cada um manualmente! O argumento <code>indirect=True</code> indica que os dados devem ser passados para a Fixture, e não para a função de teste diretamente.</p>
+<h2 id="resumo">🔹 <strong>Resumo</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>O que as Fixtures fazem?</strong></th>
+<th><strong>Vantagens</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criam objetos de teste automaticamente antes de cada teste</td>
+<td>Evita código repetitivo</td>
+</tr>
+<tr>
+<td>Permitem configurar e limpar recursos</td>
+<td>Facilita a manutenção</td>
+</tr>
+<tr>
+<td>Melhoram a organização dos testes</td>
+<td>Código mais limpo e reutilizável</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quando-usar-fixtures"><strong>Quando usar Fixtures?</strong></h3>
+<ul>
+<li>Quando um mesmo objeto ou configuração é necessária para vários testes.  </li>
+<li>Quando precisamos configurar um ambiente antes de testar.  </li>
+<li>Quando queremos manter os testes organizados e fáceis de modificar.  </li>
+</ul>
+<p>Aqui complicou um pouco, mas não se preocupe! Se precisar, levante, tome uma água e releia o que não ficou claro. Depois de relaxar um pouco, vamos falar um pouco sobre o <a href="../5-mocks/">próximo conteúdo</a>.</p>
 
 
 
