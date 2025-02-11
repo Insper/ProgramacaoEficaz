@@ -1,0 +1,50 @@
+# Projeto 2
+
+!!! success "Entrega"
+    :date: 
+    
+    :clock1: Commits até as 23:59
+
+    :material-account-group: Duplas
+
+    :simple-github: Entrega via :point_right: [GitHub Classroom]()
+
+## Objetivos :octicons-goal-16:
+
+Durante o primeiro projeto, nós desenvolvemos um servidor capaz de responder com páginas HTML. No segundo projeto, nosso objetivo é desenvolvermos um servidor RESTful que responda com JSON. Para isso, você deve implementar um servidor de uma empresa imobiliária.
+
+## Requisitos :octicons-checklist-16:
+
+1. Devem haver rotas para:
+    - Listar todos os imóveis com todos os seus atributos;
+    - Listar um imóvel específico pelo seu id com todos os seus atributos;
+    - Adicionar um novo imóvel;
+    - Atualizar um imóvel existente;
+    - Remover um imóvel existente;
+    - Listar imóveis por tipo (casa, apartamento, terreno, etc) com todos os seus atributos;
+    - Listar imóveis por cidade com todos os seus atributos;
+1. Devem haver testes automatizados para todas as rotas.
+1. O servidor deve ser desenvolvido utilizando o framework Flask.
+1. O servidor deve utilizar o banco de dados MySQL hospedado na plataforma Aiven.
+1. O projeto deve utilizar os princípios de TDD.
+1. O projeto deve ter o deploy feito em um EC2 na AWS.
+
+
+## Rubrica :material-check:
+
+A rubrica a seguir será utilizada na correção do Projeto 2:
+
+| Conceito | Descrição |
+| :------: | :-------- |
+|    I     | Não entregou ou o código não executa |
+|    D     | Criou o código do servidor antes dos testes, ou não foram feitas corretamente as rotas solicitadas. |
+|    C     | Criou os testes antes do código do servidor, mas não utilizou corretamente todos os princípios de TDD vistos. Todas as rotas respondem corretamente mas a API não é RESTful.  |
+|    C+    | No geral aplicou corretamente os princípios de TDD e a API é RESTful, mas houveram alguns pequenos erros. |
+|    B     | Aplicou corretamente os princípios de TDD, a API é RESTful e se comunica com um banco de dados MySql hospedado no Aiven. |
+|    B+    | Atingiu o conceito B e o projeto está hospedado e acessível na AWS. |
+|    A     | Atingiu o conceito B+ e o projeto apresenta outras rotas úteis (além das especificadas) para o sistema da imobiliária. |
+
+
+!!! danger "Conceito A+"
+    O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A, seja por sua qualidade ou por implementarem alguma funcionalidade adicional.
+    É importante que você discuta antes com o professor e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.

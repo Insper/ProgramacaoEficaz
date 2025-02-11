@@ -5,9 +5,9 @@ extra:
   materia: Programação Eficaz
   professor: Marcio F. Stabile Jr.
   semestre: 2025/1
-  custom_variables:
-    pl_root: https://us.prairielearn.com/pl/course_instance/177857
-    pl_testes: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
+  # custom_variables:
+  #   pl_root: https://us.prairielearn.com/pl/course_instance/177857
+  #   pl_testes: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
 
 theme:
   name: material
@@ -120,6 +120,8 @@ nav:
       - "Enunciado": projetos/projeto1/index.md
       - "Tarefas": projetos/projeto1/tarefas-projeto1.md
     - "APS 1": projetos/aps1.md
+    # - "Projeto 2": 
+    #   - "Enunciado": projetos/projeto2/index.md
   #   - "Projeto 1B":
   #     - "Enunciado": projetos/projeto1/projeto1b.md
   #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
@@ -186,7 +188,6 @@ extra_css:
 plugins:
   - search
   - glightbox
-  - macros
 
 watch:
   - includes
