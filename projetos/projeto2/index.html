@@ -10,24 +10,24 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/projetos/projeto1/projeto1b/tarefa03/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/projetos/projeto2/">
       
       
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Utilizar o PostgreSQL (em um container Docker) ao invés do SQLite - Programação Eficaz - Insper 2025/1</title>
+        <title>Projeto 2 - Programação Eficaz - Insper 2025/1</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,18 +52,18 @@
       
     
     
-      <link rel="stylesheet" href="../../../../css/printing.css">
+      <link rel="stylesheet" href="../../css/printing.css">
     
-      <link rel="stylesheet" href="../../../../css/tecweb.css">
+      <link rel="stylesheet" href="../../css/tecweb.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -72,7 +72,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#utilizar-o-postgresql-em-um-container-docker-ao-inves-do-sqlite" class="md-skip">
+        <a href="#projeto-2" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Utilizar o PostgreSQL (em um container Docker) ao invés do SQLite
+              Projeto 2
             
           </span>
         </div>
@@ -228,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -246,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../notas/" class="md-nav__link">
+      <a href="../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -356,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -377,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/01-getit/" class="md-nav__link">
+      <a href="../../aulas/01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/01-getit/parte0/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/02-rest/REST.pdf" class="md-nav__link">
+      <a href="../../aulas/02-rest/REST.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/02-rest/" class="md-nav__link">
+      <a href="../../aulas/02-rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/02-rest/requisicoes/" class="md-nav__link">
+      <a href="../../aulas/02-rest/requisicoes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/03-postman/instalacao/" class="md-nav__link">
+      <a href="../../aulas/03-postman/instalacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -673,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/03-postman/como-usar/" class="md-nav__link">
+      <a href="../../aulas/03-postman/como-usar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/04-persistencia/instalacao-mysql/" class="md-nav__link">
+      <a href="../../aulas/04-persistencia/instalacao-mysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/04-persistencia/mysql-overview/" class="md-nav__link">
+      <a href="../../aulas/04-persistencia/mysql-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/05-TDD/0-tdd/" class="md-nav__link">
+      <a href="../../aulas/05-TDD/0-tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/05-TDD/1-pytest/" class="md-nav__link">
+      <a href="../../aulas/05-TDD/1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/05-TDD/2-boaspraticas/" class="md-nav__link">
+      <a href="../../aulas/05-TDD/2-boaspraticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/05-TDD/3-exceptions/" class="md-nav__link">
+      <a href="../../aulas/05-TDD/3-exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/05-TDD/4-fixtures/" class="md-nav__link">
+      <a href="../../aulas/05-TDD/4-fixtures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/05-TDD/5-mocks/" class="md-nav__link">
+      <a href="../../aulas/05-TDD/5-mocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -948,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/05-TDD/6-flask/" class="md-nav__link">
+      <a href="../../aulas/05-TDD/6-flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../auxiliar/terminal/" class="md-nav__link">
+      <a href="../../auxiliar/terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../auxiliar/git/" class="md-nav__link">
+      <a href="../../auxiliar/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1082,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../auxiliar/venv/" class="md-nav__link">
+      <a href="../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1145,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tarefas-projeto1/" class="md-nav__link">
+      <a href="../projeto1/tarefas-projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1293,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aps1/" class="md-nav__link">
+      <a href="../aps1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1334,6 +1334,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos 
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos 
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rubrica 
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1347,9 +1382,79 @@
                   
 
 
-<h1 id="utilizar-o-postgresql-em-um-container-docker-ao-inves-do-sqlite">Utilizar o PostgreSQL (em um container Docker) ao invés do SQLite</h1>
-<p>Para esta etapa a professora frá uma discussão no dia 10/09 e vocês devem seguir o handout abaixo:</p>
-<p><a class="md-button" href="../../../aulas/05-bd.md">Próxima Etapa</a></p>
+<h1 id="projeto-2">Projeto 2</h1>
+<div class="admonition success">
+<p class="admonition-title">Entrega</p>
+<p><img alt="📅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4c5.svg" title=":date:" /> </p>
+<p><img alt="🕐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f550.svg" title=":clock1:" /> Commits até as 23:59</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.536 5.536 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13v-1.75M0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20H0m24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9V20Z"/></svg></span> Duplas</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> Entrega via <img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> <a href="">GitHub Classroom</a></p>
+</div>
+<h2 id="objetivos">Objetivos <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.637 2.363h-.001l1.676.335c.09.018.164.084.19.173a.25.25 0 0 1-.062.249l-1.373 1.374a.876.876 0 0 1-.619.256H12.31L9.45 7.611A1.5 1.5 0 1 1 6.5 8a1.501 1.501 0 0 1 1.889-1.449l2.861-2.862V2.552c0-.232.092-.455.256-.619L12.88.559a.25.25 0 0 1 .249-.062c.089.026.155.1.173.19Z"/><path d="M2 8a6 6 0 1 0 11.769-1.656.751.751 0 1 1 1.442-.413 7.502 7.502 0 0 1-12.513 7.371A7.501 7.501 0 0 1 10.069.789a.75.75 0 0 1-.413 1.442A6.001 6.001 0 0 0 2 8Z"/><path d="M5 8a3.002 3.002 0 0 0 4.699 2.476 3 3 0 0 0 1.28-2.827.748.748 0 0 1 1.045-.782.75.75 0 0 1 .445.61A4.5 4.5 0 1 1 8.516 3.53a.75.75 0 1 1-.17 1.49A3 3 0 0 0 5 8Z"/></svg></span></h2>
+<p>Durante o primeiro projeto, nós desenvolvemos um servidor capaz de responder com páginas HTML. No segundo projeto, nosso objetivo é desenvolvermos um servidor RESTful que responda com JSON. Para isso, você deve implementar um servidor de uma empresa imobiliária.</p>
+<h2 id="requisitos">Requisitos <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg></span></h2>
+<ol>
+<li>Devem haver rotas para:<ul>
+<li>Listar todos os imóveis com todos os seus atributos;</li>
+<li>Listar um imóvel específico pelo seu id com todos os seus atributos;</li>
+<li>Adicionar um novo imóvel;</li>
+<li>Atualizar um imóvel existente;</li>
+<li>Remover um imóvel existente;</li>
+<li>Listar imóveis por tipo (casa, apartamento, terreno, etc) com todos os seus atributos;</li>
+<li>Listar imóveis por cidade com todos os seus atributos;</li>
+</ul>
+</li>
+<li>Devem haver testes automatizados para todas as rotas.</li>
+<li>O servidor deve ser desenvolvido utilizando o framework Flask.</li>
+<li>O servidor deve utilizar o banco de dados MySQL hospedado na plataforma Aiven.</li>
+<li>O projeto deve utilizar os princípios de TDD.</li>
+<li>O projeto deve ter o deploy feito em um EC2 na AWS.</li>
+</ol>
+<h2 id="rubrica">Rubrica <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></h2>
+<p>A rubrica a seguir será utilizada na correção do Projeto 2:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Conceito</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">Não entregou ou o código não executa</td>
+</tr>
+<tr>
+<td style="text-align: center;">D</td>
+<td style="text-align: left;">Criou o código do servidor antes dos testes, ou não foram feitas corretamente as rotas solicitadas.</td>
+</tr>
+<tr>
+<td style="text-align: center;">C</td>
+<td style="text-align: left;">Criou os testes antes do código do servidor, mas não utilizou corretamente todos os princípios de TDD vistos. Todas as rotas respondem corretamente mas a API não é RESTful.</td>
+</tr>
+<tr>
+<td style="text-align: center;">C+</td>
+<td style="text-align: left;">No geral aplicou corretamente os princípios de TDD e a API é RESTful, mas houveram alguns pequenos erros.</td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: left;">Aplicou corretamente os princípios de TDD, a API é RESTful e se comunica com um banco de dados MySql hospedado no Aiven.</td>
+</tr>
+<tr>
+<td style="text-align: center;">B+</td>
+<td style="text-align: left;">Atingiu o conceito B e o projeto está hospedado e acessível na AWS.</td>
+</tr>
+<tr>
+<td style="text-align: center;">A</td>
+<td style="text-align: left;">Atingiu o conceito B+ e o projeto apresenta outras rotas úteis (além das especificadas) para o sistema da imobiliária.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Conceito A+</p>
+<p>O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A, seja por sua qualidade ou por implementarem alguma funcionalidade adicional.
+É importante que você discuta antes com o professor e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.</p>
+</div>
 
 
 
@@ -1396,7 +1501,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -1404,23 +1509,23 @@
 </script>
 
 
-      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../../../javascripts/progress-check.js"></script>
+        <script src="../../javascripts/progress-check.js"></script>
       
-        <script src="../../../../javascripts/quiz.js"></script>
+        <script src="../../javascripts/quiz.js"></script>
       
-        <script src="../../../../javascripts/short-questions.js"></script>
+        <script src="../../javascripts/short-questions.js"></script>
       
-        <script src="../../../../javascripts/translate-admonitions.js"></script>
+        <script src="../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../../../../javascripts/webhook-config.js"></script>
+        <script src="../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->

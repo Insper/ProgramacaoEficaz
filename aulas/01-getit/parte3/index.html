@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#01-get-it-o-retorno" class="md-skip">
           Skip to content
         </a>
       
@@ -478,6 +478,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Separando algumas responsabilidades
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -487,6 +498,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-separando-algumas-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 3: Separando algumas responsabilidades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 3: Separando algumas responsabilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-rotas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controle de rotas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1352,6 +1424,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-separando-algumas-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 3: Separando algumas responsabilidades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 3: Separando algumas responsabilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controle-de-rotas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controle de rotas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1365,11 +1487,218 @@
                   
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em></h1>
-<p><em>File</em>: <code>aulas/01-getit/parte3.md</code></p>
-<p><em>Line 93 in Markdown file:</em> <strong>unexpected char '`' at 4812</strong>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Perceba que a linha contendo a imagem foi alterada e foram adicionadas chaves. Isso acontece porque o método <span class="sb">`format`</span> do Python espera que as chaves sejam substituídas por valores. Como não queremos substituir essas chaves, precisamos dizer ao Python que elas são literais. Para isso, basta duplicar as chaves, ou seja, substituir <span class="sb">`{`</span> por <span class="sb">`{{`</span> e <span class="sb">`}`</span> por <span class="sb">`}}`</span>.
-</span></code></pre></div></p>
+<h1 id="01-get-it-o-retorno">01 - Get-it - O retorno</h1>
+<h2 id="parte-3-separando-algumas-responsabilidades">Parte 3: Separando algumas responsabilidades</h2>
+<p>O nosso código já está ficando grande e ele não faz quase nada! Um dos motivos para isso é a falta de coesão desse arquivo: esse arquivo possui a string HTML da página, que por sua vez contém todos os dados das anotações disponíveis, além do código que trata as conexões, requisições e respostas. Imagine o que aconteceria com uma quantidade razoável de anotações!</p>
+<p>Essas três responsabilidades acumuladas no mesmo arquivo estão relacionadas a um conceito chamado <b>M</b>odel, <b>V</b>iew, <b>C</b>ontroller (MVC). Vocês tiveram um breve contato com esse conceito semestre passado, mas nós discutiremos mais a respeito em um futuro próximo.</p>
+<h3 id="modelo">Modelo</h3>
+<p>Vamos começar separando a responsabilidade do modelo (lista de anotações) da responsabilidade de visualização (string HTML). Para isso, vamos criar uma lista de dicionários que contém os dados das anotações e a string HTML será gerada dinamicamente a partir desses dados:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template_string</span><span class="p">,</span> <span class="n">url_for</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="hll"><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">load_data</span>
+</span></span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="hll"><span class="n">NOTE_TEMPLATE</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;  &lt;li&gt;</span>
+</span></span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="hll"><span class="s1">    &lt;h3&gt;</span><span class="si">{title}</span><span class="s1">&lt;/h3&gt;</span>
+</span></span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="hll"><span class="s1">    &lt;p&gt;</span><span class="si">{details}</span><span class="s1">&lt;/p&gt;</span>
+</span></span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span></span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="hll"><span class="s1">&#39;&#39;&#39;</span>
+</span></span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">RESPONSE_TEMPLATE</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="s1">&lt;html&gt;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="s1">&lt;head&gt;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="s1">&lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="s1">&lt;title&gt;Get-it&lt;/title&gt;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="s1">&lt;/head&gt;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="s1">&lt;body&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="hll"><span class="s1">&lt;img src=&quot;{{{{ url_for(&#39;static&#39;, filename=&#39;img/logo-getit.png&#39;) }}}}&quot;&gt;</span>
+</span></span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="s1">&lt;p&gt;Como o Post-it, mas com outro verbo&lt;/p&gt;</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="s1">&lt;ul&gt;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="si">{notes}</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="s1">&lt;/ul&gt;</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="s1">&lt;/body&gt;</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="s1">&lt;/html&gt;</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="s1">&#39;&#39;&#39;</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c1"># Configurando a pasta de arquivos estáticos</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">app</span><span class="o">.</span><span class="n">static_folder</span> <span class="o">=</span> <span class="s1">&#39;static&#39;</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="hll">    <span class="n">notes_li</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="hll">        <span class="n">NOTE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;titulo&#39;</span><span class="p">],</span> <span class="n">details</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;detalhes&#39;</span><span class="p">])</span>
+</span></span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="hll">        <span class="k">for</span> <span class="n">dados</span> <span class="ow">in</span> <span class="n">load_data</span><span class="p">(</span><span class="s1">&#39;notes.json&#39;</span><span class="p">)</span>
+</span></span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="hll">    <span class="p">]</span>
+</span></span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="hll">    <span class="n">notes</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notes_li</span><span class="p">)</span>
+</span></span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="hll">
+</span></span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="hll">    <span class="n">response</span> <span class="o">=</span> <span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span>
+</span></span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="hll">
+</span></span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="hll">    <span class="k">return</span> <span class="n">render_template_string</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span></span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Você também vai precisar do arquivo <a href="../codigo/data/notes.json"><code>notes.json</code> (clique aqui para baixar)</a>. Coloque-o em uma pasta chamada <code>data</code> dentro da pasta <code>static</code>.:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>- DIRETORIO-DO-SEU-SERVIDOR
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  |- servidor.py
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  |- static
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    |- data
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      |- notes.json
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    |- img
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      |- logo-getit.png
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Crie um arquivo <code>utils.py</code> e implemente a função <code class="language-python highlight"><span class="n">load_data</span></code>, que recebe o nome de um arquivo JSON e devolve o conteúdo do arquivo carregado como um objeto Python (A função deve assumir que este arquivo JSON está localizado dentro da pasta <code>static/data</code>). Por exemplo: se o conteúdo do arquivo <code>static/data/dados.json</code> for a string <code>{"chave": "valor"}</code>, sua função deve devolver o dicionário Python <code class="language-python highlight"><span class="p">{</span><span class="s2">&quot;chave&quot;</span><span class="p">:</span> <span class="s2">&quot;valor&quot;</span><span class="p">}</span></code> para a entrada <code>dados.json</code> (note que o nome da pasta não é enviado como argumento). Dica: já existe uma <a href="https://docs.python.org/3/library/json.html">função Python para isso</a>.</p>
+</div>
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>No código anterior, estamos utilizando formatação de <code>string</code> um pouco diferente do que aprendemos em DevLife.</p>
+<p>Vamos ver como utilizar o método <code>.format</code>
+Considere o código a seguir:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">texto</span> <span class="o">=</span> <span class="s1">&#39;O retângulo de lados </span><span class="si">{0}</span><span class="s1"> e </span><span class="si">{1}</span><span class="s1"> tem área </span><span class="si">{2}</span><span class="s1">&#39;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">texto</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
+</span></code></pre></div>
+<p>Escolha o será impresso no terminal:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O retângulo de lados {0} e {1} tem área {2}</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O retângulo de lados 0 e 1 tem área 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> O retângulo de lados 3 e 4 tem área 12</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O retângulo de lados 4 e 3 tem área 12</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Será impresso <code>O retângulo de lados 3 e 4 tem área 12</code>, pois o método <code>.format</code> substituirá os valores entre chaves de acordo com a ordem em que os argumentos <code>x</code>, <code>y</code> e <code>z</code> foram passados. Para mais detalhes acesse: https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method</p>
+</div>
+</div>
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>No código do servidor, utilizamos o método <code>.format</code> de outra maneira possível.
+A maneira utilizada é similar ao código a seguir:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This </span><span class="si">{food}</span><span class="s1"> is </span><span class="si">{adjective}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">adjective</span><span class="o">=</span><span class="s1">&#39;absolutely horrible&#39;</span><span class="p">,</span> <span class="n">food</span><span class="o">=</span><span class="s1">&#39;spam&#39;</span><span class="p">))</span>
+</span></code></pre></div>
+<p>Escolhe o será impresso no terminal:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> This spam is absolutely horrible.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> This {food} is {adjective}.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> This absolutely horrible is spam.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> This food is adjective.</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Será impresso <code>This spam is absolutely horrible.</code>, pois o método <code>.format</code> substituirá os valores entre chaves de acordo com os nomes utilizados <code>food</code> e <code>adjective</code>. Para mais detalhes acesse: https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method</p>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Tente reescrever o trecho de código abaixo utilizando o loop <code class="language-python highlight"><span class="k">for</span></code>.
+  Caso não esteja familiarizado com <code>list-comprehensions</code> acesse: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Cria uma lista de &lt;li&gt;&#39;s para cada anotação</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># Se tiver curiosidade: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">notes_li</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   <span class="n">NOTE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;titulo&#39;</span><span class="p">],</span> <span class="n">details</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;detalhes&#39;</span><span class="p">])</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   <span class="k">for</span> <span class="n">dados</span> <span class="ow">in</span> <span class="n">load_data</span><span class="p">(</span><span class="s1">&#39;notes.json&#39;</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">]</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">notes</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notes_li</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">response</span> <span class="o">=</span> <span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<p>Perceba que a linha contendo a imagem foi alterada e foram adicionadas chaves. Isso acontece porque o método <code>format</code> do Python espera que as chaves sejam substituídas por valores. Como não queremos substituir essas chaves, precisamos dizer ao Python que elas são literais. Para isso, basta duplicar as chaves, ou seja, substituir <code>{</code> por <code>{{</code> e <code>}</code> por <code>}}</code>.</p>
+<h3 id="visualizacao">Visualização</h3>
+<p>Ufa, já está um pouco melhor. Se quisermos adicionar mais anotações basta modificar o arquivo <code>notes.json</code>. Lembra da ideia de mantermos um baixo acoplamento? Aqui nós conseguimos melhorar esse ponto. Se eu quero adicionar mais dados eu só modifico o arquivo de dados (<code>notes.json</code>) e nenhum outro. O resto do código é independente disso.</p>
+<p>Mas ainda dá para melhorar. Vamos refatorar um pouco mais o nosso código, separando a responsabilidade de visualização (HTML). </p>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Crie uma pasta chamada <code>templates</code> dentro da pasta <code>static</code> e crie dentro dela um arquivo <code>index.html</code> com o conteúdo da string <code class="language-python highlight"><span class="n">RESPONSE_TEMPLATE</span></code>. Não coloque aspas entorno do html.</p>
+<p>Ainda dentro da pasta <code>templates</code>, crie outra pasta chamada <code>components</code> e dentro dessa nova pasta um arquivo <code>note.html</code> com o conteúdo da string <code class="language-python highlight"><span class="n">NOTE_TEMPLATE</span></code>. </p>
+</div>
+<p>A sua estrutura de arquivos agora deve ser:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>- DIRETORIO-DO-SEU-SERVIDOR
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  |- servidor.py
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  |- utils.py
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  |- static
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    |- data
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>      |- notes.json
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    |- img
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>      |- logo-getit.png
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    |- templates
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        |- index.html
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        |- components
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>            |- note.html
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Implemente a função <code class="language-python highlight"><span class="n">load_template</span></code> no arquivo <code>utils.py</code> que recebe o nome de um arquivo de template e devolve uma string com o conteúdo desse arquivo. O nome do arquivo não inclui o nome da pasta <code>templates</code>. Por exemplo: para a entrada <code>index.html</code> você deve carregar o conteúdo do arquivo <code>static/templates/index.html</code>.</p>
+</div>
+<p>Vamos atualizar o código do servidor:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template_string</span><span class="p">,</span> <span class="n">url_for</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="hll"><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">load_data</span><span class="p">,</span> <span class="n">load_template</span>
+</span></span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Configurando a pasta de arquivos estáticos</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">app</span><span class="o">.</span><span class="n">static_folder</span> <span class="o">=</span> <span class="s1">&#39;static&#39;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="n">notes_li</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="hll">        <span class="n">load_template</span><span class="p">(</span><span class="s1">&#39;components/note.html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;titulo&#39;</span><span class="p">],</span> <span class="n">details</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;detalhes&#39;</span><span class="p">])</span>
+</span></span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        <span class="k">for</span> <span class="n">dados</span> <span class="ow">in</span> <span class="n">load_data</span><span class="p">(</span><span class="s1">&#39;notes.json&#39;</span><span class="p">)</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="p">]</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="n">notes</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notes_li</span><span class="p">)</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="hll">    <span class="n">response</span> <span class="o">=</span> <span class="n">load_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span>
+</span></span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>    <span class="k">return</span> <span class="n">render_template_string</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="controle-de-rotas">Controle de rotas</h3>
+<p>O código do servidor ainda possui duas responsabilidades diferentes: decidir qual rota seguir e o que fazer em cada rota (o que pode ser tão complexo quanto se queira). Vamos separar a responsabilidade de cada rota em uma função diferente:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template_string</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="hll"><span class="kn">import</span> <span class="nn">views</span>
+</span></span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Configurando a pasta de arquivos estáticos</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">app</span><span class="o">.</span><span class="n">static_folder</span> <span class="o">=</span> <span class="s1">&#39;static&#39;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="hll">    <span class="k">return</span> <span class="n">render_template_string</span><span class="p">(</span><span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">())</span>
+</span></span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Você também vai precisar criar o arquivo <code>views.py</code> com o seguinte conteúdo (note que é exatamente o mesmo código que estava na função <code>index</code> do arquivo <code>servidor.py</code>):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">load_data</span><span class="p">,</span> <span class="n">load_template</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">note_template</span> <span class="o">=</span> <span class="n">load_template</span><span class="p">(</span><span class="s1">&#39;components/note.html&#39;</span><span class="p">)</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">notes_li</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        <span class="n">note_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;titulo&#39;</span><span class="p">],</span> <span class="n">details</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;detalhes&#39;</span><span class="p">])</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="k">for</span> <span class="n">dados</span> <span class="ow">in</span> <span class="n">load_data</span><span class="p">(</span><span class="s1">&#39;notes.json&#39;</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="p">]</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="n">notes</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notes_li</span><span class="p">)</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="k">return</span> <span class="n">load_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Agora o nosso código está pronto para a <a href="../parte4/">parte 4 do handout!</a></p>
 
 
 
