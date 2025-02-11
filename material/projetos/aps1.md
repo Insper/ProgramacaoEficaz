@@ -19,18 +19,18 @@ Como comentado na aula, o banco de dados é uma parte muito importante nas difer
 
 Uma das competências importantes para o cientista da computação é exercitar o aprender a aprender e portanto vocês podem buscar os conhecimentos que precisam em boas fontes de dados. Hoje existe algumas fontes na Internet que pode ajudar muito, tais como:
 
-- W3 Schools (https://www.w3schools.com/): uma plataforma mantida na Noruega com tutoriais de aprendizado e experimentação para várias linguagens, inclusive o SQL. Você pode encontrar tudo o que precisa lá!
-- SQLite Tutorial (https://www.sqlitetutorial.net/): como iremos trabalhar nesta APS com o SQLite, este tutorial pode também te auxiliar no desenvolvimento dos exercícios.
+- W3 Schools ([https://www.w3schools.com/](https://www.w3schools.com/)): uma plataforma mantida na Noruega com tutoriais de aprendizado e experimentação para várias linguagens, inclusive o SQL. Você pode encontrar tudo o que precisa lá!
+- SQLite Tutorial ([https://www.sqlitetutorial.net/](https://www.sqlitetutorial.net/)): como iremos trabalhar nesta APS com o SQLite, este tutorial pode também te auxiliar no desenvolvimento dos exercícios.
 
 *Lembrando que as respostas dos exercícios serão liberados após a entrega da APS e iremos comentar em sala de aula cada resolução.*
 
 ## O que você precisa saber e fazer antes de iniciar os exercícios
 
 - Você não precisa (neste momento) utilizar o SQLite instalado em seu computador para trabalhar com esta APS mas não impedimos caso queira desenvolver os exercícios em uma instância local.
-- Sugerimos o uso de um sandbox executado 100% no navegador, acessando pela URL https://www.convertcsv.com/sqlite-online.htm
+- Sugerimos o uso de um sandbox executado 100% no navegador, acessando pela URL [https://www.convertcsv.com/sqlite-online.htm](https://www.convertcsv.com/sqlite-online.htm)
 - Faça o download da base de dados [imoveis.db](imoveis.db)
 - Faça a carga do banco de dados clicando no botão `Load an SQLite database` e selecionando o arquivo acima. Depois de executado com sucesso, a tabela `imoveis` estará carregada no banco de dados e você pode iniciar a resolução dos exercícios.
-- A entrega dos exercícios deve ser enviada em PDF pelo Blackboard com texto gerado em LaTeX, usando o template disponível em https://www.overleaf.com/read/zgybjvrygnfw#19e451
+- A entrega dos exercícios deve ser enviada em PDF pelo Blackboard com texto gerado em LaTeX, usando o template disponível em [https://www.overleaf.com/read/zgybjvrygnfw#19e451](https://www.overleaf.com/read/zgybjvrygnfw#19e451)
 
 ## Como será a avaliação?
 
