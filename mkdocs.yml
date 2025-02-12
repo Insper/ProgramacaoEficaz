@@ -111,6 +111,7 @@ nav:
     - "Usando o Terminal": auxiliar/terminal.md
     - "Usando o Git": auxiliar/git.md
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
+    - "Commit com coautores": auxiliar/coautores.md
     # - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
     # - Heroku: aulas/heroku.md
   - Entregas:

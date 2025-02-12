@@ -82,7 +82,7 @@ Garantir a qualidade de um software é essencial, e para isso existem diferentes
 O **teste unitário** é o mais básico e foca em validar **pequenas partes do código de forma isolada**, como funções ou métodos individuais. Ele verifica se cada unidade do programa funciona corretamente sem considerar suas dependências externas.  
 
 #### **Cenário típico**:  
-Imagine que um sistema tenha uma função para calcular descontos em uma loja virtual. Um teste unitário garantiria que, dados diferentes valores de compra e regras de desconto, a função retorna o resultado correto.  
+Imagine que um sistema tenha uma função para calcular descontos em uma loja virtual. Um teste unitário garantiria que a função retorna o resultado correto para diferentes valores de compra e regras de desconto.
 
 #### **Quando usar?**  
 - Para testar regras de negócio individuais, como cálculos matemáticos e validações simples.  

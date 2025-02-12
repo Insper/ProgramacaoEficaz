@@ -1,7 +1,6 @@
 # O que é REST
 
 Responsável: Andre Oliveira
-Tags: Guias e Processos, Teoria
 
 **Referências:**
 

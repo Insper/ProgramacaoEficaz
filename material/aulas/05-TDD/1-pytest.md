@@ -67,7 +67,7 @@ O mais usual seria ter um arquivo `math.py` com a implementação da função `s
 
 ## Red-Green-Refactor
 
-Para exemplificar o fluxo **Red-Green-Refactor** com `pytest`, vamos criar testes para uma função chamada `calcula_media` que deve receber uma lista de inteiros e retornar a média dos valores. Para isso, vamos seguir os seguintes passos:
+Para exemplificar o fluxo **Red-Green-Refactor** com `pytest`, vamos criar testes para uma função chamada `calcula_media`. Essa função deve receber uma lista de inteiros e retornar a média dos valores na lista. Primeiramente, crie os arquivos necessários:
 
 1. Crie um arquivo `funcoes.py`.
 2. Crie um arquivo chamado `test_funcoes.py`.
