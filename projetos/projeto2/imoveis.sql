@@ -1,8 +1,5 @@
---criação de banco de dados no SQLite para a APS1
---cria a tabela imoveis 
-
 CREATE TABLE IF NOT EXISTS imoveis (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     logradouro TEXT NOT NULL,
     tipo_logradouro TEXT,
     bairro TEXT,
@@ -1021,3 +1018,5 @@ INSERT INTO imoveis (logradouro, tipo_logradouro, bairro, cidade, cep, tipo, val
 INSERT INTO imoveis (logradouro, tipo_logradouro, bairro, cidade, cep, tipo, valor, data_aquisicao) VALUES ('Gary Groves', 'Avenida', 'Ramirezhaven', 'North Brandon', '65952', 'terreno', 830146.7, '2016-01-22');
 INSERT INTO imoveis (logradouro, tipo_logradouro, bairro, cidade, cep, tipo, valor, data_aquisicao) VALUES ('Amber Avenue', 'Avenida', 'Russellton', 'Roseland', '68912', 'casa em condominio', 284884.65, '2016-05-24');
 INSERT INTO imoveis (logradouro, tipo_logradouro, bairro, cidade, cep, tipo, valor, data_aquisicao) VALUES ('Wheeler Falls', 'Avenida', 'Matthewbury', 'New Brandonborough', '18235', 'terreno', 875932.19, '2023-01-23');
+
+COMMIT;
