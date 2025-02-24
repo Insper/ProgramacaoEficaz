@@ -21,20 +21,21 @@ Responsável: Andre Oliveira
     ```python
     # Código gerado com o ChatGPT
     from flask import Flask, jsonify, request
-    
+
     app = Flask(__name__)
-    
+
     # Representação do banco de dados 
     tasks = [
         {"id": 1, "title": "Estudar Python", "done": False},
         {"id": 2, "title": "Fazer compras", "done": True}
     ]
-    
+    current_id = 3
+
     # Observe como que os recursos são representados dentro da URL de requisição, ou seja, apenas lendo o caminho do recurso + seu verbo HTTP é possível ter uma ideia do que essa rota deve retornar e fazer
     @app.route('/tasks', methods=['GET'])
     def get_tasks():
         return jsonify({"tasks": tasks})
-    
+
     @app.route('/tasks/<int:task_id>', methods=['GET'])
     def get_task(task_id):
         task = next((task for task in tasks if task['id'] == task_id), None)
@@ -42,30 +43,41 @@ Responsável: Andre Oliveira
             return jsonify({"task": task})
         else:
             return jsonify({"message": "Tarefa não encontrada"}), 404
-    
+
     @app.route('/tasks', methods=['POST'])
     def create_task():
-        new_task = request.json
+        received_json = request.json
+        if not received_json or not "title" in received_json:
+            return jsonify({"message": "Formato de tarefa inválido"}), 400
+        global current_id
+        new_task = {
+            'id': current_id,
+            'done': False,
+            'title': received_json["title"]
+        }
+        current_id += 1
         tasks.append(new_task)
         return jsonify({"message": "Tarefa criada com sucesso"}), 201
-    
+
     @app.route('/tasks/<int:task_id>', methods=['PUT'])
     def update_task(task_id):
         task = next((task for task in tasks if task['id'] == task_id), None)
         if task:
-            task.update(request.json)
+            received_json = request.json
+            if received_json and "id" in received_json and received_json["id"] != task_id:
+                return jsonify({"message": "ID não pode ser alterado"}), 400
             return jsonify({"message": "Tarefa atualizada com sucesso"})
         else:
             return jsonify({"message": "Tarefa não encontrada"}), 404
-    
+
     @app.route('/tasks/<int:task_id>', methods=['DELETE'])
     def delete_task(task_id):
+        global tasks
         tasks = [task for task in tasks if task['id'] != task_id]
         return jsonify({"message": "Tarefa excluída com sucesso"})
-    
+
     if __name__ == '__main__':
         app.run(debug=True)
-    
     ```
     
 

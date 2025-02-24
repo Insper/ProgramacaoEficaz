@@ -52,6 +52,7 @@ nav:
       - "Slides": "aulas/02-rest/REST.pdf"
       - "O que é REST": aulas/02-rest/index.md
       - "Fazendo requisições via Python": aulas/02-rest/requisicoes.md
+      - "Exercícios": aulas/02-rest/exercicios.md
     - "03 - Testes manuais com Postman":
       - "Instalação": aulas/03-postman/instalacao.md
       - "Como usar": aulas/03-postman/como-usar.md
@@ -67,34 +68,7 @@ nav:
       - "Mocks": aulas/05-TDD/5-mocks.md
       - "Testando APIs": aulas/05-TDD/6-flask.md
       - Exercícios: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
-    # - "03 - Persistência de dados":
-    #   - "Handout": aulas/03-persistencia-de-dados.md
-    #   - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
-    #   - "Handout Parte 2: Criando a tabela": aulas/03-persistencia-de-dados/parte2.md
-    #   - "Handout Parte 3: Inserindo dados na tabela": aulas/03-persistencia-de-dados/parte3.md
-    #   - "Handout Parte 4: Consultando e selecionando dados": aulas/03-persistencia-de-dados/parte4.md
-    #   - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
-    #   - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
-    # - "04 - Django":
-    #   - "Slides": "aulas/04-django/Aula04.pdf"
-    #   - "Handout": aulas/04-django.md
-    #   - "Handout Parte 1: Iniciando o projeto": aulas/04-django/parte1.md
-    #   - "Handout Parte 2: Criando nosso primeiro app": aulas/04-django/parte2.md
-    #   - "Handout Parte 3: Integrando com o banco de dados": aulas/04-django/parte3.md
-    #   - "Handout Parte 4: O Django Admin": aulas/04-django/parte4.md
-    #   - "Handout Parte 5: Usando templates": aulas/04-django/parte5.md
-    #   - "Handout Parte 6: Trabalhando com formulários e o método POST": aulas/04-django/parte6.md
-    # - "05 - Containers e Bancos de Dados":
-    #   - "Slides": "aulas/05-bd/Aula05.pdf"
-    #   - "Handout": aulas/05-bd.md
-    #   - "Guia de Instalação WSL e Docker para Windows": aulas/05-bd/guia-wsl.md
-    #   # - "Guia de Instalação WSL e Docker para Windows (v2)": aulas/05-bd/windows_docker_install.md
-    # - "06 - Deploy": aulas/06-deploy.md
-    # - "07 - Javascript":
-    #   - "Handout": aulas/07-javascript.md
-    # - "08 - Django REST":
-    #     - "Slides": aulas/08-django-rest/Aula18.pdf
-    #     - "Handout": aulas/08-django-rest.md
+    
     # - "09 - React":
     #   - "Criando projeto": aulas/09-react-vite.md
     #   - "Componentes": aulas/09-react/parte-01-componentes.md
@@ -121,8 +95,8 @@ nav:
       - "Enunciado": projetos/projeto1/index.md
       - "Tarefas": projetos/projeto1/tarefas-projeto1.md
     - "APS 1": projetos/aps1.md
-    # - "Projeto 2": 
-    #   - "Enunciado": projetos/projeto2/index.md
+    - "Projeto 2": 
+      - "Enunciado": projetos/projeto2/index.md
   #   - "Projeto 1B":
   #     - "Enunciado": projetos/projeto1/projeto1b.md
   #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
