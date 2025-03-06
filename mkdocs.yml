@@ -68,7 +68,7 @@ nav:
       - "Mocks": aulas/05-TDD/5-mocks.md
       - "Testando APIs": aulas/05-TDD/6-flask.md
       - Exercícios: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
-    
+    - "06 - Deploy na AWS": aulas/06-Deploy/index.md
     # - "09 - React":
     #   - "Criando projeto": aulas/09-react-vite.md
     #   - "Componentes": aulas/09-react/parte-01-componentes.md

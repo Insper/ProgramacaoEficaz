@@ -189,6 +189,7 @@ Chamamos a rota:
 response = client.get("/alunos")
 ```
 E verificamos se:
+
 - O **código de status** é `200 OK`.
 - O **JSON retornado** corresponde aos valores simulados.
 

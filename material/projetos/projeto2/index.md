@@ -44,7 +44,7 @@ Se os dois membros da dupla estiverem trabalhando no mesmo código juntos, faça
 |    D     | Criou o código do servidor antes dos testes, ou não foram feitas corretamente as rotas solicitadas. |
 |    C     | Criou os testes antes do código do servidor, mas não utilizou corretamente todos os princípios de TDD vistos. Todas as rotas respondem corretamente mas a API não é RESTful.  |
 |    C+    | No geral aplicou corretamente os princípios de TDD e a API é RESTful, mas houveram alguns pequenos erros. |
-|    B     | Aplicou corretamente os princípios de TDD, a API é RESTful e se comunica com um banco de dados MySql hospedado no Aiven. A API está no nível 2 da Maturidade de Richardson |
-|    B+    | Atingiu o conceito B e o projeto está hospedado e acessível na AWS. |
+|    B     | Aplicou corretamente os princípios de TDD, a API é RESTful e se comunica com um banco de dados MySQL hospedado no Aiven. A API está no nível 2 da Maturidade de Richardson |
+|    B+    | Atingiu o conceito B e o projeto está hospedado e acessível na AWS. Há um link para o serviço no arquivo README do projeto. |
 |    A     | Atingiu o conceito B+ e a API retorna os códigos HTTP corretos para a ação executada, como descritos [aqui](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status). |
 |    A+     | Atingiu o conceito A e a API está no nível 3 da Maturidade de Richardson. |

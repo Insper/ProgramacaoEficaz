@@ -22,6 +22,7 @@ Boas vindas ao curso de Programação Eficaz 2025/1
 **Atendimento:**
 
 - TER 09:45 - 11:15 (Márcio)
+- QUI 09:45 - 11:15 (Ricardo - NINJA)
 
 **Algumas Datas**
 
@@ -41,4 +42,4 @@ Boas vindas ao curso de Programação Eficaz 2025/1
 
 **Links Úteis**
 
-Exercícios no Prairie Learn: [{{custom_variables.pl_root}}]({{custom_variables.pl_root}}){:target="_blank"}
+Exercícios no Prairie Learn: [https://us.prairielearn.com/pl/course_instance/177857](https://us.prairielearn.com/pl/course_instance/177857){:target="_blank"}
