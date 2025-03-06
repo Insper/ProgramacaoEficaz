@@ -171,6 +171,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://insper.github.io/progeficaz/aulas/07-JS/</loc>
+         <lastmod>2025-03-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://insper.github.io/progeficaz/auxiliar/FAQ/</loc>
          <lastmod>2025-03-06</lastmod>
          <changefreq>daily</changefreq>
