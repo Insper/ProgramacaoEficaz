@@ -16,7 +16,7 @@
         <link rel="prev" href="../5-mocks/">
       
       
-        <link rel="next" href="../../../auxiliar/terminal/">
+        <link rel="next" href="../../06-Deploy/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1198,6 +1198,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 - Deploy na AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1954,9 +1975,11 @@ Isso faz com que a API <strong>pense</strong> que o banco retornou esses valores
 <p>Chamamos a rota:
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/alunos&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-E verificamos se:
-- O <strong>código de status</strong> é <code>200 OK</code>.
-- O <strong>JSON retornado</strong> corresponde aos valores simulados.</p>
+E verificamos se:</p>
+<ul>
+<li>O <strong>código de status</strong> é <code>200 OK</code>.</li>
+<li>O <strong>JSON retornado</strong> corresponde aos valores simulados.</li>
+</ul>
 <h2 id="4-testando-um-caso-de-erro-nenhum-aluno-encontrado"><strong>4️⃣ Testando um Caso de Erro (Nenhum Aluno Encontrado)</strong></h2>
 <p>Podemos simular um <strong>banco de dados vazio</strong> para testar se a API retorna corretamente o erro <code>404</code>.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@patch</span><span class="p">(</span><span class="s2">&quot;api.connect_db&quot;</span><span class="p">)</span>
