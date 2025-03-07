@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/07-JS/">
       
       
+        <link rel="prev" href="../06-Deploy/">
+      
+      
+        <link rel="next" href="../../auxiliar/terminal/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>JavaScript Assíncrono e Requisições HTTP - Programação Eficaz - Insper 2025/1</title>
+        <title>07 - Requisições Assíncronas com JS - Programação Eficaz - Insper 2025/1</title>
       
     
     
@@ -127,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              JavaScript Assíncrono e Requisições HTTP
+              07 - Requisições Assíncronas com JS
             
           </span>
         </div>
@@ -283,17 +287,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -307,7 +313,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -1037,10 +1043,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../06-Deploy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    07 - Requisições Assíncronas com JS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1049,6 +1075,161 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#axios-biblioteca-para-requisicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axios: Biblioteca para Requisições
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Axios: Biblioteca para Requisições">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalando-o-axios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando o Axios:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criando-uma-instancia-do-axios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando uma Instância do Axios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fazendo-uma-requisicao-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fazendo uma Requisição GET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fazendo-uma-requisicao-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fazendo uma Requisição POST
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Promises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estados-de-uma-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estados de uma Promise:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncawait" class="md-nav__link">
+    <span class="md-ellipsis">
+      Async/Await
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erros-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erros Comuns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erros Comuns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-nao-usar-await-em-chamadas-assincronas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Não usar await em chamadas assíncronas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-esquecer-de-tratar-erros-com-trycatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Esquecer de tratar erros com try/catch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1450,6 +1631,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projetos/aps2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APS 2
+  </span>
+  
+
+      </a>
     </li>
   
 
