@@ -69,7 +69,7 @@ nav:
       - "Testando APIs": aulas/05-TDD/6-flask.md
       - Exercícios: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
     - "06 - Deploy na AWS": aulas/06-Deploy/index.md
-    - "07 - Requisições Assíncronas com JS": aulas/06-Deploy/index.md
+    - "07 - Requisições Assíncronas com JS": aulas/07-JS/index.md
     # - "09 - React":
     #   - "Criando projeto": aulas/09-react-vite.md
     #   - "Componentes": aulas/09-react/parte-01-componentes.md
@@ -98,6 +98,7 @@ nav:
     - "APS 1": projetos/aps1.md
     - "Projeto 2": 
       - "Enunciado": projetos/projeto2/index.md
+    - "APS 2": projetos/aps2.md
   #   - "Projeto 1B":
   #     - "Enunciado": projetos/projeto1/projeto1b.md
   #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md

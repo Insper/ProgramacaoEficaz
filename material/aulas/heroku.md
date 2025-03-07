@@ -172,7 +172,7 @@ Esse processo é um pouco demorado, pois o Heroku vai baixar o código da sua ap
 
 Agora que você fez o primeiro deploy (por mais que tenha ocorrido um erro) o Heroku identificou que você está publicando uma aplicação Django. Assim, ele já disponibiliza uma instância do Postgres para você! Acesse a sua aplicação no [dashboard do Heroku](https://dashboard.heroku.com/apps) e o Postgres deve aparecer nos add-ons instalados:
 
-![](06-deploy/dashboard.png)
+<!-- ![](06-deploy/dashboard.png) -->
 
 Uma opção é acessar os dados de configuração desse banco e alterar manualmente o dicionário `#!python DATABASES` nas configurações. Entretanto, isso faria com que o seu código parasse de funcionar em desenvolvimento (no seu computador). Por isso, vamos utilizar o `dj-database-url`:
 

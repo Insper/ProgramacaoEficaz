@@ -29,6 +29,8 @@ Boas vindas ao curso de Programação Eficaz 2025/1
 - 09/02: Entrega do [ELI5](entregas/01-ELI5.md)
 - 22/02: Entrega do [Projeto 1](projetos/projeto1/index.md)
 - 22/02: Entrega da [APS1](projetos/aps1.md)
+- 19/03: Entrega do [Projeto 2](projetos/projeto2/index.md)
+- 06/04: Entrega da [APS2](projetos/aps2.md)
 <!-- - ~~16/08: Entrega do [Desafio CSS]~~
 - 19/08: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
 - 27/08: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)

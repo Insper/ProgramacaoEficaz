@@ -33,11 +33,11 @@ Co-authored-by: João Santos <joao@example.com>"
 
 Quando estiver pronto para realizar o commit, vá para o menu lateral de controle de fonte no VSCode (ícone de ramificação).
 
-![image.png](coautores0.png)
+![image.png](coautores/coautores0.png)
 
 Digite a mensagem do commit no campo fornecido.
 
-![image.png](coautores1.png)
+![image.png](coautores/coautores1.png)
 
 Adicione os coautores no seguinte formato:
 
