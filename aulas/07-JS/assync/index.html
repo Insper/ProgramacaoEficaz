@@ -10,28 +10,28 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/07-JS/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/07-JS/assync/">
       
       
-        <link rel="prev" href="../06-Deploy/">
+        <link rel="prev" href="../intro/">
       
       
-        <link rel="next" href="../../auxiliar/terminal/">
+        <link rel="next" href="../../../auxiliar/terminal/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>07 - Requisições Assíncronas com JS - Programação Eficaz - Insper 2025/1</title>
+        <title>Requisições Assíncronas - Programação Eficaz - Insper 2025/1</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -56,18 +56,18 @@
       
     
     
-      <link rel="stylesheet" href="../../css/printing.css">
+      <link rel="stylesheet" href="../../../css/printing.css">
     
-      <link rel="stylesheet" href="../../css/tecweb.css">
+      <link rel="stylesheet" href="../../../css/tecweb.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -76,7 +76,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -111,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              07 - Requisições Assíncronas com JS
+              Requisições Assíncronas
             
           </span>
         </div>
@@ -232,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -250,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -270,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../notas/" class="md-nav__link">
+      <a href="../../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -383,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-getit/" class="md-nav__link">
+      <a href="../../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-getit/parte0/" class="md-nav__link">
+      <a href="../../01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -425,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-getit/parte1/" class="md-nav__link">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -446,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-getit/parte2/" class="md-nav__link">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-getit/parte3/" class="md-nav__link">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-getit/parte4/" class="md-nav__link">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-rest/REST.pdf" class="md-nav__link">
+      <a href="../../02-rest/REST.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-rest/" class="md-nav__link">
+      <a href="../../02-rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -594,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-rest/requisicoes/" class="md-nav__link">
+      <a href="../../02-rest/requisicoes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -615,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-rest/exercicios/" class="md-nav__link">
+      <a href="../../02-rest/exercicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-postman/instalacao/" class="md-nav__link">
+      <a href="../../03-postman/instalacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -700,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-postman/como-usar/" class="md-nav__link">
+      <a href="../../03-postman/como-usar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-persistencia/instalacao-mysql/" class="md-nav__link">
+      <a href="../../04-persistencia/instalacao-mysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -785,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-persistencia/mysql-overview/" class="md-nav__link">
+      <a href="../../04-persistencia/mysql-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -849,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-TDD/0-tdd/" class="md-nav__link">
+      <a href="../../05-TDD/0-tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -870,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-TDD/1-pytest/" class="md-nav__link">
+      <a href="../../05-TDD/1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-TDD/2-boaspraticas/" class="md-nav__link">
+      <a href="../../05-TDD/2-boaspraticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -912,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-TDD/3-exceptions/" class="md-nav__link">
+      <a href="../../05-TDD/3-exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -933,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-TDD/4-fixtures/" class="md-nav__link">
+      <a href="../../05-TDD/4-fixtures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-TDD/5-mocks/" class="md-nav__link">
+      <a href="../../05-TDD/5-mocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -975,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-TDD/6-flask/" class="md-nav__link">
+      <a href="../../05-TDD/6-flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,11 +1025,69 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-Deploy/" class="md-nav__link">
+      <a href="../../06-Deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     06 - Deploy na AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    07 - JavaScript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            07 - JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introdução
   </span>
   
 
@@ -1059,7 +1117,7 @@
           
   
   <span class="md-ellipsis">
-    07 - Requisições Assíncronas com JS
+    Requisições Assíncronas
   </span>
   
 
@@ -1070,7 +1128,7 @@
         
   
   <span class="md-ellipsis">
-    07 - Requisições Assíncronas com JS
+    Requisições Assíncronas
   </span>
   
 
@@ -1241,6 +1299,14 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -1284,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auxiliar/terminal/" class="md-nav__link">
+      <a href="../../../auxiliar/terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1305,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auxiliar/git/" class="md-nav__link">
+      <a href="../../../auxiliar/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1326,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auxiliar/venv/" class="md-nav__link">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auxiliar/coautores/" class="md-nav__link">
+      <a href="../../../auxiliar/coautores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1410,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1508,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1529,7 +1595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1558,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/aps1/" class="md-nav__link">
+      <a href="../../../projetos/aps1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1614,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto2/" class="md-nav__link">
+      <a href="../../../projetos/projeto2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1643,7 +1709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/aps2/" class="md-nav__link">
+      <a href="../../../projetos/aps2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2024,7 +2090,7 @@ Correto:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -2032,23 +2098,23 @@ Correto:
 </script>
 
 
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/progress-check.js"></script>
+        <script src="../../../javascripts/progress-check.js"></script>
       
-        <script src="../../javascripts/quiz.js"></script>
+        <script src="../../../javascripts/quiz.js"></script>
       
-        <script src="../../javascripts/short-questions.js"></script>
+        <script src="../../../javascripts/short-questions.js"></script>
       
-        <script src="../../javascripts/translate-admonitions.js"></script>
+        <script src="../../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../../javascripts/webhook-config.js"></script>
+        <script src="../../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->

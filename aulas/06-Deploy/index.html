@@ -16,7 +16,7 @@
         <link rel="prev" href="../05-TDD/6-flask/">
       
       
-        <link rel="next" href="../07-JS/">
+        <link rel="next" href="../07-JS/intro/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1157,16 +1157,80 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    07 - JavaScript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            07 - JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../07-JS/" class="md-nav__link">
+      <a href="../07-JS/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    07 - Requisições Assíncronas com JS
+    Introdução
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-JS/assync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisições Assíncronas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1744,7 +1808,7 @@
 <p>Agora, configuramos um ambiente virtual Python para evitar conflitos:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python3 -m venv venv
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>source venv/bin/activate
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>pip install requeiriments.txt
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>pip install -r requeiriments.txt
 </span></code></pre></div>
 <h3 id="configurar-o-gunicorn-para-rodar-o-flask"><strong>Configurar o Gunicorn para Rodar o Flask</strong></h3>
 <p>Gunicorn é um servidor <strong>mais eficiente e seguro</strong> do que o Flask padrão.</p>
@@ -1795,7 +1859,7 @@
 <p>Reinicie a instância:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo reboot
 </span></code></pre></div>
-<p>Espere uns 2 minutos até a instância subir novamente e acesse <code>http://SEU_IP_PUBLICO/5000</code> no navegador!</p>
+<p>Espere uns 2 minutos até a instância subir novamente e acesse <code>http://SEU_IP_PUBLICO:5000</code> no navegador!</p>
 <p><a class="glightbox" href="imgs/deploy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="deploy.png" src="imgs/deploy.png" /></a></p>
 <p>Você fez o deploy da aplicação na AWS!</p>
 <h3 id="vamos-deixar-o-servidor-seguro"><strong>Vamos deixar o Servidor Seguro</strong></h3>
