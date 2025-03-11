@@ -54,7 +54,7 @@ Agora, configuramos um ambiente virtual Python para evitar conflitos:
 ```
 python3 -m venv venv
 source venv/bin/activate
-pip install requeiriments.txt
+pip install -r requeiriments.txt
 
 ```
 
@@ -139,7 +139,7 @@ sudo reboot
 
 ```
 
-Espere uns 2 minutos até a instância subir novamente e acesse `http://SEU_IP_PUBLICO/5000` no navegador!
+Espere uns 2 minutos até a instância subir novamente e acesse `http://SEU_IP_PUBLICO:5000` no navegador!
 
 ![deploy.png](imgs/deploy.png)
 
