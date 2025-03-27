@@ -10,24 +10,28 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/entregas/03-servidor-js/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/mongo/relacoes/">
       
       
+        <link rel="prev" href="../pythonmongo/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+        <link rel="next" href="../../../auxiliar/terminal/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>03 - Servidor de desafios Javascript - Programação Eficaz - Insper 2025/1</title>
+        <title>Relações entre documentos - Programação Eficaz - Insper 2025/1</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,18 +56,18 @@
       
     
     
-      <link rel="stylesheet" href="../../css/printing.css">
+      <link rel="stylesheet" href="../../../css/printing.css">
     
-      <link rel="stylesheet" href="../../css/tecweb.css">
+      <link rel="stylesheet" href="../../../css/tecweb.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -72,7 +76,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -91,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-servidor-de-desafios-javascript" class="md-skip">
+        <a href="#como-modelar-relacoes-entre-documentos-no-mongodb-usando-embeddings" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -127,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03 - Servidor de desafios Javascript
+              Relações entre documentos
             
           </span>
         </div>
@@ -228,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -246,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../notas/" class="md-nav__link">
+      <a href="../../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -283,17 +287,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -307,7 +313,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -356,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -377,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/" class="md-nav__link">
+      <a href="../../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte0/" class="md-nav__link">
+      <a href="../../01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/02-rest/REST.pdf" class="md-nav__link">
+      <a href="../../02-rest/REST.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/02-rest/" class="md-nav__link">
+      <a href="../../02-rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/02-rest/requisicoes/" class="md-nav__link">
+      <a href="../../02-rest/requisicoes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -609,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/02-rest/exercicios/" class="md-nav__link">
+      <a href="../../02-rest/exercicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -673,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/03-postman/instalacao/" class="md-nav__link">
+      <a href="../../03-postman/instalacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/03-postman/como-usar/" class="md-nav__link">
+      <a href="../../03-postman/como-usar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/04-persistencia/instalacao-mysql/" class="md-nav__link">
+      <a href="../../04-persistencia/instalacao-mysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -779,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/04-persistencia/mysql-overview/" class="md-nav__link">
+      <a href="../../04-persistencia/mysql-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/05-TDD/0-tdd/" class="md-nav__link">
+      <a href="../../05-TDD/0-tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/05-TDD/1-pytest/" class="md-nav__link">
+      <a href="../../05-TDD/1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/05-TDD/2-boaspraticas/" class="md-nav__link">
+      <a href="../../05-TDD/2-boaspraticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/05-TDD/3-exceptions/" class="md-nav__link">
+      <a href="../../05-TDD/3-exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/05-TDD/4-fixtures/" class="md-nav__link">
+      <a href="../../05-TDD/4-fixtures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -948,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/05-TDD/5-mocks/" class="md-nav__link">
+      <a href="../../05-TDD/5-mocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -969,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/05-TDD/6-flask/" class="md-nav__link">
+      <a href="../../05-TDD/6-flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1019,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/06-Deploy/" class="md-nav__link">
+      <a href="../../06-Deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/07-JS/intro/" class="md-nav__link">
+      <a href="../../07-JS/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../aulas/07-JS/assync/" class="md-nav__link">
+      <a href="../../07-JS/assync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1105,6 +1111,262 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    08 - NoSQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            08 - NoSQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conceitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceitos NoSQL e MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB - Configuração
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pythonmongo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python + MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Relações entre documentos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Relações entre documentos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-sao-relacoes-em-bancos-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que são relações em bancos de dados?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formas-de-representar-relacoes-no-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formas de representar relações no MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-usar-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar embeddings?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-pratico-relacao-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo prático: relação 1:1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo prático: relação 1:1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sem-embedding-documentos-separados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sem embedding (documentos separados):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-embedding-documento-unico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com embedding (documento único):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beneficios-do-uso-de-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefícios do uso de embeddings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-nao-usar-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando não usar embeddings?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1167,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auxiliar/terminal/" class="md-nav__link">
+      <a href="../../../auxiliar/terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1188,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auxiliar/git/" class="md-nav__link">
+      <a href="../../../auxiliar/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1209,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auxiliar/venv/" class="md-nav__link">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1230,7 +1492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../auxiliar/coautores/" class="md-nav__link">
+      <a href="../../../auxiliar/coautores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1293,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-ELI5/" class="md-nav__link">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1441,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/aps1/" class="md-nav__link">
+      <a href="../../../projetos/aps1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1497,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/projeto2/" class="md-nav__link">
+      <a href="../../../projetos/projeto2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1526,11 +1788,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projetos/aps2/" class="md-nav__link">
+      <a href="../../../projetos/aps2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     APS 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/aps3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    APS 3
   </span>
   
 
@@ -1574,9 +1857,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#servidor-js" class="md-nav__link">
+  <a href="#o-que-sao-relacoes-em-bancos-de-dados" class="md-nav__link">
     <span class="md-ellipsis">
-      Servidor JS
+      O que são relações em bancos de dados?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formas-de-representar-relacoes-no-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formas de representar relações no MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-usar-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar embeddings?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-pratico-relacao-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo prático: relação 1:1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo prático: relação 1:1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sem-embedding-documentos-separados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sem embedding (documentos separados):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-embedding-documento-unico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com embedding (documento único):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beneficios-do-uso-de-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefícios do uso de embeddings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-nao-usar-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando não usar embeddings?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias:
     </span>
   </a>
   
@@ -1597,17 +1958,92 @@
                   
 
 
-<h1 id="03-servidor-de-desafios-javascript">03 - Servidor de desafios Javascript</h1>
-<h2 id="servidor-js">Servidor JS</h2>
-<div class="admonition success">
-<p class="admonition-title">Entrega</p>
-<p><del><img alt="📅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4c5.svg" title=":date:" />  07/10 (segunda-feira)</del></p>
-<p><del><img alt="📅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4c5.svg" title=":date:" />  08/10 (terça-feira)</del></p>
-<p><img alt="📅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4c5.svg" title=":date:" />  13/10 (domingo)</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.536 5.536 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13v-1.75M0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20H0m24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9V20Z"/></svg></span> Individual</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5m1.5-9H17V12h4.46L19.5 9.5M6 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5M20 8l3 4v5h-2c0 1.66-1.34 3-3 3s-3-1.34-3-3H9c0 1.66-1.34 3-3 3s-3-1.34-3-3H1V6c0-1.11.89-2 2-2h14v4h3M3 6v9h.76c.55-.61 1.35-1 2.24-1 .89 0 1.69.39 2.24 1H15V6H3m7 1 3.5 3.5L10 14v-2.5H5v-2h5V7Z"/></svg></span> Entrega via Blackboard.</p>
-<p><img alt="🗒" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f5d2.svg" title=":notepad_spiral:" /> Para mais informações, veja o link a seguir: <a href="https://tecweb-js.insper-comp.com.br/" target="_blank">Servidor JS</a> </p>
-</div>
+<h1 id="como-modelar-relacoes-entre-documentos-no-mongodb-usando-embeddings">Como modelar relações entre documentos no MongoDB usando <strong>Embeddings</strong></h1>
+<h2 id="o-que-sao-relacoes-em-bancos-de-dados">O que são relações em bancos de dados?</h2>
+<p>Em qualquer banco de dados, seja relacional (como MySQL) ou não relacional (como MongoDB), <strong>relacionar dados</strong> significa <strong>ligar informações de diferentes entidades</strong>.</p>
+<p>Por exemplo:
+- Um usuário pode ter um endereço.
+- Um pedido pode ter uma lista de produtos.
+- Um aluno pode estar matriculado em várias disciplinas.</p>
+<p>Essas <strong>relações entre entidades</strong> são essenciais para organizar, consultar e manter os dados de forma eficiente.</p>
+<h2 id="formas-de-representar-relacoes-no-mongodb">Formas de representar relações no MongoDB</h2>
+<p>O MongoDB oferece duas abordagens principais para representar relações entre documentos:</p>
+<ol>
+<li><strong>Referências</strong>: armazenar o <code>id</code> de um documento dentro de outro (semelhante a uma foreign key).</li>
+<li><strong>Embeddings (documentos embutidos)</strong>: <strong>inserir um documento dentro de outro</strong>.</li>
+</ol>
+<p>Embedding é a técnica de armazenar um documento inteiro como um campo dentro de outro documento.
+Ou seja, em vez de manter os dados separados em coleções diferentes (como tabelas), você aninha um documento dentro de outro para mantê-los juntos no mesmo registro. Da mesma forma como fazíamos dicionários contendo outros dicionários.</p>
+<blockquote>
+<p>A própria documentação do MongoDB recomenda:</p>
+<blockquote>
+<p><strong>“What you use together, store together.”</strong><br />
+Se você sempre acessa duas entidades juntas, <strong>considere embutir</strong> os dados!</p>
+</blockquote>
+</blockquote>
+<h2 id="quando-usar-embeddings">Quando usar <strong>embeddings</strong>?</h2>
+<p>Use embeddings quando:
+- A relação for do tipo <strong>um-para-um (1:1)</strong> ou <strong>um-para-poucos (1:N)</strong>.
+- Os dados embutidos <strong>não forem compartilhados</strong> com outros documentos.
+- Você <strong>acessa essas informações juntas com frequência</strong>.</p>
+<h2 id="exemplo-pratico-relacao-11">Exemplo prático: relação <strong>1:1</strong></h2>
+<p>Imagine que você tem um sistema de biblioteca. Cada <strong>leitor</strong> possui um <strong>endereço</strong>. Essa é uma relação <strong>um-para-um</strong>: cada leitor tem exatamente um endereço.</p>
+<h3 id="sem-embedding-documentos-separados">Sem embedding (documentos separados):</h3>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Documento da coleção &quot;leitores&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">   </span><span class="err">_id</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;joe&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">   </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Joe Bookreader&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// Documento da coleção &quot;enderecos&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">   </span><span class="err">pa</span><span class="kc">tr</span><span class="err">o</span><span class="kc">n</span><span class="err">_id</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;joe&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">   </span><span class="err">s</span><span class="kc">treet</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123 Fake Street&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">   </span><span class="err">ci</span><span class="kc">t</span><span class="err">y</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Faketon&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">   </span><span class="err">s</span><span class="kc">tate</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MA&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">   </span><span class="err">zip</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Nesse caso, para buscar o endereço de Joe, seria necessário juntar manualmente(join manual) os dados de duas coleções. Isso é possível, mas menos performático.</p>
+<h3 id="com-embedding-documento-unico">Com embedding (documento único):</h3>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Documento da coleção &quot;leitores&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">   </span><span class="err">_id</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;joe&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">   </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Joe Bookreader&quot;</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">   </span><span class="err">address</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="err">s</span><span class="kc">treet</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123 Fake Street&quot;</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="err">ci</span><span class="kc">t</span><span class="err">y</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Faketon&quot;</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="err">s</span><span class="kc">tate</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MA&quot;</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="err">zip</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">   </span><span class="p">}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Agora, todos os dados do leitor estão juntos em um único documento, como um dicionário de dicionários. Isso torna a leitura de dados muito mais rápida e simples!</p>
+<h2 id="beneficios-do-uso-de-embeddings">Benefícios do uso de embeddings</h2>
+<ul>
+<li>Mais performance em leitura (menos buscas no banco)</li>
+<li>Estrutura de dados mais natural e compacta</li>
+<li>Ideal para dados que pertencem fortemente ao “dono” (como o endereço de um usuário)</li>
+</ul>
+<h2 id="quando-nao-usar-embeddings">Quando não usar embeddings?</h2>
+<p>Evite embeddings se:</p>
+<ul>
+<li>O dado embutido cresce demais (ex: milhares de comentários em um post).</li>
+<li>O dado embutido precisa ser acessado independentemente ou em massa.</li>
+<li>Você precisa atualizar os dados embutidos com muita frequência.</li>
+</ul>
+<h2 id="referencias">Referencias:</h2>
+<ul>
+<li>
+<p><a href="https://www.mongodb.com/docs/manual/tutorial/model-embedded-one-to-one-relationships-between-documents/">Relacionamentos um para um</a></p>
+</li>
+<li>
+<p><a href="https://www.mongodb.com/pt-br/docs/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/">Relacionamentos um para muitos</a></p>
+</li>
+<li>
+<p><a href="https://www.mongodb.com/pt-br/docs/manual/tutorial/model-embedded-many-to-many-relationships-between-documents/">Relacionamentos muitos para muitos</a></p>
+</li>
+</ul>
 
 
 
@@ -1654,7 +2090,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -1662,23 +2098,23 @@
 </script>
 
 
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/progress-check.js"></script>
+        <script src="../../../javascripts/progress-check.js"></script>
       
-        <script src="../../javascripts/quiz.js"></script>
+        <script src="../../../javascripts/quiz.js"></script>
       
-        <script src="../../javascripts/short-questions.js"></script>
+        <script src="../../../javascripts/short-questions.js"></script>
       
-        <script src="../../javascripts/translate-admonitions.js"></script>
+        <script src="../../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../../javascripts/webhook-config.js"></script>
+        <script src="../../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->
