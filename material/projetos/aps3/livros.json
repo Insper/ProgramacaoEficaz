@@ -1,0 +1,212 @@
+[
+  {
+    "titulo": "Mistérios de Pedra 0",
+    "autor": "Mário de Andrade",
+    "ano": 1990,
+    "genero": "Fantasia",
+    "disponivel": false
+  },
+  {
+    "titulo": "Mistérios de Pedra 1",
+    "autor": "Clarice Lispector",
+    "ano": 1921,
+    "genero": "Romance",
+    "disponivel": false
+  },
+  {
+    "titulo": "Poemas para um Mundo Novo 2",
+    "autor": "Lima Barreto",
+    "ano": 1850,
+    "genero": "Crônica",
+    "disponivel": false
+  },
+  {
+    "titulo": "Céu de Papel 3",
+    "autor": "Machado de Assis",
+    "ano": 1892,
+    "genero": "Crônica",
+    "disponivel": false
+  },
+  {
+    "titulo": "Histórias do Sertão 4",
+    "autor": "Cecília Meireles",
+    "ano": 1984,
+    "genero": "Drama",
+    "disponivel": false
+  },
+  {
+    "titulo": "Poemas para um Mundo Novo 5",
+    "autor": "Lima Barreto",
+    "ano": 1874,
+    "genero": "Conto",
+    "disponivel": true
+  },
+  {
+    "titulo": "A Última Canção 6",
+    "autor": "Graciliano Ramos",
+    "ano": 1937,
+    "genero": "Infantil",
+    "disponivel": false
+  },
+  {
+    "titulo": "Além da Fronteira 7",
+    "autor": "Jorge Amado",
+    "ano": 1932,
+    "genero": "Fantasia",
+    "disponivel": false
+  },
+  {
+    "titulo": "Céu de Papel 8",
+    "autor": "Jorge Amado",
+    "ano": 1951,
+    "genero": "Poesia",
+    "disponivel": true
+  },
+  {
+    "titulo": "O Vento e as Estrelas 9",
+    "autor": "Manuel Bandeira",
+    "ano": 1966,
+    "genero": "Romance",
+    "disponivel": true
+  },
+  {
+    "titulo": "Caminhos Cruzados 10",
+    "autor": "Manuel Bandeira",
+    "ano": 1989,
+    "genero": "Drama",
+    "disponivel": false
+  },
+  {
+    "titulo": "Poemas para um Mundo Novo 11",
+    "autor": "Graciliano Ramos",
+    "ano": 2008,
+    "genero": "Drama",
+    "disponivel": false
+  },
+  {
+    "titulo": "Caminhos Cruzados 12",
+    "autor": "Cecília Meireles",
+    "ano": 1890,
+    "genero": "Suspense",
+    "disponivel": true
+  },
+  {
+    "titulo": "Memórias Esquecidas 13",
+    "autor": "Graciliano Ramos",
+    "ano": 1946,
+    "genero": "Conto",
+    "disponivel": false
+  },
+  {
+    "titulo": "Caminhos Cruzados 14",
+    "autor": "Lima Barreto",
+    "ano": 1855,
+    "genero": "Fantasia",
+    "disponivel": false
+  },
+  {
+    "titulo": "Poemas para um Mundo Novo 15",
+    "autor": "Carlos Drummond",
+    "ano": 1987,
+    "genero": "Poesia",
+    "disponivel": true
+  },
+  {
+    "titulo": "Memórias Esquecidas 16",
+    "autor": "Manuel Bandeira",
+    "ano": 1896,
+    "genero": "Fantasia",
+    "disponivel": false
+  },
+  {
+    "titulo": "Histórias do Sertão 17",
+    "autor": "Clarice Lispector",
+    "ano": 1889,
+    "genero": "Fantasia",
+    "disponivel": true
+  },
+  {
+    "titulo": "A Última Canção 18",
+    "autor": "Mário de Andrade",
+    "ano": 1893,
+    "genero": "Drama",
+    "disponivel": false
+  },
+  {
+    "titulo": "Memórias Esquecidas 19",
+    "autor": "Guimarães Rosa",
+    "ano": 1910,
+    "genero": "Conto",
+    "disponivel": false
+  },
+  {
+    "titulo": "Caminhos Cruzados 20",
+    "autor": "Lima Barreto",
+    "ano": 1999,
+    "genero": "Romance",
+    "disponivel": false
+  },
+  {
+    "titulo": "Mistérios de Pedra 21",
+    "autor": "Jorge Amado",
+    "ano": 1947,
+    "genero": "Poesia",
+    "disponivel": false
+  },
+  {
+    "titulo": "Poemas para um Mundo Novo 22",
+    "autor": "Graciliano Ramos",
+    "ano": 1893,
+    "genero": "Poesia",
+    "disponivel": false
+  },
+  {
+    "titulo": "Histórias do Sertão 23",
+    "autor": "Carlos Drummond",
+    "ano": 1909,
+    "genero": "Crônica",
+    "disponivel": false
+  },
+  {
+    "titulo": "O Vento e as Estrelas 24",
+    "autor": "Guimarães Rosa",
+    "ano": 1940,
+    "genero": "Conto",
+    "disponivel": false
+  },
+  {
+    "titulo": "Céu de Papel 25",
+    "autor": "Jorge Amado",
+    "ano": 1855,
+    "genero": "Crônica",
+    "disponivel": true
+  },
+  {
+    "titulo": "Além da Fronteira 26",
+    "autor": "Lima Barreto",
+    "ano": 1969,
+    "genero": "Conto",
+    "disponivel": false
+  },
+  {
+    "titulo": "O Vento e as Estrelas 27",
+    "autor": "Graciliano Ramos",
+    "ano": 1975,
+    "genero": "Infantil",
+    "disponivel": false
+  },
+  {
+    "titulo": "Mistérios de Pedra 28",
+    "autor": "Manuel Bandeira",
+    "ano": 1949,
+    "genero": "Infantil",
+    "disponivel": false
+  },
+  {
+    "titulo": "Além da Fronteira 29",
+    "autor": "Graciliano Ramos",
+    "ano": 2001,
+    "genero": "Drama",
+    "disponivel": false
+  }
+]

@@ -45,14 +45,14 @@ app = Flask(__name__)
 @app.route('/alunos', methods=['GET'])
 def get_alunos():
 
-    # conectar colm a base
+    # conectar com a base de dados
     conn = connect_db()
 
     if conn is None:
         resp = {"erro": "Erro ao conectar ao banco de dados"}
         return resp, 500
     
-    # se chegou até, tenho uma conexão válida
+    # se chegou até aqui, tenho uma conexão válida
     cursor = conn.cursor()
 
     sql = "SELECT * from tbl_alunos"

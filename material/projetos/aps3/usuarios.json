@@ -1,0 +1,344 @@
+[
+  {
+    "nome": "Ana",
+    "email": "ana@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Poemas para um Mundo Novo 11",
+        "data_emprestimo": "2024-08-07"
+      },
+      {
+        "titulo": "Mistérios de Pedra 1",
+        "data_emprestimo": "2024-08-13"
+      },
+      {
+        "titulo": "O Vento e as Estrelas 9",
+        "data_emprestimo": "2024-08-02"
+      }
+    ]
+  },
+  {
+    "nome": "Carlos",
+    "email": "carlos@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Mistérios de Pedra 0",
+        "data_emprestimo": "2024-08-12"
+      }
+    ]
+  },
+  {
+    "nome": "Beatriz",
+    "email": "beatriz@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Poemas para um Mundo Novo 5",
+        "data_emprestimo": "2024-08-11"
+      },
+      {
+        "titulo": "Poemas para um Mundo Novo 22",
+        "data_emprestimo": "2024-08-01"
+      },
+      {
+        "titulo": "Além da Fronteira 26",
+        "data_emprestimo": "2024-08-25"
+      }
+    ]
+  },
+  {
+    "nome": "João",
+    "email": "joão@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Lucas",
+    "email": "lucas@email.com",
+    "emprestimos": [
+      {
+        "titulo": "O Vento e as Estrelas 27",
+        "data_emprestimo": "2024-08-14"
+      }
+    ]
+  },
+  {
+    "nome": "Mariana",
+    "email": "mariana@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Memórias Esquecidas 13",
+        "data_emprestimo": "2024-08-29"
+      },
+      {
+        "titulo": "Céu de Papel 8",
+        "data_emprestimo": "2024-08-28"
+      },
+      {
+        "titulo": "Céu de Papel 8",
+        "data_emprestimo": "2024-08-16"
+      }
+    ]
+  },
+  {
+    "nome": "Gabriel",
+    "email": "gabriel@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Larissa",
+    "email": "larissa@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Poemas para um Mundo Novo 15",
+        "data_emprestimo": "2024-08-26"
+      }
+    ]
+  },
+  {
+    "nome": "Fernando",
+    "email": "fernando@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Tatiane",
+    "email": "tatiane@email.com",
+    "emprestimos": [
+      {
+        "titulo": "A Última Canção 18",
+        "data_emprestimo": "2024-08-13"
+      },
+      {
+        "titulo": "O Vento e as Estrelas 27",
+        "data_emprestimo": "2024-08-11"
+      }
+    ]
+  },
+  {
+    "nome": "Bruno",
+    "email": "bruno@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Aline",
+    "email": "aline@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Poemas para um Mundo Novo 22",
+        "data_emprestimo": "2024-08-21"
+      },
+      {
+        "titulo": "Mistérios de Pedra 28",
+        "data_emprestimo": "2024-08-20"
+      },
+      {
+        "titulo": "Memórias Esquecidas 16",
+        "data_emprestimo": "2024-08-01"
+      }
+    ]
+  },
+  {
+    "nome": "Diego",
+    "email": "diego@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Mistérios de Pedra 28",
+        "data_emprestimo": "2024-08-23"
+      },
+      {
+        "titulo": "Memórias Esquecidas 19",
+        "data_emprestimo": "2024-08-13"
+      },
+      {
+        "titulo": "Poemas para um Mundo Novo 5",
+        "data_emprestimo": "2024-08-25"
+      }
+    ]
+  },
+  {
+    "nome": "Renata",
+    "email": "renata@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Thiago",
+    "email": "thiago@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Mistérios de Pedra 28",
+        "data_emprestimo": "2024-08-11"
+      },
+      {
+        "titulo": "Poemas para um Mundo Novo 2",
+        "data_emprestimo": "2024-08-07"
+      },
+      {
+        "titulo": "Além da Fronteira 26",
+        "data_emprestimo": "2024-08-23"
+      }
+    ]
+  },
+  {
+    "nome": "Paula",
+    "email": "paula@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Eduardo",
+    "email": "eduardo@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Camila",
+    "email": "camila@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Vinícius",
+    "email": "vinícius@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Caminhos Cruzados 20",
+        "data_emprestimo": "2024-08-10"
+      }
+    ]
+  },
+  {
+    "nome": "Juliana",
+    "email": "juliana@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Histórias do Sertão 17",
+        "data_emprestimo": "2024-08-07"
+      },
+      {
+        "titulo": "Memórias Esquecidas 13",
+        "data_emprestimo": "2024-08-24"
+      },
+      {
+        "titulo": "Memórias Esquecidas 13",
+        "data_emprestimo": "2024-08-06"
+      }
+    ]
+  },
+  {
+    "nome": "Rafael",
+    "email": "rafael@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Mistérios de Pedra 21",
+        "data_emprestimo": "2024-08-24"
+      },
+      {
+        "titulo": "Céu de Papel 25",
+        "data_emprestimo": "2024-08-18"
+      },
+      {
+        "titulo": "Poemas para um Mundo Novo 5",
+        "data_emprestimo": "2024-08-22"
+      }
+    ]
+  },
+  {
+    "nome": "Natália",
+    "email": "natália@email.com",
+    "emprestimos": [
+      {
+        "titulo": "A Última Canção 6",
+        "data_emprestimo": "2024-08-08"
+      },
+      {
+        "titulo": "Caminhos Cruzados 14",
+        "data_emprestimo": "2024-08-30"
+      }
+    ]
+  },
+  {
+    "nome": "Fábio",
+    "email": "fábio@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Mistérios de Pedra 28",
+        "data_emprestimo": "2024-08-25"
+      },
+      {
+        "titulo": "Poemas para um Mundo Novo 15",
+        "data_emprestimo": "2024-08-19"
+      },
+      {
+        "titulo": "Histórias do Sertão 23",
+        "data_emprestimo": "2024-08-19"
+      }
+    ]
+  },
+  {
+    "nome": "Letícia",
+    "email": "letícia@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Mistérios de Pedra 1",
+        "data_emprestimo": "2024-08-17"
+      }
+    ]
+  },
+  {
+    "nome": "Rodrigo",
+    "email": "rodrigo@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Isabela",
+    "email": "isabela@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Poemas para um Mundo Novo 2",
+        "data_emprestimo": "2024-08-29"
+      }
+    ]
+  },
+  {
+    "nome": "André",
+    "email": "andré@email.com",
+    "emprestimos": [
+      {
+        "titulo": "A Última Canção 18",
+        "data_emprestimo": "2024-08-09"
+      },
+      {
+        "titulo": "Além da Fronteira 26",
+        "data_emprestimo": "2024-08-29"
+      }
+    ]
+  },
+  {
+    "nome": "Sabrina",
+    "email": "sabrina@email.com",
+    "emprestimos": []
+  },
+  {
+    "nome": "Danilo",
+    "email": "danilo@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Poemas para um Mundo Novo 5",
+        "data_emprestimo": "2024-08-07"
+      },
+      {
+        "titulo": "Além da Fronteira 26",
+        "data_emprestimo": "2024-08-30"
+      }
+    ]
+  },
+  {
+    "nome": "Bianca",
+    "email": "bianca@email.com",
+    "emprestimos": [
+      {
+        "titulo": "Caminhos Cruzados 12",
+        "data_emprestimo": "2024-08-13"
+      },
+      {
+        "titulo": "Caminhos Cruzados 14",
+        "data_emprestimo": "2024-08-13"
+      }
+    ]
+  }
+]

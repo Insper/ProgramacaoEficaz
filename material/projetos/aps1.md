@@ -22,8 +22,6 @@ Uma das competências importantes para o cientista da computação é exercitar 
 - W3 Schools ([https://www.w3schools.com/](https://www.w3schools.com/)): uma plataforma mantida na Noruega com tutoriais de aprendizado e experimentação para várias linguagens, inclusive o SQL. Você pode encontrar tudo o que precisa lá!
 - SQLite Tutorial ([https://www.sqlitetutorial.net/](https://www.sqlitetutorial.net/)): como iremos trabalhar nesta APS com o SQLite, este tutorial pode também te auxiliar no desenvolvimento dos exercícios.
 
-*Lembrando que as respostas dos exercícios serão liberados após a entrega da APS e iremos comentar em sala de aula cada resolução.*
-
 ## O que você precisa saber e fazer antes de iniciar os exercícios
 
 - Você não precisa (neste momento) utilizar o SQLite instalado em seu computador para trabalhar com esta APS mas não impedimos caso queira desenvolver os exercícios em uma instância local.

@@ -72,6 +72,11 @@ nav:
     - "07 - JavaScript": 
       - "Introdução": aulas/07-JS/intro.md
       - "Requisições Assíncronas": aulas/07-JS/assync.md
+    - "08 - NoSQL":
+      - "Conceitos NoSQL e MongoDB": aulas/mongo/conceitos.md
+      - "MongoDB - Configuração": aulas/mongo/configuracao.md
+      - "Python + MongoDB": aulas/mongo/pythonmongo.md
+      - "Relações entre documentos": aulas/mongo/relacoes.md
     # - "09 - React":
     #   - "Criando projeto": aulas/09-react-vite.md
     #   - "Componentes": aulas/09-react/parte-01-componentes.md
@@ -101,6 +106,7 @@ nav:
     - "Projeto 2": 
       - "Enunciado": projetos/projeto2/index.md
     - "APS 2": projetos/aps2.md
+    - "APS 3": projetos/aps3.md
   #   - "Projeto 1B":
   #     - "Enunciado": projetos/projeto1/projeto1b.md
   #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
