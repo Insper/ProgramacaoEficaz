@@ -77,7 +77,7 @@ Os exercícios consistem em realizar consultas no banco de dados `biblioteca` qu
 
 1. Liste todos os livros disponíveis.
 1. Busque todos os livros do autor "Machado de Assis".
-1. Atualizar a disponibilidade de "Dom Casmurro" para `false`.
+1. Atualizar a disponibilidade de "Poemas para um Mundo Novo 5" para `false`.
 1. Apague da coleção `livros` todos os livros publicados antes de 1900.
 1. Insira um novo livro na coleção `livros` com os seguintes dados:
     - Título: "O Pequeno Príncipe"
