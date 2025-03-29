@@ -12,6 +12,7 @@
 Para completar esta APS os seguintes links serão bastante úteis:
 
 - W3 Schools ([https://www.w3schools.com/mongodb/](https://www.w3schools.com/mongodb/))
+- Cheat Sheet do MongoDB ([https://www.mongodb.com/developer/products/mongodb/cheat-sheet/](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/))
 - Documentação do MongoDB ([https://www.mongodb.com/pt-br/docs/manual/reference/operator/query/](https://www.mongodb.com/pt-br/docs/manual/reference/operator/query/))
 
 

@@ -77,14 +77,14 @@ nav:
       - "MongoDB - Configuração": aulas/mongo/configuracao.md
       - "Python + MongoDB": aulas/mongo/pythonmongo.md
       - "Relações entre documentos": aulas/mongo/relacoes.md
-    # - "09 - React":
-    #   - "Criando projeto": aulas/09-react-vite.md
-    #   - "Componentes": aulas/09-react/parte-01-componentes.md
-    #   - "Recebendo Dados": aulas/09-react/parte-02-recebendo-dados.md
-    #   - "Carregando imagens e arquivos estáticos": aulas/09-react/parte-03-carregando-estaticos.md
-    #   - "Implementando a Criação de Anotações": aulas/09-react/parte-04-criacao-notas.md
-    #   - "Implementando a edição de Anotações": aulas/09-react/parte-05-editando-anotacao.md
-    #   - "Bônus: implementando a rotação dos cartões": aulas/09-react/parte-06-bonus.md
+    - "09 - React":
+      - "Criando projeto": aulas/react/parte-00-react-vite.md
+      - "Componentes": aulas/react/parte-01-componentes.md
+      - "Recebendo Dados": aulas/react/parte-02-recebendo-dados.md
+      - "Carregando imagens e arquivos estáticos": aulas/react/parte-03-carregando-estaticos.md
+      - "Implementando a Criação de Anotações": aulas/react/parte-04-criacao-notas.md
+      - "Implementando a edição de Anotações": aulas/react/parte-05-editando-anotacao.md
+      - "Bônus: implementando a rotação dos cartões": aulas/react/parte-06-bonus.md
     # - "10 - Autenticação Django REST": 
     #   - "Django REST": aulas/10-autenticacao.md
     #   - "React Login": aulas/10-autenticacao/react-cadastro-e-login.md
