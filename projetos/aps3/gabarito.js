@@ -55,6 +55,8 @@ db.usuarios.find({
       $elemMatch: { titulo: "Mistérios de Pedra 1" }
     }
   })
+  // ou
+db.usuarios.find({ "emprestimos.titulo": "Mistérios de Pedra 1" })
 // 11
 db.usuarios.aggregate([
     { $unwind: "$emprestimos" },
