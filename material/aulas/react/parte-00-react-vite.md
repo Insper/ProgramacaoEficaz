@@ -20,6 +20,7 @@ Crie o repositório do Github Classroom para fazer o envio deste handout. [Link 
     ```
     npm create vite@latest notes-frontend -- --template react
     ```
+    Nada deveria ser perguntado, mas se você tiver que escolher opções, escolha as opções `React` e `JavaScript`.
 
 4. A estrutura de arquivos dentro do projeto será:
   
