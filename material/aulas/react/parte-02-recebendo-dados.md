@@ -64,7 +64,7 @@ export default App;
     **No projeto Flask,** adicione a biblioteca `flask-cors`:
 
     ```
-    pip install django-cors-headers
+    pip install flask-cors
     ```
 
     Altere o início do arquivo `app.py` para adicionar as duas linhas abaixo:
