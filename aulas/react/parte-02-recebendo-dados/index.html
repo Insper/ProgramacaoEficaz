@@ -2061,7 +2061,7 @@ Agora modifique o seu código do <code>src/App.js</code> para utilizar o axios p
 <p>Esse erro ocorre porque o navegador está tentando te proteger. Ele não fará requisições para servidores que não aceitam explicitamente requisições de outros endereços. O nosso frontend está rodando em <code>localhost:5173</code> e o backend em <code>localhost:8000</code>. Eles são endereços diferentes, então a requisição é bloqueada.</p>
 <p>Para esse tipo de requisição ser desbloqueada, precisamos adicionar o header CORS, indicando que <a href="https://drawings.jvns.ca/cors/" target="_blank">aceitamos essa requisição</a>:</p>
 <p><strong>No projeto Flask,</strong> adicione a biblioteca <code>flask-cors</code>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install django-cors-headers
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install flask-cors
 </span></code></pre></div>
 <p>Altere o início do arquivo <code>app.py</code> para adicionar as duas linhas abaixo:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="hll"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">request</span>
