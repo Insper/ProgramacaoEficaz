@@ -70,11 +70,11 @@ export default App;
     Altere o início do arquivo `app.py` para adicionar as duas linhas abaixo:
 
     ```python hl_lines="1 4"
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+    from flask import Flask, jsonify, request
+    from flask_cors import CORS
 
-app = Flask(__name__)
-CORS(app)
+    app = Flask(__name__)
+    CORS(app)
     ```
 
     O `CORS(app)` habilita o CORS para todas as rotas do servidor. Isso significa que qualquer origem pode acessar o servidor. Isso é seguro para o nosso projeto, mas não é recomendado para produção. Para produção, você deve configurar o CORS para aceitar apenas requisições de endereços específicos (nosso projeto React, por exemplo).
