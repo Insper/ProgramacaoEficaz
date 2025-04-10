@@ -72,17 +72,17 @@ Depende do contexto.
 
   
 
-## Teste Unitário, Teste de Integração e Teste de Ponta a Ponta  
+## Teste de Unidade, Teste de Integração e Teste de Ponta a Ponta  
 
-Garantir a qualidade de um software é essencial, e para isso existem diferentes tipos de testes automatizados. Três dos mais importantes são: **teste unitário, teste de integração e teste de ponta a ponta (E2E – End-to-End)**. Cada um deles tem um propósito específico dentro do processo de desenvolvimento.  
+Garantir a qualidade de um software é essencial, e para isso existem diferentes tipos de testes automatizados. Três dos mais importantes são: **teste de unidade, teste de integração e teste de ponta a ponta (E2E – End-to-End)**. Cada um deles tem um propósito específico dentro do processo de desenvolvimento.  
 
 
-### 🔹 **Teste Unitário**  
+### 🔹 **Teste de Unidade**  
 
-O **teste unitário** é o mais básico e foca em validar **pequenas partes do código de forma isolada**, como funções ou métodos individuais. Ele verifica se cada unidade do programa funciona corretamente sem considerar suas dependências externas.  
+O **teste de unidade** é o mais básico e foca em validar **pequenas partes do código de forma isolada**, como funções ou métodos individuais. Ele verifica se cada unidade do programa funciona corretamente sem considerar suas dependências externas.  
 
 #### **Cenário típico**:  
-Imagine que um sistema tenha uma função para calcular descontos em uma loja virtual. Um teste unitário garantiria que a função retorna o resultado correto para diferentes valores de compra e regras de desconto.
+Imagine que um sistema tenha uma função para calcular descontos em uma loja virtual. Um teste de unidade garantiria que a função retorna o resultado correto para diferentes valores de compra e regras de desconto.
 
 #### **Quando usar?**  
 - Para testar regras de negócio individuais, como cálculos matemáticos e validações simples.  
@@ -107,7 +107,7 @@ O **teste de ponta a ponta** verifica **todo o fluxo da aplicação**, simulando
 
 #### **Cenário típico**:  
 Em um sistema de e-commerce, um teste E2E validaria o processo completo de compra: um usuário acessa a página de um produto, adiciona-o ao carrinho, preenche os dados de pagamento, conclui a compra e recebe a confirmação. O teste garantiria que todas as etapas funcionam corretamente e que o pedido é registrado no sistema.  
-Apesar de muito útil, o teste de ponta a ponta é mais lento e frágil do que os testes unitários e de integração, pois envolvem a execução de todas as etapas do sistema e mudanças na interface do usuário podem quebrar os testes facilmente.
+Apesar de muito útil, o teste de ponta a ponta é mais lento e frágil do que os testes de unidade e de integração, pois envolvem a execução de todas as etapas do sistema e mudanças na interface do usuário podem quebrar os testes facilmente.
 
 #### **Quando usar?**  
 - Para garantir que todas as partes do sistema operam corretamente do ponto de vista do usuário.  
@@ -118,7 +118,7 @@ Apesar de muito útil, o teste de ponta a ponta é mais lento e frágil do que o
 
 | Tipo de Teste  | O que verifica? | Exemplo de cenário | Vantagens | Desvantagens | Ferramentas | 
 |---------------|----------------|---------------------|-----------|--------------|--------------|
-| **Teste Unitário** | Uma função ou método isolado | Validar o cálculo de desconto em uma compra | Rápido, fácil de rodar e de manter | Não testa a interação com outros módulos | pytest, unittest |
+| **Teste de Unidade** | Uma função ou método isolado | Validar o cálculo de desconto em uma compra | Rápido, fácil de rodar e de manter | Não testa a interação com outros módulos | pytest, unittest |
 | **Teste de Integração** | Comunicação entre módulos do sistema | Verificar se um cadastro de usuário é salvo corretamente no banco de dados | Detecta problemas entre componentes | Mais lento e exige mais configuração | pytest + requests, Postman + Newman |
 | **Teste de Ponta a Ponta (E2E)** | Fluxo completo da aplicação | Simular um processo de compra, do login ao pagamento | Testa o sistema como um usuário real | Lento e pode quebrar facilmente | Selenium |
 
