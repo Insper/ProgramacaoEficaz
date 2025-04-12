@@ -75,6 +75,9 @@ def get_notas():
     username = get_jwt_identity()
     notas = list(notas_col.find({"username": username}, {}))
     return jsonify(notas)
+
+if __name__ == "__main__":
+    app.run(debug=True)
 ```
 
 Nesse código temos vários comandos novos. Vamos ver o que cada um deles faz:
@@ -121,7 +124,7 @@ export default function Login({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", {
+      const res = await axios.post("http://127.0.0.1:5000/login", {
         username,
         password,
       });
@@ -167,7 +170,7 @@ function App() {
   useEffect(() => {
     if (token) {
       axios
-        .get("http://localhost:5000/notas", {
+        .get("http://127.0.0.1:5000/notas", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => setNotas(res.data))
@@ -202,7 +205,7 @@ export default App;
 Nesse código, usamos o `useEffect` para fazer uma requisição para a rota de notas da API sempre que o token mudar. Se o token for inválido ou expirado, chamamos a função `handleLogout`, que remove o token do localStorage e atualiza o estado do aplicativo. Isso faz com que o componente de login seja exibido novamente. Perceba também que para fazer a requisição das notas, foi necessário passar o token de autenticação exatamente como fizemos no servidor JS.
 ```javascript
 axios
-  .get("http://localhost:5000/notas", {
+  .get("http://127.0.0.1:5000/notas", {
     headers: { Authorization: `Bearer ${token}` },
   })
 ```
