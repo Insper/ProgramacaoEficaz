@@ -27,6 +27,53 @@ Neste projeto, o objetivo é criar dois softwares que se comuniquem entre si. O 
 1. O código do cliente deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/D5wGlXsp){:target=_blank}.
 1. Os arquivos de credenciais não devem ser commitados nos repositórios. Utilize variáveis de ambiente para armazenar as credenciais. Os arquivos de credenciais devem ser enviados via Blackboard para permitir a correção.
 
+## Avaliação do Grupo :octicons-people-16:
+
+A Rubrica do projeto será utilizada para avaliar o projeto submetido. No entanto, os membros do grupo podem ter sua nota alterada de acordo com o desempenho individual. Alunos que não tiverem quantidades significativas de commits com contribuições em seu nome, ou que não participarem ativamente do projeto, podem ter sua nota reduzida.
+
+Para isso, será utilizada a avaliação por pares. Uma vez por semana, os membros do grupo devem preencher o formulário de avaliação por pares. Neste formulário, cada membro do grupo deve avaliar os outros membros do grupo. Serão 3 submissões do formulário, nos dias 23/04, 30/04 e 07/05. A não entrega de um dos formulários resultará em uma redução de meio conceito na nota final do aluno para cada formulário não entregue. 
+
+No formulário, devem ser avaliadas a produtividade e proatividade de cada membro do grupo em uma escala de 1 a 5 da seguinte forma:
+
+### Produtividade
+
+1. Produziu muito abaixo do esperado, colocando a entrega em risco e obrigando outro(s) membro(s) a mudar planejamentos pessoais para garanti-la.
+
+2. Produziu abaixo do esperado.
+
+3. Produziu precisamente o esperado. Nem menos, nem mais.
+
+4. Produziu acima do esperado.
+
+5. Produziu muito acima do esperado, mudando planejamentos pessoais para compensar a entrega abaixo do esperado de outro(s) membro(s).
+
+!!! danger "ATENÇÃO"
+    - Se a sprint não foi bem sucedida, é obrigatório que pelo menos um dos membros tenha nível 1 ou 2. Não faz sentido todos terem produzido o esperado e ainda assim a sprint ter sido malsucedida.
+
+    - Se um membro tem nível 5, é obrigatório, pela descrição da rubrica, que pelo menos um dos membros tenha nível 1 ou pelo menos dois dos membros tenham nível 2.
+
+    - Para atingir A, tanto faz atribuir 3 ou 4. Ou seja, não faz muito sentido atribuir 4 por receio de prejudicar o colega. Use esse nível para reconhecer desempenhos excepcionais.
+
+### Proatividade
+
+1. Nem tentou fazer o que tinha prometido.
+
+2. Tentou fazer o que tinha prometido, mas só porque o grupo ficou cobrando.
+
+3. Tentou fazer o que tinha prometido, sem que o grupo precisasse ficar cobrando.
+
+4. Terminou o que tinha prometido e tentou fazer além, ajudando outro(s) membro(s) que estava(m) tendo dificuldades.
+
+5. Tentou fazer o que outro(s) membro(s) tinha(m) prometido, mesmo sem terminar o que ele próprio tinha prometido e/ou sem ter evidência de que esse(s) esse(s) membro(s) estava(m) tendo dificuldades.
+
+| Conceito | Descrição |
+| :------: | :-------- |
+|    Sem desconto    | Não teve nenhuma avaliação abaixo do esperado. Ou teve uma avaliação abaixo do esperado, seguida de duas avaliações acima do esperado. |
+|    Menos meio conceito     | Teve avaliação abaixo do esperado em 1 sprint. |
+|    Menos um conceito     | Teve avaliação abaixo do esperado em 2 sprints. |
+|    Menos dois conceitos     | Teve avaliação de desempenho abaixo do esperado em 3 sprints. |
+|    Menos três conceitos     | Não respondeu nenhum questionário dentro do prazo. Ou não possui nenhum contribuição significativa no projeto.|
+
 ## Rubrica :material-check:
 
 A rubrica a seguir será utilizada na correção do Projeto Final:
