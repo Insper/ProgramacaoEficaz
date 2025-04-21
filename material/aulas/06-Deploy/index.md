@@ -1,4 +1,4 @@
-# Deploy do jogo da cobrinha
+# 06 - Deploy na AWS
 
 Vamos subir o jogo da cobrinha na **AWS!**
 
@@ -172,4 +172,4 @@ sudo ufw enable
 
 Agora **somente a porta 80 (HTTP) e a 22 (SSH) estarão abertas**, garantindo segurança. Sua aplicação está disponível em alguns instantes, na porta 80, basta acessar [`http://SEU_IP_PUBLICO/`](http://SEU_IP_PUBLICO/) 
 
-# 🚀 **Parabéns! Deploy da aplicação na AWS Finalizada**
+## 🚀 **Parabéns! Deploy da aplicação na AWS Finalizada**

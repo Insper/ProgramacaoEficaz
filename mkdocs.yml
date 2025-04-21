@@ -85,10 +85,7 @@ nav:
       - "Implementando a Criação de Anotações": aulas/react/parte-04-criacao-notas.md
       - "Implementando a edição de Anotações": aulas/react/parte-05-editando-anotacao.md
       - "Bônus: implementando a rotação dos cartões": aulas/react/parte-06-bonus.md
-    # - "10 - Autenticação Django REST": 
-    #   - "Django REST": aulas/10-autenticacao.md
-    #   - "React Login": aulas/10-autenticacao/react-cadastro-e-login.md
-    # - "Aula de Apoio - Docker & Banco de dados": aulas/Aula-Docker-TecWeb.pdf
+    - "10 - Autenticação com JWT": aulas/autenticacao/index.md
   - "Material Auxiliar":
     - "Usando o Terminal": auxiliar/terminal.md
     - "Usando o Git": auxiliar/git.md
@@ -171,8 +168,12 @@ extra_css:
   - css/tecweb.css
 
 plugins:
-  - search
-  - glightbox
+    - search
+    - glightbox
+    # - with-pdf:
+    #     copyright: 2025-1
+    #     cover_title: Programação Eficaz
+    #     cover_subtitle: Insper
 
 watch:
   - includes
