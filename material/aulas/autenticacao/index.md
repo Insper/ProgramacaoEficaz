@@ -106,6 +106,7 @@ Nesse código temos vários comandos novos. Vamos ver o que cada um deles faz:
 ## Frontend
 
 No frontend, precisamos fazer algumas alterações para lidar com o token de autenticação. Quando o usuário fizer login, devemos armazenar o token em algum lugar e incluí-lo em todas as requisições subsequentes para acessar rotas protegidas. Os navegadores oferecem várias opções para armazenar dados, como cookies, localStorage e sessionStorage. A escolha de qual usar depende do caso de uso. Veja algumas considerações:
+
 - **Cookies**: São enviados automaticamente pelo navegador em todas as requisições para o mesmo domínio. Isso pode ser útil para autenticação, mas também pode ser um problema de segurança se não forem configurados corretamente. É importante usar a flag `HttpOnly` para evitar que o JavaScript acesse o cookie, e a flag `Secure` para garantir que o cookie só seja enviado em conexões HTTPS.
 - **localStorage**: É uma opção mais simples, mas os dados armazenados no localStorage podem ser acessados pelo JavaScript, o que pode ser um problema de segurança. Além disso, os dados no localStorage persistem mesmo após o fechamento do navegador, o que pode não ser desejável em alguns casos.
 - **sessionStorage**: Funciona de maneira semelhante ao localStorage, mas os dados armazenados no sessionStorage são removidos quando o navegador é fechado. Isso pode ser útil para autenticação, pois os dados não persistem entre sessões.
