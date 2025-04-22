@@ -2245,13 +2245,15 @@ As bibliotecas flask e flask-cors já conhecemos. A biblioteca flask-jwt-extende
 </span></code></pre></div>
 Nesse caso, o token é passado no cabeçalho da requisição, no campo <code>Authorization</code>, com o prefixo <code>Bearer</code>. Esse prefixo é uma convenção do padrão JWT e indica que o token é um token de acesso. O servidor deve verificar esse cabeçalho e validar o token antes de permitir o acesso aos dados protegidos.</p>
 <h2 id="seguranca">Segurança</h2>
-<p>O JWT é uma forma segura de autenticação, mas existem algumas maneiras de deixar a implementação ainda mais segura. Aqui estão algumas dicas:
-- <strong>Armazenamento do token</strong>: O token deve ser armazenado de forma segura, para evitar que ele seja acessado por scripts maliciosos. O uso de cookies com a flag <code>HttpOnly</code> é uma boa prática nesse caso.
-- <strong>Validade do token</strong>: O token deve ter um tempo de expiração definido, para evitar que ele seja usado indefinidamente. O JWT permite definir um tempo de expiração ao criar o token, e o servidor deve verificar esse tempo ao validar o token.
-- <strong>Revogação do token</strong>: O servidor deve ter uma forma de revogar o token, caso o usuário faça logout ou o token seja comprometido. Uma forma de fazer isso é armazenar os tokens revogados em um banco de dados e verificar se o token está na lista de revogados ao validar o token.
-- <strong>HTTPS</strong>: O uso de HTTPS é essencial para garantir a segurança da comunicação entre o cliente e o servidor. O HTTPS criptografa os dados transmitidos, evitando que eles sejam interceptados por terceiros.
-- <strong>CORS</strong>: O CORS (Cross-Origin Resource Sharing) é um mecanismo de segurança que impede que scripts de um domínio acessem recursos de outro domínio. O uso do CORS é importante para evitar ataques de CSRF (Cross-Site Request Forgery), onde um script malicioso tenta fazer requisições para o servidor em nome do usuário. A biblioteca <code>flask-cors</code> já está configurada no código acima, mas é importante revisar as configurações para garantir que apenas os domínios autorizados possam acessar a API.
-- <strong>Deploy fechado</strong>: Se a nossa API for exclusiva para o nosso aplicativo, podemos fechá-la para o mundo externo, permitindo apenas requisições do nosso domínio ou do IP do servidor onde está o Frontend. Isso pode ser feito configurando o firewall do servidor ou usando um proxy reverso, como o Nginx, para filtrar as requisições.</p>
+<p>O JWT é uma forma segura de autenticação, mas existem algumas maneiras de deixar a implementação ainda mais segura. Aqui estão algumas dicas:</p>
+<ul>
+<li><strong>Armazenamento do token</strong>: O token deve ser armazenado de forma segura, para evitar que ele seja acessado por scripts maliciosos. O uso de cookies com a flag <code>HttpOnly</code> é uma boa prática nesse caso.</li>
+<li><strong>Validade do token</strong>: O token deve ter um tempo de expiração definido, para evitar que ele seja usado indefinidamente. O JWT permite definir um tempo de expiração ao criar o token, e o servidor deve verificar esse tempo ao validar o token.</li>
+<li><strong>Revogação do token</strong>: O servidor deve ter uma forma de revogar o token, caso o usuário faça logout ou o token seja comprometido. Uma forma de fazer isso é armazenar os tokens revogados em um banco de dados e verificar se o token está na lista de revogados ao validar o token.</li>
+<li><strong>HTTPS</strong>: O uso de HTTPS é essencial para garantir a segurança da comunicação entre o cliente e o servidor. O HTTPS criptografa os dados transmitidos, evitando que eles sejam interceptados por terceiros.</li>
+<li><strong>CORS</strong>: O CORS (Cross-Origin Resource Sharing) é um mecanismo de segurança que impede que scripts de um domínio acessem recursos de outro domínio. O uso do CORS é importante para evitar ataques de CSRF (Cross-Site Request Forgery), onde um script malicioso tenta fazer requisições para o servidor em nome do usuário. A biblioteca <code>flask-cors</code> já está configurada no código acima, mas é importante revisar as configurações para garantir que apenas os domínios autorizados possam acessar a API.</li>
+<li><strong>Deploy fechado</strong>: Se a nossa API for exclusiva para o nosso aplicativo, podemos fechá-la para o mundo externo, permitindo apenas requisições do nosso domínio ou do IP do servidor onde está o Frontend. Isso pode ser feito configurando o firewall do servidor ou usando um proxy reverso, como o Nginx, para filtrar as requisições.</li>
+</ul>
 
 
 
