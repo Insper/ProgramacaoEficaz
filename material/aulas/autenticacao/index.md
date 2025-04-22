@@ -214,6 +214,7 @@ Nesse caso, o token é passado no cabeçalho da requisição, no campo `Authoriz
 ## Segurança
 
 O JWT é uma forma segura de autenticação, mas existem algumas maneiras de deixar a implementação ainda mais segura. Aqui estão algumas dicas:
+
 - **Armazenamento do token**: O token deve ser armazenado de forma segura, para evitar que ele seja acessado por scripts maliciosos. O uso de cookies com a flag `HttpOnly` é uma boa prática nesse caso.
 - **Validade do token**: O token deve ter um tempo de expiração definido, para evitar que ele seja usado indefinidamente. O JWT permite definir um tempo de expiração ao criar o token, e o servidor deve verificar esse tempo ao validar o token.
 - **Revogação do token**: O servidor deve ter uma forma de revogar o token, caso o usuário faça logout ou o token seja comprometido. Uma forma de fazer isso é armazenar os tokens revogados em um banco de dados e verificar se o token está na lista de revogados ao validar o token.
