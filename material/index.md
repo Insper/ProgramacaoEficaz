@@ -47,3 +47,5 @@ Boas vindas ao curso de Programação Eficaz 2025/1
 Exercícios no Prairie Learn: [https://us.prairielearn.com/pl/course_instance/177857](https://us.prairielearn.com/pl/course_instance/177857){:target="_blank"}
 
 Simulado da Avaliação Intermediária: [https://classroom.github.com/a/o--baFcW](https://classroom.github.com/a/o--baFcW){:target="_blank"}
+
+Simulado da Avaliação Final: [https://classroom.github.com/a/H6588CLi](https://classroom.github.com/a/H6588CLi){:target="_blank"}
