@@ -10,26 +10,24 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/mongo/certi/">
       
       
       
-        <link rel="next" href="notas/">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Programação Eficaz - Insper 2025/1</title>
+        <title>SSL Handshake - Como consertar o erro do PyMongo (MacOS) - Programação Eficaz - Insper 2025/1</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,18 +52,18 @@
       
     
     
-      <link rel="stylesheet" href="css/printing.css">
+      <link rel="stylesheet" href="../../../css/printing.css">
     
-      <link rel="stylesheet" href="css/tecweb.css">
+      <link rel="stylesheet" href="../../../css/tecweb.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -74,7 +72,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -93,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#programacao-eficaz" class="md-skip">
+        <a href="#ssl-handshake-como-consertar-o-erro-do-pymongo-macos" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +107,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -129,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              SSL Handshake - Como consertar o erro do PyMongo (MacOS)
             
           </span>
         </div>
@@ -230,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/1" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -245,19 +243,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,7 +255,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -278,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notas/" class="md-nav__link">
+      <a href="../../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -368,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/" class="md-nav__link">
+      <a href="../../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte0/" class="md-nav__link">
+      <a href="../../01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-rest/REST.pdf" class="md-nav__link">
+      <a href="../../02-rest/REST.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -579,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-rest/" class="md-nav__link">
+      <a href="../../02-rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-rest/requisicoes/" class="md-nav__link">
+      <a href="../../02-rest/requisicoes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-rest/exercicios/" class="md-nav__link">
+      <a href="../../02-rest/exercicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -685,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-postman/instalacao/" class="md-nav__link">
+      <a href="../../03-postman/instalacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-postman/como-usar/" class="md-nav__link">
+      <a href="../../03-postman/como-usar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/04-persistencia/instalacao-mysql/" class="md-nav__link">
+      <a href="../../04-persistencia/instalacao-mysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/04-persistencia/mysql-overview/" class="md-nav__link">
+      <a href="../../04-persistencia/mysql-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/05-TDD/0-tdd/" class="md-nav__link">
+      <a href="../../05-TDD/0-tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -876,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/05-TDD/1-pytest/" class="md-nav__link">
+      <a href="../../05-TDD/1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -897,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/05-TDD/2-boaspraticas/" class="md-nav__link">
+      <a href="../../05-TDD/2-boaspraticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -918,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/05-TDD/3-exceptions/" class="md-nav__link">
+      <a href="../../05-TDD/3-exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/05-TDD/4-fixtures/" class="md-nav__link">
+      <a href="../../05-TDD/4-fixtures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/05-TDD/5-mocks/" class="md-nav__link">
+      <a href="../../05-TDD/5-mocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/05-TDD/6-flask/" class="md-nav__link">
+      <a href="../../05-TDD/6-flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/06-Deploy/" class="md-nav__link">
+      <a href="../../06-Deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/07-JS/intro/" class="md-nav__link">
+      <a href="../../07-JS/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1108,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/07-JS/assync/" class="md-nav__link">
+      <a href="../../07-JS/assync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1172,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/mongo/conceitos/" class="md-nav__link">
+      <a href="../conceitos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/mongo/configuracao/" class="md-nav__link">
+      <a href="../configuracao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1214,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/mongo/pythonmongo/" class="md-nav__link">
+      <a href="../pythonmongo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1235,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/mongo/relacoes/" class="md-nav__link">
+      <a href="../relacoes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1299,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/react/parte-00-react-vite/" class="md-nav__link">
+      <a href="../../react/parte-00-react-vite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1320,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/react/parte-01-componentes/" class="md-nav__link">
+      <a href="../../react/parte-01-componentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1341,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/react/parte-02-recebendo-dados/" class="md-nav__link">
+      <a href="../../react/parte-02-recebendo-dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1362,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/react/parte-03-carregando-estaticos/" class="md-nav__link">
+      <a href="../../react/parte-03-carregando-estaticos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1383,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/react/parte-04-criacao-notas/" class="md-nav__link">
+      <a href="../../react/parte-04-criacao-notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/react/parte-05-editando-anotacao/" class="md-nav__link">
+      <a href="../../react/parte-05-editando-anotacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/react/parte-06-bonus/" class="md-nav__link">
+      <a href="../../react/parte-06-bonus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/autenticacao/" class="md-nav__link">
+      <a href="../../autenticacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="auxiliar/terminal/" class="md-nav__link">
+      <a href="../../../auxiliar/terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1538,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="auxiliar/git/" class="md-nav__link">
+      <a href="../../../auxiliar/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="auxiliar/venv/" class="md-nav__link">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="auxiliar/coautores/" class="md-nav__link">
+      <a href="../../../auxiliar/coautores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1643,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1741,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projetos/projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1762,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
+      <a href="../../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1791,7 +1779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projetos/aps1/" class="md-nav__link">
+      <a href="../../../projetos/aps1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1812,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projetos/projeto2/" class="md-nav__link">
+      <a href="../../../projetos/projeto2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1833,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projetos/aps2/" class="md-nav__link">
+      <a href="../../../projetos/aps2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1854,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projetos/aps3/" class="md-nav__link">
+      <a href="../../../projetos/aps3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1875,7 +1863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="projetos/projeto3/" class="md-nav__link">
+      <a href="../../../projetos/projeto3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1916,6 +1904,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      REFERÊNCIAS:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1929,53 +1934,25 @@
                   
 
 
-<h1 id="programacao-eficaz">Programação Eficaz</h1>
-<p>Boas vindas ao curso de Programação Eficaz 2025/1</p>
-<p><strong>Professor</strong></p>
-<ul>
-<li>Márcio F. Stabile Jr. (marciofsj@insper.edu.br)</li>
-</ul>
-<p><strong>Professora Auxiliar</strong></p>
-<ul>
-<li>Licia Sales Costa Lima (liciascl@insper.edu.br)</li>
-</ul>
-<p><strong>Ninja</strong></p>
-<ul>
-<li>Ricardo Luz Carvalho (ricardolc2@al.insper.edu.br)</li>
-</ul>
-<p><strong>Aulas:</strong></p>
-<ul>
-<li>TER 07:30 - 09:30</li>
-<li>SEX 09:45 - 11:45</li>
-</ul>
-<p><strong>Atendimento:</strong></p>
-<ul>
-<li>TER 09:45 - 11:15 (Márcio)</li>
-<li>QUI 09:45 - 11:15 (Ricardo - NINJA)</li>
-</ul>
-<p><strong>Algumas Datas</strong></p>
-<ul>
-<li>09/02: Entrega do <a href="entregas/01-ELI5/">ELI5</a></li>
-<li>22/02: Entrega do <a href="projetos/projeto1/">Projeto 1</a></li>
-<li>22/02: Entrega da <a href="projetos/aps1/">APS1</a></li>
-<li>19/03: Entrega do <a href="projetos/projeto2/">Projeto 2</a></li>
-<li>06/04: Entrega da <a href="projetos/aps2/">APS2</a></li>
-</ul>
-<!-- - ~~16/08: Entrega do [Desafio CSS]~~
-- 19/08: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
-- 27/08: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
-- 17/09: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
-- ~~07/10: Entrega do [Servidor JS]~~
-- ~~08/10: Entrega do [Servidor JS]~~
-- 13/10: Entrega do [Servidor JS](entregas/03-servidor-js.md)
-- ~~29/10: Entrega do [Projeto 2]~~
-- 03/11: Entrega do [Projeto 2](projetos/projeto2.md)
-- 19/11: Entrega do [Projeto 3](projetos/projeto3.md) -->
-
-<p><strong>Links Úteis</strong></p>
-<p>Exercícios no Prairie Learn: <a href="https://us.prairielearn.com/pl/course_instance/177857" target="_blank">https://us.prairielearn.com/pl/course_instance/177857</a></p>
-<p>Simulado da Avaliação Intermediária: <a href="https://classroom.github.com/a/o--baFcW" target="_blank">https://classroom.github.com/a/o--baFcW</a></p>
-<p>Simulado da Avaliação Final: <a href="https://classroom.github.com/a/H6588CLi" target="_blank">https://classroom.github.com/a/H6588CLi</a></p>
+<h1 id="ssl-handshake-como-consertar-o-erro-do-pymongo-macos">SSL Handshake - Como consertar o erro do PyMongo (MacOS)</h1>
+<p>Responsável: Andre Pereira</p>
+<p>O seguinte erro pode ocorrer quando você estiver usando flask + flask_pymongo, principalmente em sistemas Mac:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pymongo.errors.ServerSelectionTimeoutError: SSL handshake failed: backendstore.documents.azure.com:10255: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:749)
+</span></code></pre></div>
+<p>Basta instalar pelo pip dentro da sua "venv” a biblioteca <code>certifi</code> e gerar o seguinte código na sua aplicação:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">certifi</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">ca</span> <span class="o">=</span> <span class="n">certifi</span><span class="o">.</span><span class="n">where</span><span class="p">()</span>
+</span></code></pre></div>
+<p>E na hora de se conectar com o mongo passar na instância do PyMongo o certificado pelo parâmetro <code>tlsCAFile</code> a variável <code>ca</code> que foi criada anteriormente</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">flask_pymongo</span> <span class="kn">import</span> <span class="n">PyMongo</span><span class="p">,</span> <span class="n">ObjectId</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;MONGO_URI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SUA_URL_DE_CONEXAO&quot;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">db</span> <span class="o">=</span> <span class="n">PyMongo</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">tlsCAFile</span><span class="o">=</span><span class="n">ca</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="referencias"><strong>REFERÊNCIAS</strong>:</h3>
+<p><a href="https://stackoverflow.com/questions/54484890/ssl-handshake-issue-with-pymongo-on-python3">https://stackoverflow.com/questions/54484890/ssl-handshake-issue-with-pymongo-on-python3</a></p>
 
 
 
@@ -2022,7 +1999,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -2030,23 +2007,23 @@
 </script>
 
 
-      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="javascripts/progress-check.js"></script>
+        <script src="../../../javascripts/progress-check.js"></script>
       
-        <script src="javascripts/quiz.js"></script>
+        <script src="../../../javascripts/quiz.js"></script>
       
-        <script src="javascripts/short-questions.js"></script>
+        <script src="../../../javascripts/short-questions.js"></script>
       
-        <script src="javascripts/translate-admonitions.js"></script>
+        <script src="../../../javascripts/translate-admonitions.js"></script>
       
-        <script src="javascripts/webhook-config.js"></script>
+        <script src="../../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->
