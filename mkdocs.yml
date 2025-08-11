@@ -1,10 +1,10 @@
-site_name: Programação Eficaz - Insper 2025/1
+site_name: Programação Eficaz - Insper 2025/2
 site_author: Marcio F. Stabile Jr.
 
 extra:
   materia: Programação Eficaz
   professor: Marcio F. Stabile Jr.
-  semestre: 2025/1
+  semestre: 2025/2
   # custom_variables:
   #   pl_root: https://us.prairielearn.com/pl/course_instance/177857
   #   pl_testes: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
@@ -99,11 +99,11 @@ nav:
     - "Projeto 1": 
       - "Enunciado": projetos/projeto1/index.md
       - "Tarefas": projetos/projeto1/tarefas-projeto1.md
-    - "APS 1": projetos/aps1.md
-    - "Projeto 2": projetos/projeto2/index.md
-    - "APS 2": projetos/aps2.md
-    - "APS 3": projetos/aps3.md
-    - "Projeto 3": projetos/projeto3/index.md
+    # - "APS 1": projetos/aps1.md
+    # - "Projeto 2": projetos/projeto2/index.md
+    # - "APS 2": projetos/aps2.md
+    # - "APS 3": projetos/aps3.md
+    # - "Projeto 3": projetos/projeto3/index.md
   #   - "Projeto 1B":
   #     - "Enunciado": projetos/projeto1/projeto1b.md
   #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
