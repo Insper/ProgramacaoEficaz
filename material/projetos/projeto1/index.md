@@ -36,9 +36,9 @@ A rubrica a seguir será utilizada na correção do Projeto 1:
 
 ## Configuração da Correção Automática
 
-1. Para configurar a correção automática, você deve fazer algumas configurações no seu repositório do GitHub Classroom. Siga as instruções presentes no [Guia de Configuração da Correção Automática](guia-corr-aut.md).
+- Para configurar a correção automática, você deve fazer algumas configurações no seu repositório do GitHub Classroom. Siga as instruções presentes no [Guia de Configuração da Correção Automática](guia-corr-aut.md).
 
 
 ## Detalhes das Tarefas
 
-1. Veja mais descrições das tarefas que devem ser entregues no projeto [:point_right: Clique aqui](tarefas-projeto1.md) para ver os detalhes das tarefas.
+- Veja mais descrições das tarefas que devem ser entregues no projeto [:point_right: Clique aqui](tarefas-projeto1.md) para ver os detalhes das tarefas.

@@ -33,7 +33,9 @@ Nesta etapa, você deverá implementar a persistência dos dados com SQLite util
 
 - Ao finalizar esta etapa, caso não utilize mais o arquivo `notes.json`, apague o arquivo do repositório.
 
-- Material de apoio: [https://www.vrsofttech.com/python-flask/flask-with-sqlite-crud-application](https://www.vrsofttech.com/python-flask/flask-with-sqlite-crud-application)
+- Importante: O nome do banco de dados deve ser `banco.db` e ele deve estar na raiz do repositório. 
+
+- Material de apoio: [https://docs.python.org/3/library/sqlite3.html](https://docs.python.org/3/library/sqlite3.html)
 
 
 ## **3. Apagar anotações** :material-delete:
@@ -57,6 +59,7 @@ Permitir que o usuário apague uma anotação;
         id=<NOTA_ID>
         ```
         Para enviar o id no formulário, pesquise por `#!html <input type="hidden" />`
+- Importante: O link ou botão deve possuir o atributo `name='delete_button'` para que o teste de apagar anotações passe com sucesso.
 - **Observação:** Note que o `id` da nota não deve aparecer na tela, pois esta informação é irrelevante para o usuário.
 
 ### Exemplo
@@ -74,6 +77,7 @@ Permitir a edição de anotações existentes;
         ```
         GET /update/<NOTA_ID> HTTP/1.1
         ```
+- Importante: O link ou botão deve possuir o atributo `name='edit_button'` para que o teste de editar anotações passe com sucesso.
 - A página de edição deve apresentar um formulário com o `título` e `conteúdo` já preenchidos.
 - Você precisará de um método novo no arquivo `utils.py` que recebe como argumento o `id` de uma anotação e retorna esta anotação no formato de um objeto do tipo `Note`. 
 - Esta página deve apresentar dois botões: `Salvar` e `Cancelar`. Caso os nomes sejam diferentes o teste de editar anotações não passará com sucesso.
@@ -96,6 +100,15 @@ Permitir a edição de anotações existentes;
 
 ## Conceito A+
 
-Para o conceito A+, converse com o professor e combine qual funcionalidade será entregue para atingir este conceito. Essa funcionalidade deve ser validada com o professor. Funcionalidades não validadas não serão consideradas para o conceito A+.
+Para receber o conceito A+ você deve implementar a funcionalidade de favoritar anotações.
 
-Além disso, a funcionalidade extra será considerada somente se o projeto atingir o conceito A.
+## **5. Marcar anotações como favoritas** :material-star:
+
+Permitir que o usuário marque uma anotação como favorita;
+
+- Adicione um botão/link no `card` de cada nota existente para favoritar/desfavoritar esta nota.
+- Importante: O link ou botão deve possuir o atributo `name='favorite_button'` para que o teste de favoritar anotações passe com sucesso.
+- Notas favoritadas devem ser exibidas antes das notas não favoritadas.
+- Esta funcionalidade somente será considerada caso todos os testes anteriores estejam implementados e funcionando corretamente.
+- Deve ser possível favoritar/desfavoritar uma anotação. Ou seja, se a anotação já estiver favoritada, ao clicar no botão/link de favoritar, a anotação deve ser desfavoritada e vice-versa.
+- Deve haver uma indicação visual de que a anotação está favoritada. Por exemplo, você pode utilizar um ícone de estrela preenchida para indicar que a anotação está favoritada e um ícone de estrela vazia para indicar que a anotação não está favoritada.
