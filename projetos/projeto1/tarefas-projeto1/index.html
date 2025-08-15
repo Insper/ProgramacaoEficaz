@@ -16,6 +16,8 @@
         <link rel="prev" href="../">
       
       
+        <link rel="next" href="../guia-corr-aut/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
@@ -1876,10 +1878,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-marcar-anotacoes-como-favoritas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Marcar anotações como favoritas 
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-corr-aut/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuração do Corretor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../submetendo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submetendo
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2001,6 +2054,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-marcar-anotacoes-como-favoritas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Marcar anotações como favoritas 
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2049,7 +2111,10 @@
 <p>Ao finalizar esta etapa, caso não utilize mais o arquivo <code>notes.json</code>, apague o arquivo do repositório.</p>
 </li>
 <li>
-<p>Material de apoio: <a href="https://www.vrsofttech.com/python-flask/flask-with-sqlite-crud-application">https://www.vrsofttech.com/python-flask/flask-with-sqlite-crud-application</a></p>
+<p>Importante: O nome do banco de dados deve ser <code>banco.db</code> e ele deve estar na raiz do repositório. </p>
+</li>
+<li>
+<p>Material de apoio: <a href="https://docs.python.org/3/library/sqlite3.html">https://docs.python.org/3/library/sqlite3.html</a></p>
 </li>
 </ul>
 <h2 id="3-apagar-anotacoes"><strong>3. Apagar anotações</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12Z"/></svg></span></h2>
@@ -2072,6 +2137,7 @@
     Para enviar o id no formulário, pesquise por <code class="language-html highlight"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="p">/&gt;</span></code></li>
 </ul>
 </li>
+<li>Importante: O link ou botão deve possuir o atributo <code>name='delete_button'</code> para que o teste de apagar anotações passe com sucesso.</li>
 <li><strong>Observação:</strong> Note que o <code>id</code> da nota não deve aparecer na tela, pois esta informação é irrelevante para o usuário.</li>
 </ul>
 <h3 id="exemplo">Exemplo</h3>
@@ -2088,6 +2154,7 @@
 </span></code></pre></div></li>
 </ul>
 </li>
+<li>Importante: O link ou botão deve possuir o atributo <code>name='edit_button'</code> para que o teste de editar anotações passe com sucesso.</li>
 <li>A página de edição deve apresentar um formulário com o <code>título</code> e <code>conteúdo</code> já preenchidos.</li>
 <li>Você precisará de um método novo no arquivo <code>utils.py</code> que recebe como argumento o <code>id</code> de uma anotação e retorna esta anotação no formato de um objeto do tipo <code>Note</code>. </li>
 <li>Esta página deve apresentar dois botões: <code>Salvar</code> e <code>Cancelar</code>. Caso os nomes sejam diferentes o teste de editar anotações não passará com sucesso.<ul>
@@ -2108,8 +2175,17 @@ As alterações devem ser registradas no banco de dados e em seguida o usuário 
     <figcaption>Exemplo da funcionalidade de editar</figcaption>
 </figure>
 <h2 id="conceito-a">Conceito A+</h2>
-<p>Para o conceito A+, converse com o professor e combine qual funcionalidade será entregue para atingir este conceito. Essa funcionalidade deve ser validada com o professor. Funcionalidades não validadas não serão consideradas para o conceito A+.</p>
-<p>Além disso, a funcionalidade extra será considerada somente se o projeto atingir o conceito A.</p>
+<p>Para receber o conceito A+ você deve implementar a funcionalidade de favoritar anotações.</p>
+<h2 id="5-marcar-anotacoes-como-favoritas"><strong>5. Marcar anotações como favoritas</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.45 4.73L5.82 21 12 17.27Z"/></svg></span></h2>
+<p>Permitir que o usuário marque uma anotação como favorita;</p>
+<ul>
+<li>Adicione um botão/link no <code>card</code> de cada nota existente para favoritar/desfavoritar esta nota.</li>
+<li>Importante: O link ou botão deve possuir o atributo <code>name='favorite_button'</code> para que o teste de favoritar anotações passe com sucesso.</li>
+<li>Notas favoritadas devem ser exibidas antes das notas não favoritadas.</li>
+<li>Esta funcionalidade somente será considerada caso todos os testes anteriores estejam implementados e funcionando corretamente.</li>
+<li>Deve ser possível favoritar/desfavoritar uma anotação. Ou seja, se a anotação já estiver favoritada, ao clicar no botão/link de favoritar, a anotação deve ser desfavoritada e vice-versa.</li>
+<li>Deve haver uma indicação visual de que a anotação está favoritada. Por exemplo, você pode utilizar um ícone de estrela preenchida para indicar que a anotação está favoritada e um ícone de estrela vazia para indicar que a anotação não está favoritada.</li>
+</ul>
 
 
 

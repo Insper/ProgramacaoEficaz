@@ -10,24 +10,26 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/02-rest/exercicios/CorrigindoRestaurante/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/projetos/projeto1/submetendo/">
+      
+      
+        <link rel="prev" href="../guia-corr-aut/">
       
       
       
-      
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Corrigindo Erros em uma API de Gerenciamento de Pedidos de Restaurante - Programação Eficaz - Insper 2025/2</title>
+        <title>Submetendo - Programação Eficaz - Insper 2025/2</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,18 +54,18 @@
       
     
     
-      <link rel="stylesheet" href="../../../../css/printing.css">
+      <link rel="stylesheet" href="../../../css/printing.css">
     
-      <link rel="stylesheet" href="../../../../css/tecweb.css">
+      <link rel="stylesheet" href="../../../css/tecweb.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -72,7 +74,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -91,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#corrigindo-erros-em-uma-api-de-gerenciamento-de-pedidos-de-restaurante" class="md-skip">
+        <a href="#realizando-uma-submissao" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +109,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Programação Eficaz - Insper 2025/2" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/2" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/2" class="md-header__button md-logo" aria-label="Programação Eficaz - Insper 2025/2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -127,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Corrigindo Erros em uma API de Gerenciamento de Pedidos de Restaurante
+              Submetendo
             
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Programação Eficaz - Insper 2025/2" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/2" data-md-component="logo">
+    <a href="../../.." title="Programação Eficaz - Insper 2025/2" class="md-nav__button md-logo" aria-label="Programação Eficaz - Insper 2025/2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -246,7 +248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../notas/" class="md-nav__link">
+      <a href="../../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -356,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -377,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-getit/" class="md-nav__link">
+      <a href="../../../aulas/01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-getit/parte0/" class="md-nav__link">
+      <a href="../../../aulas/01-getit/parte0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-getit/parte1/" class="md-nav__link">
+      <a href="../../../aulas/01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-getit/parte2/" class="md-nav__link">
+      <a href="../../../aulas/01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-getit/parte3/" class="md-nav__link">
+      <a href="../../../aulas/01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../01-getit/parte4/" class="md-nav__link">
+      <a href="../../../aulas/01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../REST.pdf" class="md-nav__link">
+      <a href="../../../aulas/02-rest/REST.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../aulas/02-rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../requisicoes/" class="md-nav__link">
+      <a href="../../../aulas/02-rest/requisicoes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -609,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../../aulas/02-rest/exercicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -673,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03-postman/instalacao/" class="md-nav__link">
+      <a href="../../../aulas/03-postman/instalacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../03-postman/como-usar/" class="md-nav__link">
+      <a href="../../../aulas/03-postman/como-usar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../04-persistencia/instalacao-mysql/" class="md-nav__link">
+      <a href="../../../aulas/04-persistencia/instalacao-mysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -779,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../04-persistencia/mysql-overview/" class="md-nav__link">
+      <a href="../../../aulas/04-persistencia/mysql-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../05-TDD/0-tdd/" class="md-nav__link">
+      <a href="../../../aulas/05-TDD/0-tdd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../05-TDD/1-pytest/" class="md-nav__link">
+      <a href="../../../aulas/05-TDD/1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../05-TDD/2-boaspraticas/" class="md-nav__link">
+      <a href="../../../aulas/05-TDD/2-boaspraticas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../05-TDD/3-exceptions/" class="md-nav__link">
+      <a href="../../../aulas/05-TDD/3-exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../05-TDD/4-fixtures/" class="md-nav__link">
+      <a href="../../../aulas/05-TDD/4-fixtures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -948,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../05-TDD/5-mocks/" class="md-nav__link">
+      <a href="../../../aulas/05-TDD/5-mocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -969,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../05-TDD/6-flask/" class="md-nav__link">
+      <a href="../../../aulas/05-TDD/6-flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1019,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../06-Deploy/" class="md-nav__link">
+      <a href="../../../aulas/06-Deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../07-JS/intro/" class="md-nav__link">
+      <a href="../../../aulas/07-JS/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../07-JS/assync/" class="md-nav__link">
+      <a href="../../../aulas/07-JS/assync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mongo/conceitos/" class="md-nav__link">
+      <a href="../../../aulas/mongo/conceitos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mongo/configuracao/" class="md-nav__link">
+      <a href="../../../aulas/mongo/configuracao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mongo/pythonmongo/" class="md-nav__link">
+      <a href="../../../aulas/mongo/pythonmongo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mongo/relacoes/" class="md-nav__link">
+      <a href="../../../aulas/mongo/relacoes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/parte-00-react-vite/" class="md-nav__link">
+      <a href="../../../aulas/react/parte-00-react-vite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1308,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/parte-01-componentes/" class="md-nav__link">
+      <a href="../../../aulas/react/parte-01-componentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1329,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/parte-02-recebendo-dados/" class="md-nav__link">
+      <a href="../../../aulas/react/parte-02-recebendo-dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/parte-03-carregando-estaticos/" class="md-nav__link">
+      <a href="../../../aulas/react/parte-03-carregando-estaticos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1371,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/parte-04-criacao-notas/" class="md-nav__link">
+      <a href="../../../aulas/react/parte-04-criacao-notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1392,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/parte-05-editando-anotacao/" class="md-nav__link">
+      <a href="../../../aulas/react/parte-05-editando-anotacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../react/parte-06-bonus/" class="md-nav__link">
+      <a href="../../../aulas/react/parte-06-bonus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../autenticacao/" class="md-nav__link">
+      <a href="../../../aulas/autenticacao/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../auxiliar/terminal/" class="md-nav__link">
+      <a href="../../../auxiliar/terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1526,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../auxiliar/git/" class="md-nav__link">
+      <a href="../../../auxiliar/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1547,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../auxiliar/venv/" class="md-nav__link">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1568,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../auxiliar/coautores/" class="md-nav__link">
+      <a href="../../../auxiliar/coautores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1656,17 +1658,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1680,7 +1684,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Projetos
@@ -1691,17 +1695,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -1715,7 +1721,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             Projeto 1
@@ -1729,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../projetos/projeto1/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1750,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../projetos/projeto1/tarefas-projeto1/" class="md-nav__link">
+      <a href="../tarefas-projeto1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1771,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../projetos/projeto1/guia-corr-aut/" class="md-nav__link">
+      <a href="../guia-corr-aut/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1789,10 +1795,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../projetos/projeto1/submetendo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Submetendo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1801,6 +1827,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-de-diretorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura de diretórios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura de diretórios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivo .gitignore
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-um-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando um release
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1848,27 +1927,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#codigo-bugado" class="md-nav__link">
+  <a href="#estrutura-de-diretorios" class="md-nav__link">
     <span class="md-ellipsis">
-      Código bugado:
+      Estrutura de diretórios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura de diretórios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivo .gitignore
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#testar-a-api-no-postman" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testar a API no Postman:
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dica-sobre-os-bugs-no-exercicio" class="md-nav__link">
+  <a href="#criando-um-release" class="md-nav__link">
     <span class="md-ellipsis">
-      Dica sobre os bugs no exercício:
+      Criando um release
     </span>
   </a>
   
@@ -1889,82 +1974,112 @@
                   
 
 
-<h1 id="corrigindo-erros-em-uma-api-de-gerenciamento-de-pedidos-de-restaurante">Corrigindo Erros em uma API de Gerenciamento de Pedidos de Restaurante</h1>
-<p>Responsável: Licia Sales</p>
-<p>Você recebeu uma API RESTful para o gerenciamento de pedidos em um restaurante, que já foi desenvolvida, mas contém alguns erros que precisam ser corrigidos. A API deve permitir criar novos pedidos, visualizar pedidos existentes, atualizar o status dos pedidos e remover pedidos. Cada pedido tem um identificador único, o nome do cliente, os itens do pedido e o status (ex: "Em preparo", "Pronto", "Entregue").</p>
-<p><strong>Estrutura do Pedido:</strong></p>
-<ul>
-<li><strong>ID</strong>: Um número inteiro único que identifica o pedido.</li>
-<li><strong>Nome do Cliente</strong>: Uma string que representa o nome do cliente.</li>
-<li><strong>Itens</strong>: Uma lista de strings que descreve os itens do pedido.</li>
-<li><strong>Status</strong>: Uma string que representa o status do pedido.</li>
-</ul>
-<h3 id="codigo-bugado"><strong>Código bugado:</strong></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">request</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Lista de pedidos de exemplo</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">orders</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;customer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;João Silva&quot;</span><span class="p">,</span> <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Pizza&quot;</span><span class="p">,</span> <span class="s2">&quot;Refrigerante&quot;</span><span class="p">],</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Em preparo&quot;</span><span class="p">},</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;customer_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Maria Oliveira&quot;</span><span class="p">,</span> <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hambúrguer&quot;</span><span class="p">,</span> <span class="s2">&quot;Batata Frita&quot;</span><span class="p">],</span> <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Pronto&quot;</span><span class="p">},</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">]</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/orders&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">def</span> <span class="nf">get_orders</span><span class="p">():</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;No orders found&quot;</span><span class="p">}</span>  
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/orders&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">def</span> <span class="nf">add_order</span><span class="p">():</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">new_order</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">new_order</span><span class="p">[</span><span class="s2">&quot;customer_name&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">new_order</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]:</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid data&quot;</span><span class="p">},</span> <span class="mi">400</span>  
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="n">new_order</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="n">orders</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_order</span><span class="p">)</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">new_order</span><span class="p">),</span> <span class="mi">201</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/orders/&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">def</span> <span class="nf">get_order</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        <span class="k">if</span> <span class="n">order</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>            <span class="k">return</span> <span class="n">order</span>  
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Order not found&quot;</span><span class="p">},</span> <span class="mi">404</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/orders/&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PUT&#39;</span><span class="p">])</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="k">def</span> <span class="nf">update_order</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="n">updated_order</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>        <span class="k">if</span> <span class="n">order</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>            <span class="n">order</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">updated_order</span><span class="p">)</span>  
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>            <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Order not found&quot;</span><span class="p">},</span> <span class="mi">404</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/orders/&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DELETE&#39;</span><span class="p">])</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="k">def</span> <span class="nf">delete_order</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        <span class="k">if</span> <span class="n">order</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>            <span class="n">orders</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Order deleted&quot;</span><span class="p">},</span> <span class="mi">200</span>
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Order not found&quot;</span><span class="p">},</span> <span class="mi">404</span>
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<h1 id="realizando-uma-submissao">Realizando uma submissão</h1>
+<p>Depois de configurar o WebHook do seu repositório Github vamos adicionar os arquivos referentes ao Handout 1.</p>
+<p>Caso não tenha feito a configuração do WebHook, <a href="../guia-corr-aut/">clique aqui</a> para configurar.</p>
+<h2 id="estrutura-de-diretorios">Estrutura de diretórios</h2>
+<p>Copie os arquivos referentes ao Handout. O repositório do projeto deve seguir a seguinte estrutura de diretórios e nomenclatura de arquivos:</p>
+<figure>
+    <a class="glightbox" href="../organizacao-repositorio.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Organização do Repositório" src="../organizacao-repositorio.jpg" width="30%" /></a>
+    <figcaption>Organização do Repositório</figcaption>
+</figure>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Como o projeto será corrigido automaticamente, é importante que você siga a estrutura de diretórios apresentada no handout.</p>
+<p>Além disso, o arquivo principal do projeto deve se chamar <code>servidor.py</code>.</p>
+</div>
+<h3 id="arquivo-gitignore">Arquivo .gitignore</h3>
+<p>Existem arquivos que não devem ser versionados no repositório. Um exemplo é a pasta <code>__pycache__</code> que é criado pelo Python. Se você procurar em seu repositório Github criado para o handout 1 verá que este pasta está lá.</p>
+<p>Essa pasta é desnecessária para o repositório, pois é criada automaticamente pelo Python. Para evitar que ela seja versionada, deve existir um arquivo chamado <code>.gitignore</code> na raiz do seu repositório. Verifique se o arquivo <code>.gitignore</code> existe. Caso não exista, crie um arquivo chamado <code>.gitignore</code> na raiz do seu repositório e adicione o seguinte conteúdo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>__pycache__/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>env/
 </span></code></pre></div>
-<h3 id="testar-a-api-no-postman"><strong>Testar a API no Postman:</strong></h3>
+<h2 id="criando-um-release">Criando um release</h2>
+<p>Para que o corretor automático possa corrigir o seu projeto, é necessário criar um release no Github. Para isso, siga os passos a seguir:</p>
+<ol>
+<li>
+<p>Acesse o repositório do seu projeto no Github. Procure o menu <code>Releases</code> e clique em <code>Create a new release</code>.</p>
+<p><figure markdown="span">
+    <a class="glightbox" href="../webhook-config-08.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Releases" src="../webhook-config-08.png" width="100%" /></a>
+    <figcaption>Releases</figcaption>
+</figure></p>
+</li>
+<li>
+<p><strong>Clique no botão <code>Choose a tag</code></strong>
+    <figure markdown="span">
+        <a class="glightbox" href="../webhook-config-09.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Releases" src="../webhook-config-09.png" width="100%" /></a>
+        <figcaption>Releases</figcaption>
+    </figure></p>
+</li>
+<li>
+<p>Crie uma tag para o seu release. A tag deve ser <code>v1.0</code>.</p>
+<p>Sempre que for criar um release, crie uma nova tag utilizando o padrão v1.0, v1.1, v1.2, etc. Caso a release seja referente a uma nova funcionalidade implementada, incremente o primeiro número da tag. Por exemplo, se a release atual é v1.0 e você implementou uma nova funcionalidade, a tag da nova release deve ser v2.0. Caso a release seja referente a uma correção de bug, incremente o segundo número da tag. Por exemplo, se a release atual é v1.0 e você corrigiu um bug, a tag da nova release deve ser v1.1.</p>
+<p><figure markdown="span">
+    <a class="glightbox" href="../webhook-config-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Releases" src="../webhook-config-10.png" width="50%" /></a>
+    <figcaption>Releases</figcaption>
+</figure></p>
+<p>Digite o nome da tag e clique <code>+ Create new tag: v1.0</code>.</p>
+</li>
+<li>
+<p>Preencha o campo <code>Release title</code> com o mesmo nome da tag <code>v1.0</code>, adicione uma descrição e clique em <code>Publish release</code>.</p>
+<p><figure markdown="span">
+    <a class="glightbox" href="../webhook-config-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Releases" src="../webhook-config-11.png" width="60%" /></a>
+    <figcaption>Releases</figcaption>
+</figure></p>
+</li>
+</ol>
+<p>Pronto! Agora os testes vão rodar. (Pode levar alguns minutos para que os testes sejam executados).</p>
+<p>Sempre que algum teste não passar com sucesso, uma <code>issue</code> será aberta no seu repositório indicando o que está errado. Como não implementamos todas as funcionalidades do projeto, uma issue será aberta indicando quais itens faltam implementar.</p>
+<figure>
+    <a class="glightbox" href="../webhook-config-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Issue" src="../webhook-config-13.png" width="100%" /></a>
+    <figcaption>Issue</figcaption>
+</figure>
+<p>Se tudo estiver correto, uma imagem aparecerá no README do seu repositório indicando que os testes para o handout 01 passaram.</p>
+<figure>
+    <a class="glightbox" href="../webhook-config-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Testes handout 01 ok" src="../webhook-config-12.png" width="100%" /></a>
+    <figcaption>Testes handout 01 ok</figcaption>
+</figure>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.</p>
+<p>Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. </p>
 <ul>
-<li>Após corrigir os erros, use o Postman para testar cada endpoint. Eles devem garantir que todas as operações funcionem conforme o esperado, incluindo cenários de sucesso e falha.</li>
+<li>No Windows <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 12V6.75l6-1.32v6.48L3 12m17-9v8.75l-10 .15V5.21L20 3M3 13l6 .09v6.81l-6-1.15V13m17 .25V22l-10-1.91V13.1l10 .15Z"/></svg></span> e Linux <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 0 0-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 0 1-.004-.021l-.004-.024a1.807 1.807 0 0 1-.15.706.953.953 0 0 1-.213.335.71.71 0 0 0-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 0 0-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 0 0-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 0 0-.205.334 1.18 1.18 0 0 0-.09.4v.019c.002.089.008.179.02.267-.193-.067-.438-.135-.607-.202a1.635 1.635 0 0 1-.018-.2v-.02a1.772 1.772 0 0 1 .15-.768 1.08 1.08 0 0 1 .43-.533.985.985 0 0 1 .594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2.012-.09.013-.18.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.613.613 0 0 0-.166-.267.248.248 0 0 0-.183-.064h-.021c-.071.006-.13.04-.186.132a.552.552 0 0 0-.12.27.944.944 0 0 0-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268.01.009.02.018.034.024-.07.057-.117.07-.176.136a.304.304 0 0 1-.131.068 2.62 2.62 0 0 1-.275-.402 1.772 1.772 0 0 1-.155-.667 1.759 1.759 0 0 1 .08-.668 1.43 1.43 0 0 1 .283-.535c.128-.133.26-.2.418-.2zm1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.571.571 0 0 1 .016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.139 1.139 0 0 1-.448-.067 3.566 3.566 0 0 1-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71-.07-.268-.005-.47.193-.6.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.645 2.645 0 0 0-.402-.533 1.45 1.45 0 0 0-.275-.333c.182 0 .338-.03.465-.067a.615.615 0 0 0 .314-.334c.108-.267 0-.697-.345-1.163-.345-.467-.931-.995-1.788-1.521-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.123 8.123 0 0 1 .647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335.039.003.075.006.11.006.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01c.053 0 .105.005.157.014.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602-.369-.066-.61-.2-.723-.4-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336zm7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8.097 8.097 0 0 1-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065zm-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></svg></span>, pressione <code>Ctrl + F5</code>. </li>
+<li>No MacOS <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11Z"/></svg></span>, pressione <code>Cmd + Shift + R</code>. </li>
+<li>Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.</li>
 </ul>
-<h3 id="dica-sobre-os-bugs-no-exercicio"><strong>Dica sobre os bugs no exercício:</strong></h3>
-<hr />
-<ul>
-<li><strong>Dica 1:</strong> Verifique se o endpoint <code>GET /orders</code> está retornando a informação no formato JSON e lidando corretamente quando não há pedidos.</li>
-<li><strong>Dica 2:</strong> Verifique se o endpoint <code>POST /orders</code> está validando corretamente todos os campos obrigatórios antes de criar um novo pedido.</li>
-<li><strong>Dica 3:</strong> Verifique se o endpoint <code>GET /orders/&lt;id&gt;</code> está retornando a resposta no formato JSON e tratando adequadamente pedidos que não existem.</li>
-<li><strong>Dica 4:</strong> Verifique se o endpoint <code>PUT /orders/&lt;id&gt;</code> permite a atualização parcial dos dados do pedido, preservando os dados que não foram enviados.</li>
-<li><strong>Dica 5:</strong> Verifique se o endpoint <code>DELETE /orders/&lt;id&gt;</code> remove corretamente o pedido e verifica se o pedido existe.</li>
-</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>O servidor deverá utilizar a porta <code>5000</code></p>
+</div>
+<!-- ## Erro no handout01
+
+
+<figure markdown="span">
+    ![Corretor não identifica handout 01](webhook-config-17.png){ width="100%" }
+    <figcaption>Corretor não identifica handout 01</figcaption>
+</figure>
+
+No arquivo `servidor.py` a variável `SERVER_HOST` deve ser `#!python "0.0.0.0"`. Para testar sua aplicação em seu computador (ambiente local), basta acessar `http://localhost:8080` ou `http://127.0.0.1:8080`.
+
+Caso queira, pode alterar o `print` marcado abaixo por `#!python print('Servidor escutando em (ctrl+click): http://localhost:8080')`
+
+```python hl_lines="2 10"
+CUR_DIR = Path(__file__).parent
+SERVER_HOST = '0.0.0.0'
+SERVER_PORT = 8080
+
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+server_socket.bind((SERVER_HOST, SERVER_PORT))
+server_socket.listen()
+
+print(f'Servidor escutando em (ctrl+click): http://{SERVER_HOST}:{SERVER_PORT}')
+``` -->
+
+<p>Agora podemos começar a tabalhar nas tarefas do Projeto 1.</p>
+<p><a class="md-button" href="../tarefas-projeto1/">Tarefas do Projeto 1</a></p>
 
 
 
@@ -2011,7 +2126,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -2019,23 +2134,23 @@
 </script>
 
 
-      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../../../javascripts/progress-check.js"></script>
+        <script src="../../../javascripts/progress-check.js"></script>
       
-        <script src="../../../../javascripts/quiz.js"></script>
+        <script src="../../../javascripts/quiz.js"></script>
       
-        <script src="../../../../javascripts/short-questions.js"></script>
+        <script src="../../../javascripts/short-questions.js"></script>
       
-        <script src="../../../../javascripts/translate-admonitions.js"></script>
+        <script src="../../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../../../../javascripts/webhook-config.js"></script>
+        <script src="../../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->
