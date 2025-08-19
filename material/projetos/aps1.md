@@ -1,7 +1,7 @@
 # APS 1
 
 !!! success "Entrega"
-    :date: 22/02 (sábado)
+    :date: 29/08 (sexta-feira)
     
     :clock1: até as 23:59
 
@@ -28,22 +28,7 @@ Uma das competências importantes para o cientista da computação é exercitar 
 - Sugerimos o uso de um sandbox executado 100% no navegador, acessando pela URL [https://www.convertcsv.com/sqlite-online.htm](https://www.convertcsv.com/sqlite-online.htm)
 - Faça o download da base de dados [imoveis.db](imoveis.db)
 - Faça a carga do banco de dados clicando no botão `Load an SQLite database` e selecionando o arquivo acima. Depois de executado com sucesso, a tabela `imoveis` estará carregada no banco de dados e você pode iniciar a resolução dos exercícios.
-- A entrega dos exercícios deve ser enviada em PDF pelo Blackboard com texto gerado em LaTeX, usando o template disponível em [https://www.overleaf.com/read/zgybjvrygnfw#19e451](https://www.overleaf.com/read/zgybjvrygnfw#19e451)
-
-## Como será a avaliação?
-
-O feedback referente a esta atividade será disponibilizado a todos os alunos, indicando as questões corretas e incorretas incluindo as sugestões para melhoria. O conceito na atividade será atribuído pelo número de questões corretas, como segue a Tabela abaixo:
-
-| Conceito | Número de Acertos |
-| :------: | :-------- |
-|    I     | 0 |
-|    D     | 2 |
-|    C     | 4 |
-|    C+    | 6 |
-|    B     | 8 |
-|    B+    | 10 |
-|    A     | 12 |
-|    A+    | 14 |
+- A entrega dos exercícios deve ser feita através do [Prairie Learn](https://us.prairielearn.com/pl/course_instance/186073/assessment/2559035) com correção e feedback automáticos.
 
 **Reforçamos que não serão aceitos exercícios entregues fora do prazo e que na entrega não realizada será atribuído conceito I**
 

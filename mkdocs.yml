@@ -101,7 +101,7 @@ nav:
       - "Tarefas": projetos/projeto1/tarefas-projeto1.md
       - "Configuração do Corretor": projetos/projeto1/guia-corr-aut.md
       - "Submetendo": projetos/projeto1/submetendo.md
-    # - "APS 1": projetos/aps1.md
+    - "APS 1": projetos/aps1.md
     # - "Projeto 2": projetos/projeto2/index.md
     # - "APS 2": projetos/aps2.md
     # - "APS 3": projetos/aps3.md
