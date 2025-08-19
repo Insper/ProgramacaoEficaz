@@ -34,6 +34,7 @@ Nesta etapa, você deverá implementar a persistência dos dados com SQLite util
 - Ao finalizar esta etapa, caso não utilize mais o arquivo `notes.json`, apague o arquivo do repositório.
 
 - Importante: O nome do banco de dados deve ser `banco.db` e ele deve estar na raiz do repositório. 
+- O nome da tabela deve ser `notes` e ela deve conter pelo menos as colunas `id`, `title` e `content`. A coluna `id` deve ser uma chave primária e autoincrementada. Perceba que o nome da tabela e das colunas está em inglês, pois é uma convenção comum em bancos de dados relacionais. No entanto, o nome dos componentes da interface do usuário devem permanecer em português, como no handout.
 
 - Material de apoio: [https://docs.python.org/3/library/sqlite3.html](https://docs.python.org/3/library/sqlite3.html)
 
