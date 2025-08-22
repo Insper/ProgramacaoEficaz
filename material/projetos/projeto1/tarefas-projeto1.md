@@ -108,6 +108,7 @@ Para receber o conceito A+ você deve implementar a funcionalidade de favoritar 
 Permitir que o usuário marque uma anotação como favorita;
 
 - Adicione um botão/link no `card` de cada nota existente para favoritar/desfavoritar esta nota.
+- Cada nota deve ter um `class='card'` para que seja identificada como um card.
 - Importante: O link ou botão deve possuir o atributo `name='favorite_button'` para que o teste de favoritar anotações passe com sucesso.
 - Notas favoritadas devem ser exibidas antes das notas não favoritadas.
 - Esta funcionalidade somente será considerada caso todos os testes anteriores estejam implementados e funcionando corretamente.
