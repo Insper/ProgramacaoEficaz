@@ -1,13 +1,13 @@
 # Projeto 2
 
 !!! success "Entrega"
-    :date: 19/03/2025 (quarta-feira)
+    :date: 17/09/2025 (quarta-feira)
     
     :clock1: Commits até as 23:59
 
     :material-account-group: Duplas
 
-    :simple-github: Entrega via :point_right: [GitHub Classroom](https://classroom.github.com/a/mCuB878M)
+    :simple-github: Entrega via :point_right: [GitHub Classroom](https://classroom.github.com/a/gxfZUAYR)
 
 ## Objetivos :octicons-goal-16:
 
