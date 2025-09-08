@@ -43,7 +43,7 @@ sudo ufw enable
 Agora, vamos trazer o código para o servidor:
 
 ```
-git clone https://github.com/liciascl/cobrinha
+git clone https://github.com/mfstabile/cobrinha
 cd cobrinha
 ```
 
