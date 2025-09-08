@@ -54,7 +54,7 @@ Agora, configuramos um ambiente virtual Python para evitar conflitos:
 ```
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requeiriments.txt
+pip install -r requirements.txt
 
 ```
 
