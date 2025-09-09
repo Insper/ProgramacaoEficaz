@@ -252,4 +252,4 @@ test_api.py::test_get_alunos_vazio PASSED
 
 Isso facilita a **manutenção do código**, garantindo que a API continue funcionando conforme esperado, mesmo com futuras mudanças. 🚀
 
-Agora que você já aprendeu tudo sobre testes automáticos, que tal praticar um pouco mais? Vamos para os [**Exercícios no Prairie Learn**](https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997){:target="_blank"}!
+Agora que você já aprendeu tudo sobre testes automáticos, que tal praticar um pouco mais? Vamos para os [**Exercícios no Prairie Learn**](https://us.prairielearn.com/pl/course_instance/186073){:target="_blank"}!
