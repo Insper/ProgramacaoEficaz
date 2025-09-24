@@ -2,7 +2,7 @@
 
 !!! success "Entrega"
 
-    :date:  11/04 (sexta-feira)
+    :date:  10/10 (sexta-feira)
     
     :material-account-group: Individual
 
