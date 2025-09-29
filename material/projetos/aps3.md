@@ -1,13 +1,13 @@
 # APS 3
 
 !!! success "Entrega"
-    :date: 25/04 (sexta-feira)
+    :date:  10/10 (sexta-feira)
     
     :clock1: até as 23:59
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via :point_right: Blackboard.
+    :simple-github: Entrega via Prairie Learn.
  
 Para completar esta APS os seguintes links serão bastante úteis:
 
@@ -18,9 +18,7 @@ Para completar esta APS os seguintes links serão bastante úteis:
 
 ## O que você precisa saber e fazer antes de iniciar os exercícios
 
-- A entrega dos exercícios deve ser enviada em PDF pelo Blackboard com texto gerado em LaTeX, usando o template disponível em [https://www.overleaf.com/read/zgybjvrygnfw#19e451](https://www.overleaf.com/read/zgybjvrygnfw#19e451)
-
-- Faça o download dos arquivos [`livros.json`](aps3/livros.json) e [`usuarios.json`](aps3/usuarios.json). Esses arquivos contém dados completamente inventados e não validos, apenas para fins de teste.
+- Faça o download dos arquivos [`livros.json`](aps3/livros.json) e [`usuarios.json`](aps3/usuarios.json). Esses arquivos contém dados completamente inventados e não válidos, apenas para fins de teste.
 
 - Crie um banco de dados no MongoDB Atlas como instruído [aqui](../aulas/mongo/configuracao.md).
 
@@ -54,23 +52,6 @@ db.usuarios.find().pretty()
 ```
 
 Caso o comando acima retorne os dados dos usuários, a importação foi realizada com sucesso.
-
-## Como será a avaliação?
-
-O feedback referente a esta atividade será disponibilizado a todos os alunos, indicando as questões corretas e incorretas incluindo as sugestões para melhoria. O conceito na atividade será atribuído pelo número de questões corretas, como segue a Tabela abaixo:
-
-| Conceito | Número de Acertos |
-| :------: | :-------- |
-|    I     | 0 |
-|    D     | 2 |
-|    C     | 4 |
-|    C+    | 6 |
-|    B     | 8 |
-|    B+    | 9 |
-|    A     | 10 |
-|    A+    | 11 |
-
-**Reforçamos que não serão aceitos exercícios entregues fora do prazo e que na entrega não realizada será atribuído conceito I**
 
 ## Exercícios
 
