@@ -4,7 +4,7 @@ O objetivo deste handout é que você tenha um primeiro contato com o React. Ao 
 
 **Github Classroom**
 
-Crie o repositório do Github Classroom para fazer o envio deste handout. [Link para o Github Classroom](https://classroom.github.com/a/e7nShEqQ){:target="_blank"}.
+Crie o repositório do Github Classroom para fazer o envio deste handout. [Link para o Github Classroom](https://classroom.github.com/a/D7OuLHQm){:target="_blank"}.
 
 !!! danger "Importante"
     Nem todo código deste handout é JavaScript puro. Algumas (muitas) coisas são específicas do React e não funcionarão fora desse contexto.
