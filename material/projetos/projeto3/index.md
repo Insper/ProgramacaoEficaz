@@ -1,11 +1,11 @@
 # Projeto Final
 
 !!! success "Entrega"
-    :date: 07/05/2025 (quarta-feira)
+    :date: 04/11/2025 (terça-feira)
     
     :clock1: Commits até as 23:59
 
-    :material-account-group: Mesmos grupos de Projeto Ágil + no máximo 1 aluno que não esteja cursando a disciplina.
+    :material-account-group: Mesmos grupos de Projeto Ágil + 1 aluno que não esteja cursando a disciplina.
 
     :simple-github: Entrega via :point_right: GitHub Classroom.
 
