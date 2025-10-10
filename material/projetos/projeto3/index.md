@@ -1,7 +1,7 @@
 # Projeto Final
 
 !!! success "Entrega"
-    :date: 04/11/2025 (terça-feira)
+    :date: 04/11/2025 (terça-feira) - Apresentação em aula.
     
     :clock1: Commits até as 23:59
 
@@ -23,15 +23,15 @@ Neste projeto, o objetivo é criar dois softwares que se comuniquem entre si. O 
 1. O projeto deve ter o deploy feito em um EC2 na AWS.
 1. O tema do projeto deve ser escolhido pelo grupo, mas deve ser validado pelo professor.
 1. O projeto deve utilizar-se de pelo menos uma API externa.
-1. O código do servidor deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/3BoLKVKL){:target=_blank}.
-1. O código do cliente deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/D5wGlXsp){:target=_blank}.
+1. O código do servidor deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/pZTgnAfL){:target=_blank}.
+1. O código do cliente deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/bTlhC8hM){:target=_blank}.
 1. Os arquivos de credenciais não devem ser commitados nos repositórios. Utilize variáveis de ambiente para armazenar as credenciais. Os arquivos de credenciais devem ser enviados via Blackboard para permitir a correção.
 
 ## Avaliação do Grupo :octicons-people-16:
 
 A Rubrica do projeto será utilizada para avaliar o projeto submetido. No entanto, os membros do grupo podem ter sua nota alterada de acordo com o desempenho individual. Alunos que não tiverem quantidades significativas de commits com contribuições em seu nome, ou que não participarem ativamente do projeto, podem ter sua nota reduzida.
 
-Para isso, será utilizada a avaliação por pares. Uma vez por semana, os membros do grupo devem preencher o formulário de avaliação por pares. Neste formulário, cada membro do grupo deve avaliar os outros membros do grupo. Serão 3 submissões do formulário, nos dias 23/04, 30/04 e 07/05. A não entrega de um dos formulários resultará em uma redução de meio conceito na nota final do aluno para cada formulário não entregue. 
+Para isso, será utilizada a avaliação por pares. Uma vez por semana, os membros do grupo devem preencher o formulário de avaliação por pares. Neste formulário, cada membro do grupo deve avaliar os outros membros do grupo. Serão 3 submissões do formulário, nos dias 17/10, 24/10 e 31/10. A não entrega de um dos formulários resultará em uma redução de meio conceito na nota final do aluno para cada formulário não entregue.
 
 No formulário, devem ser avaliadas a produtividade e proatividade de cada membro do grupo em uma escala de 1 a 5 da seguinte forma:
 
