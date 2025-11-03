@@ -3,7 +3,7 @@
 !!! success "Entrega"
     :date: 04/11/2025 (terça-feira) - Apresentação em aula.
     
-    :clock1: Commits até as 23:59
+    :clock1: Commits até as 07:30 do dia 04/11/2025.
 
     :material-account-group: Mesmos grupos de Projeto Ágil + 1 aluno que não esteja cursando a disciplina.
 
