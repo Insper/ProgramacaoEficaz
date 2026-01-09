@@ -2,15 +2,11 @@
 
 O objetivo deste handout é que você tenha um primeiro contato com o React. Ao final do handout você terá alguma ideia de qual é a "cara" de um app React. Para saber mais sobre React veja o [tutorial oficial do React](https://react.dev/learn/tutorial-tic-tac-toe){:target="_blank"} ou o tutorial disponibilizado pelo Mozilla [Tutorial React by Mozilla](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started){:target="_blank"}.
 
-**Github Classroom**
-
-Crie o repositório do Github Classroom para fazer o envio deste handout. [Link para o Github Classroom](https://classroom.github.com/a/D7OuLHQm){:target="_blank"}.
-
 !!! danger "Importante"
     Nem todo código deste handout é JavaScript puro. Algumas (muitas) coisas são específicas do React e não funcionarão fora desse contexto.
 
 !!! danger "Importante 2"
-    Quando você for pesquisar no Google sobre React, você vai encontrar muito material utilizando classes. Essa é a uma maneira alternativa de se utilizar o React. O uso de componentes funcionais (que veremos neste handout) tem se tornado cada vez mais utilizado, mas é importante saber que existem essas duas alternativas para não utilizar soluções que não funcionarão para o seu caso.
+    Quando você for pesquisar no Google sobre React, você vai encontrar muito material utilizando classes. Essa é a uma maneira alternativa de se utilizar o React. O uso de componentes funcionais (que veremos neste handout) tem se tornado cada vez mais comum, mas é importante saber que existem essas duas alternativas para não utilizar soluções que não funcionarão para o seu caso.
 
 ## Setup do React
 

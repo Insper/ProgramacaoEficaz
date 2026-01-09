@@ -14,7 +14,7 @@ Boas vindas ao curso de Programação Eficaz 2025/2
 **Aulas:**
 
 - TER 07:30 - 09:30
-- SEX 14:15 - 16:15
+- SEX 09:45 - 11:45
 
 **Atendimento:**
 
@@ -41,7 +41,7 @@ Boas vindas ao curso de Programação Eficaz 2025/2
 
 **Links Úteis**
 
-Exercícios no Prairie Learn: [https://us.prairielearn.com/pl/course_instance/186073](https://us.prairielearn.com/pl/course_instance/186073){:target="_blank"}
+Exercícios no Prairie Learn: [https://us.prairielearn.com/pl/course_instance/204883](https://us.prairielearn.com/pl/course_instance/204883){:target="_blank"}
 
 Simulado da Avaliação Intermediária: [https://classroom.github.com/a/6GFbTBtV](https://classroom.github.com/a/6GFbTBtV){:target="_blank"}
 

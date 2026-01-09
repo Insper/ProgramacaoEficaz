@@ -64,7 +64,7 @@ nav:
       - "Fixtures": aulas/05-TDD/4-fixtures.md
       - "Mocks": aulas/05-TDD/5-mocks.md
       - "Testando APIs": aulas/05-TDD/6-flask.md
-      - Exercícios: https://us.prairielearn.com/pl/course_instance/186073
+      - Exercícios: https://us.prairielearn.com/pl/course_instance/204883/assessment/2632693
     - "06 - Deploy na AWS": aulas/06-Deploy/index.md
     - "07 - JavaScript": 
       - "Introdução": aulas/07-JS/intro.md
@@ -98,11 +98,11 @@ nav:
       - "Tarefas": projetos/projeto1/tarefas-projeto1.md
       - "Configuração do Corretor": projetos/projeto1/guia-corr-aut.md
       - "Submetendo": projetos/projeto1/submetendo.md
-    - "APS 1": projetos/aps1.md
-    - "Projeto 2": projetos/projeto2/index.md
-    - "APS 2": projetos/aps2.md
-    - "APS 3": projetos/aps3.md
-    - "Projeto 3": projetos/projeto3/index.md
+    # - "APS 1": projetos/aps1.md
+    # - "Projeto 2": projetos/projeto2/index.md
+    # - "APS 2": projetos/aps2.md
+    # - "APS 3": projetos/aps3.md
+    # - "Projeto 3": projetos/projeto3/index.md
   #   - "Projeto 1B":
   #     - "Enunciado": projetos/projeto1/projeto1b.md
   #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md

@@ -28,7 +28,7 @@ Uma das competências importantes para o cientista da computação é exercitar 
 - Sugerimos o uso de um sandbox executado 100% no navegador, acessando pela URL [https://www.convertcsv.com/sqlite-online.htm](https://www.convertcsv.com/sqlite-online.htm)
 - Faça o download da base de dados [imoveis.db](imoveis.db)
 - Faça a carga do banco de dados clicando no botão `Load an SQLite database` e selecionando o arquivo acima. Depois de executado com sucesso, a tabela `imoveis` estará carregada no banco de dados e você pode iniciar a resolução dos exercícios.
-- A entrega dos exercícios deve ser feita através do [Prairie Learn](https://us.prairielearn.com/pl/course_instance/186073/assessment/2559035) com correção e feedback automáticos.
+- A entrega dos exercícios deve ser feita através do [Prairie Learn](https://us.prairielearn.com/pl/course_instance/204883/assessment/2632691) com correção e feedback automáticos.
 
 **Reforçamos que não serão aceitos exercícios entregues fora do prazo e que na entrega não realizada será atribuído conceito I**
 
