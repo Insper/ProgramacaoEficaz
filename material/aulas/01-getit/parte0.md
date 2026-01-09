@@ -26,7 +26,7 @@ O Git e o GitHub são ferramentas já conhecidas que foram bastante usadas em De
 Agora que você já leu os materiais sobre o terminal e o Git, é hora de colocar em prática o que aprendeu. Para isso, siga os passos abaixo:
 
 1. Abra o terminal e crie uma pasta chamada `programacao-eficaz` em alguma pasta de sua preferência.
-2. Acesse o site do [GitHub Classroom](https://classroom.github.com/a/Pyu2Qgi3) e crie o repositório.
+2. Acesse o site do [GitHub Classroom](https://classroom.github.com/a/0j89gl3b) e crie o repositório.
 3. Clone o repositório para a pasta `programacao-eficaz` que você criou no passo 1 utilizando o terminal.
 4. Crie um ambiente virtual chamado `env` dentro da pasta do repositório utilizando o terminal.
 

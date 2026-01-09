@@ -7,7 +7,7 @@
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via :point_right: [GitHub Classroom](https://classroom.github.com/a/Pyu2Qgi3)
+    :simple-github: Entrega via :point_right: [GitHub Classroom](https://classroom.github.com/a/0j89gl3b)
  
 ## Objetivos
 
