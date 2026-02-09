@@ -1,10 +1,10 @@
-site_name: Programação Eficaz - Insper 2025/2
+site_name: Programação Eficaz - Insper 2026/1
 site_author: Marcio F. Stabile Jr.
 
 extra:
   materia: Programação Eficaz
   professor: Marcio F. Stabile Jr.
-  semestre: 2025/2
+  semestre: 2026/1
 
 theme:
   name: material
