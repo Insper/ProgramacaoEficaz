@@ -6,10 +6,10 @@ Boas vindas ao curso de Programação Eficaz 2026/1
 
 - Márcio F. Stabile Jr. (marciofsj@insper.edu.br)
 
-<!-- **Ninjas**
+**Ninjas**
 
-- Eduardo Takei Yaginuma (eduardoty2@al.insper.edu.br)
-- Yuri Henrique da Cunha Santos (yurihcs@al.insper.edu.br) -->
+- Emily de Britto (emilybg@al.insper.edu.br)
+- Gabriel Chaves Aguiar (gabrielca5@al.insper.edu.br)
 
 **Aulas:**
 
