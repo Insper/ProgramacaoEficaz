@@ -7,7 +7,7 @@
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via :point_right: Blackboard.
+    :simple-github: Entrega via :point_right: PrairieLearn.
  
 ## Para que preciso aprender isso?
 
