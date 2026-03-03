@@ -7,7 +7,7 @@
 
     :material-account-group: Duplas
 
-    :simple-github: Entrega via :point_right: [GitHub Classroom](https://classroom.github.com/a/gxfZUAYR)
+    :simple-github: Entrega via :point_right: [GitHub Classroom](https://classroom.github.com/a/mWiSDRa_)
 
 ## Objetivos :octicons-goal-16:
 
