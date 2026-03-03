@@ -1,7 +1,7 @@
 # Projeto 2
 
 !!! success "Entrega"
-    :date: 17/09/2025 (quarta-feira)
+    :date: 18/03/2026 (quarta-feira)
     
     :clock1: Commits até as 23:59
 
