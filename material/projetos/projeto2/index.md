@@ -21,8 +21,8 @@ Durante o primeiro projeto, nós desenvolvemos um servidor capaz de responder co
     - Adicionar um novo imóvel;
     - Atualizar um imóvel existente;
     - Remover um imóvel existente;
-    - Listar imóveis por tipo (casa, apartamento, terreno, etc) com todos os seus atributos;
-    - Listar imóveis por cidade com todos os seus atributos;
+    - Buscar imóveis por tipo (casa, apartamento, terreno, etc) com todos os seus atributos;
+    - Buscar imóveis por cidade com todos os seus atributos;
 1. Devem haver testes automatizados para todas as rotas.
 1. O servidor deve ser desenvolvido utilizando o framework Flask.
 1. O servidor deve utilizar o banco de dados MySQL hospedado na plataforma Aiven.
