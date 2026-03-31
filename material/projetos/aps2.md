@@ -2,7 +2,9 @@
 
 !!! success "Entrega"
 
-    :date:  TBD
+    :date:  17/04 (sexta-feira)
+    
+    :clock1: até as 23:59
     
     :material-account-group: Individual
 

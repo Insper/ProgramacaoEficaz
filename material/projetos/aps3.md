@@ -1,7 +1,7 @@
 # APS 3
 
 !!! success "Entrega"
-    :date:  10/10 (sexta-feira)
+    :date:  17/04 (sexta-feira)
     
     :clock1: até as 23:59
 
