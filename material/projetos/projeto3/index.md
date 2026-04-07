@@ -23,8 +23,8 @@ Neste projeto, o objetivo é criar dois softwares que se comuniquem entre si. O 
 1. O projeto deve ter o deploy feito em um EC2 na AWS.
 1. O tema do projeto deve ser escolhido pelo grupo, mas deve ser validado pelo professor.
 1. O projeto deve utilizar-se de pelo menos uma API externa.
-1. O código do servidor deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/pZTgnAfL){:target=_blank}.
-1. O código do cliente deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/bTlhC8hM){:target=_blank}.
+1. O código do servidor deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/GXnkhpCe){:target=_blank}.
+1. O código do cliente deve estar no seguinte GitHub Classroom: [link](https://classroom.github.com/a/A-FdV31q){:target=_blank}.
 1. Os arquivos de credenciais não devem ser commitados nos repositórios. Utilize variáveis de ambiente para armazenar as credenciais. Os arquivos de credenciais devem ser enviados via Blackboard para permitir a correção.
 
 ## Avaliação do Grupo :octicons-people-16:
