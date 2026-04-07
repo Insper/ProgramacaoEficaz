@@ -102,7 +102,7 @@ nav:
     - "Projeto 2": projetos/projeto2/index.md
     - "APS 2": projetos/aps2.md
     - "APS 3": projetos/aps3.md
-    # - "Projeto 3": projetos/projeto3/index.md
+    - "Projeto 3": projetos/projeto3/index.md
   #   - "Projeto 1B":
   #     - "Enunciado": projetos/projeto1/projeto1b.md
   #     - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
