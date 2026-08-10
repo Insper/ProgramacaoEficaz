@@ -1,6 +1,6 @@
 # Programação Eficaz
 
-Boas vindas ao curso de Programação Eficaz 2026/1
+Boas vindas ao curso de Programação Eficaz 2026/2
 
 **Professor**
 
@@ -8,8 +8,8 @@ Boas vindas ao curso de Programação Eficaz 2026/1
 
 **Ninjas**
 
-- Emily de Britto (emilybg@al.insper.edu.br)
-- Gabriel Chaves Aguiar (gabrielca5@al.insper.edu.br)
+- Gabriel Emery Vivacqua (gabrielev1@insper.edu.br)
+- Vitor Hiratsuca Costa (vitorhc@al.insper.edu.br)
 
 **Aulas:**
 

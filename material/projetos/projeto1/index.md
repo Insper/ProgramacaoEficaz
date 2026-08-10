@@ -1,13 +1,13 @@
 # Projeto 1
 
 !!! success "Entrega"
-    :date: 27/02 (sexta-feira)
+    :date: a definir
     
     :clock1: Commits até as 23:59
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via :point_right: [GitHub Classroom](https://classroom.github.com/a/0j89gl3b)
+    :simple-github: Entrega via Blackboard. Envie o link do seu repositório do GitHub no Blackboard. O repositório deve estar público para que a correção automática funcione. Siga as instruções da aula [01 - Get-it - O retorno](../../aulas/01-getit/parte0.md) para criar o repositório do projeto.
  
 ## Objetivos
 
