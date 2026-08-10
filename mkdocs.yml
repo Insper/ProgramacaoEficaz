@@ -64,7 +64,7 @@ nav:
       - "Fixtures": aulas/05-TDD/4-fixtures.md
       - "Mocks": aulas/05-TDD/5-mocks.md
       - "Testando APIs": aulas/05-TDD/6-flask.md
-      - Exercícios: https://us.prairielearn.com/pl/course_instance/204883/assessment/2632693
+      - Exercícios: https://us.prairielearn.com/pl/course_instance/225046
     - "06 - Deploy na AWS": aulas/06-Deploy/index.md
     - "07 - JavaScript": 
       - "Introdução": aulas/07-JS/intro.md

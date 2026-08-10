@@ -41,8 +41,8 @@ Boas vindas ao curso de Programação Eficaz 2026/2
 
 **Links Úteis**
 
-Exercícios no Prairie Learn: [https://us.prairielearn.com/pl/course_instance/204883](https://us.prairielearn.com/pl/course_instance/204883){:target="_blank"}
+Exercícios no Prairie Learn: [https://us.prairielearn.com/pl/course_instance/225046](https://us.prairielearn.com/pl/course_instance/225046){:target="_blank"}
 
-Simulado da Avaliação Intermediária: [https://classroom.github.com/a/vV6z64KC](https://classroom.github.com/a/vV6z64KC){:target="_blank"}
+<!-- Simulado da Avaliação Intermediária: [https://classroom.github.com/a/vV6z64KC](https://classroom.github.com/a/vV6z64KC){:target="_blank"}
 
-Simulado da Avaliação Final: [https://classroom.github.com/a/C65mBKg-](https://classroom.github.com/a/C65mBKg-){:target="_blank"}
+Simulado da Avaliação Final: [https://classroom.github.com/a/C65mBKg-](https://classroom.github.com/a/C65mBKg-){:target="_blank"} -->
