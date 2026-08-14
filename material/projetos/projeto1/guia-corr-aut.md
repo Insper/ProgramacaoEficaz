@@ -57,7 +57,9 @@
     
 5. Clone o seu repositório do Github.
     
-    Altere o arquivo `README.md` e adicione o nome do seu repositório no GitHub, conforme o exemplo abaixo:
+    Altere o arquivo `README.md` e faça duas modificações:
+    - Altere `insper-classroom` para o seu nome de usuário do GitHub.
+    - Altere `NOME DO SEU REPOSITORIO` para o nome do seu repositório do projeto.
 
     ```html title="Conteúdo do README.md"
     ## Status da Entrega
