@@ -1,7 +1,7 @@
 # APS 1
 
 !!! success "Entrega"
-    :date: 02/03 (segunda-feira)
+    :date: Consultar no Prairie Learn
     
     :clock1: até as 23:59
 
