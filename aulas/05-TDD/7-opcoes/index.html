@@ -2304,151 +2304,53 @@
 </span></code></pre></div>
 <p>Isso pode ser útil quando você está corrigindo erros um de cada vez.</p>
 <p>Por exemplo, se existem 100 testes e o terceiro falha, o <code>pytest</code> interrompe a execução imediatamente.</p>
-<h2 id="parar-depois-de-uma-quantidade-de-falhas">Parar depois de uma quantidade de falhas</h2>
-<h3 id="-maxfail"><code>--maxfail</code></h3>
-<p>Permite determinar quantas falhas podem acontecer antes de interromper a execução.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>pytest<span class="w"> </span>--maxfail<span class="o">=</span><span class="m">2</span>
-</span></code></pre></div>
-<p>Nesse exemplo, o <code>pytest</code> interrompe a execução depois que <strong>dois testes falharem</strong>.</p>
-<p>Também é possível combinar com <code>-v</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--maxfail<span class="o">=</span><span class="m">2</span>
-</span></code></pre></div>
-<h2 id="executar-novamente-apenas-os-testes-que-falharam">Executar novamente apenas os testes que falharam</h2>
-<h3 id="-lf-ou-last-failed"><code>--lf</code> ou <code>--last-failed</code></h3>
-<p>O <code>pytest</code> guarda informações sobre a execução anterior.</p>
-<p>O comando:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>pytest<span class="w"> </span>--lf
-</span></code></pre></div>
-<p>executa somente os testes que falharam na última execução.</p>
-<p>Por exemplo, se temos 50 testes e apenas dois falharam, depois de corrigir o código podemos executar:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>pytest<span class="w"> </span>--lf
-</span></code></pre></div>
-<p>Assim, inicialmente somente esses dois testes serão executados novamente.</p>
-<h2 id="executar-primeiro-os-testes-que-falharam-anteriormente">Executar primeiro os testes que falharam anteriormente</h2>
-<h3 id="-ff-ou-failed-first"><code>--ff</code> ou <code>--failed-first</code></h3>
-<p>Executa todos os testes, mas coloca primeiro aqueles que falharam na execução anterior.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>pytest<span class="w"> </span>--ff
-</span></code></pre></div>
-<p>Isso é útil quando queremos verificar rapidamente se uma correção resolveu um problema, mas ainda queremos executar toda a suíte de testes.</p>
 <h1 id="controlando-o-que-aparece-no-terminal">Controlando o que aparece no terminal</h1>
 <h2 id="mostrar-os-print-dos-testes">Mostrar os <code>print()</code> dos testes</h2>
 <h3 id="-s"><code>-s</code></h3>
 <p>Por padrão, o <code>pytest</code> captura a saída produzida por <code>print()</code>.</p>
 <p>Considere:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">():</span>
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Executando teste de soma&quot;</span><span class="p">)</span>
-</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">():</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Executando teste de soma&quot;</span><span class="p">)</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
 </span></code></pre></div>
 <p>Executando:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>pytest
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>pytest
 </span></code></pre></div>
 <p>o texto normalmente não aparece durante um teste que passa.</p>
 <p>Com:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>pytest<span class="w"> </span>-s
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>pytest<span class="w"> </span>-s
 </span></code></pre></div>
 <p>veremos:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Executando teste de soma
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Executando teste de soma
 </span></code></pre></div>
 <p>Essa opção pode ser útil durante a depuração.</p>
 <p>Também é comum combinar:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-s
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-s
 </span></code></pre></div>
-<h2 id="mostrar-menos-informacoes">Mostrar menos informações</h2>
-<h3 id="-q-ou-quiet"><code>-q</code> ou <code>--quiet</code></h3>
-<p>A opção <code>-q</code> (<em>quiet</em>) reduz a quantidade de informações mostradas pelo <code>pytest</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>pytest<span class="w"> </span>-q
-</span></code></pre></div>
-<p>É útil quando queremos uma saída mais curta, principalmente em projetos que possuem muitos testes.</p>
 <h1 id="controlando-a-mensagem-de-erro">Controlando a mensagem de erro</h1>
 <h2 id="alterar-o-formato-do-traceback">Alterar o formato do traceback</h2>
 <h3 id="-tb"><code>--tb</code></h3>
 <p>Quando um teste falha, o <code>pytest</code> mostra o <em>traceback</em>, ou seja, informações indicando onde ocorreu o erro.</p>
 <p>Podemos controlar a quantidade de informações mostradas.</p>
-<h3 id="traceback-curto">Traceback curto</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>short
-</span></code></pre></div>
-<p>Mostra uma versão reduzida do erro.</p>
 <h3 id="traceback-completo">Traceback completo</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>long
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>long
 </span></code></pre></div>
 <p>Mostra informações mais detalhadas.</p>
-<h3 id="apenas-uma-linha">Apenas uma linha</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>line
-</span></code></pre></div>
-<p>Mostra cada erro de forma bastante compacta.</p>
-<h3 id="nao-mostrar-traceback">Não mostrar traceback</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>no
-</span></code></pre></div>
-<p>Pode ser útil quando queremos visualizar apenas quais testes falharam.</p>
-<p>Uma combinação bastante prática é:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--tb<span class="o">=</span>short
-</span></code></pre></div>
 <h1 id="listando-testes-sem-executa-los">Listando testes sem executá-los</h1>
 <h2 id="-collect-only"><code>--collect-only</code></h2>
 <p>O <code>pytest</code> primeiro procura os testes existentes no projeto. Esse processo é chamado de <strong>coleta de testes</strong> (<em>test collection</em>).</p>
 <p>Podemos pedir para ele mostrar quais testes encontrou sem executá-los:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>pytest<span class="w"> </span>--collect-only
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>pytest<span class="w"> </span>--collect-only
 </span></code></pre></div>
 <p>Por exemplo:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>test_calculadora.py
-</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>    test_soma
-</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>    test_subtracao
-</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>    test_multiplicacao
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>test_calculadora.py
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>    test_soma
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>    test_subtracao
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>    test_multiplicacao
 </span></code></pre></div>
 <p>Esse comando é útil para verificar se o <code>pytest</code> está conseguindo encontrar todos os testes esperados.</p>
 <p>Para uma saída mais compacta:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>pytest<span class="w"> </span>--collect-only<span class="w"> </span>-q
-</span></code></pre></div>
-<h1 id="executando-testes-marcados">Executando testes marcados</h1>
-<h2 id="-m"><code>-m</code></h2>
-<p>O <code>pytest</code> permite adicionar <strong>marcadores</strong> (<em>markers</em>) aos testes.</p>
-<p>Por exemplo:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
-</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>
-</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>
-</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">lento</span>
-</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="k">def</span> <span class="nf">test_operacao_complexa</span><span class="p">():</span>
-</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>    <span class="k">assert</span> <span class="kc">True</span>
-</span></code></pre></div>
-<p>Podemos executar apenas os testes que possuem a marca <code>lento</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>pytest<span class="w"> </span>-m<span class="w"> </span>lento
-</span></code></pre></div>
-<p>Também podemos excluir esses testes:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>pytest<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;not lento&quot;</span>
-</span></code></pre></div>
-<p>Os marcadores são úteis para separar, por exemplo:</p>
-<ul>
-<li>testes rápidos;</li>
-<li>testes lentos;</li>
-<li>testes de integração;</li>
-<li>testes que dependem de banco de dados;</li>
-<li>testes que dependem de serviços externos.</li>
-</ul>
-<blockquote>
-<p>Marcadores personalizados normalmente devem ser registrados no arquivo de configuração do <code>pytest</code>.</p>
-</blockquote>
-<h1 id="algumas-combinacoes-uteis">Algumas combinações úteis</h1>
-<p>As opções podem ser combinadas.</p>
-<h3 id="ver-detalhadamente-os-testes">Ver detalhadamente os testes</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>pytest<span class="w"> </span>-v
-</span></code></pre></div>
-<h3 id="ver-detalhes-e-os-print">Ver detalhes e os <code>print()</code></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-s
-</span></code></pre></div>
-<h3 id="parar-na-primeira-falha_1">Parar na primeira falha</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-x
-</span></code></pre></div>
-<h3 id="mostrar-traceback-mais-curto">Mostrar traceback mais curto</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--tb<span class="o">=</span>short
-</span></code></pre></div>
-<h3 id="executar-novamente-apenas-os-testes-que-falharam_1">Executar novamente apenas os testes que falharam</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--lf
-</span></code></pre></div>
-<h3 id="executar-testes-cujo-nome-contem-usuario">Executar testes cujo nome contém <code>usuario</code></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-k<span class="w"> </span>usuario
-</span></code></pre></div>
-<h3 id="executar-um-teste-especifico_1">Executar um teste específico</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>pytest<span class="w"> </span>test_calculadora.py::test_soma<span class="w"> </span>-v
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>pytest<span class="w"> </span>--collect-only<span class="w"> </span>-q
 </span></code></pre></div>
 <h1 id="resumo-dos-principais-comandos">Resumo dos principais comandos</h1>
 <table>
