@@ -1976,6 +1976,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projeto 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2111,7 +2132,6 @@
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">():</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
 </span></code></pre></div>
-<hr />
 <h2 id="ver-mais-detalhes-da-execucao">Ver mais detalhes da execução</h2>
 <h3 id="-v-ou-verbose"><code>-v</code> ou <code>--verbose</code></h3>
 <p>A opção <code>-v</code> (<em>verbose</em>) faz com que o <code>pytest</code> mostre mais informações durante a execução dos testes.</p>
@@ -2130,7 +2150,6 @@
 <p>Também podemos executar um arquivo específico:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pytest<span class="w"> </span>test_calculadora.py<span class="w"> </span>-v
 </span></code></pre></div>
-<hr />
 <h2 id="mostrar-um-resumo-dos-testes">Mostrar um resumo dos testes</h2>
 <h3 id="-r"><code>-r</code></h3>
 <p>A opção <code>-r</code> permite escolher quais tipos de resultados devem aparecer no <strong>resumo final da execução</strong>.</p>
@@ -2188,7 +2207,6 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest<span class="w"> </span>-ra
 </span></code></pre></div>
 <p>O <code>a</code> significa mostrar informações sobre <strong>todos os resultados relevantes</strong>, exceto os testes que simplesmente passaram.</p>
-<hr />
 <h2 id="ver-os-comandos-disponiveis">Ver os comandos disponíveis</h2>
 <h3 id="-h-ou-help"><code>-h</code> ou <code>--help</code></h3>
 <p>Mostra a lista de opções disponíveis no <code>pytest</code>.</p>
@@ -2198,7 +2216,6 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pytest<span class="w"> </span>--help
 </span></code></pre></div>
 <p>Esse comando é útil quando você não lembra exatamente o nome ou funcionamento de alguma opção.</p>
-<hr />
 <h1 id="escolhendo-quais-testes-executar">Escolhendo quais testes executar</h1>
 <h2 id="executar-os-testes-de-um-arquivo-especifico">Executar os testes de um arquivo específico</h2>
 <p>Para executar somente os testes presentes em um determinado arquivo:</p>
@@ -2213,7 +2230,6 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>pytest<span class="w"> </span>test_usuario.py
 </span></code></pre></div>
 <p>executará somente os testes presentes em <code>test_usuario.py</code>.</p>
-<hr />
 <h2 id="executar-um-teste-especifico">Executar um teste específico</h2>
 <p>Podemos utilizar <code>::</code> para indicar exatamente qual teste queremos executar.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>pytest<span class="w"> </span>arquivo_test.py::funcao_test
@@ -2229,7 +2245,6 @@
 <p>Para executar somente <code>test_soma</code>:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>pytest<span class="w"> </span>test_calculadora.py::test_soma
 </span></code></pre></div>
-<hr />
 <h2 id="executar-os-testes-de-uma-classe-especifica">Executar os testes de uma classe específica</h2>
 <p>Quando os testes estão organizados em classes, também podemos selecionar uma classe inteira.</p>
 <p>Por exemplo:</p>
@@ -2247,7 +2262,6 @@
 <p>Para executar somente um método:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>pytest<span class="w"> </span>test_calculadora.py::TestCalculadora::test_soma
 </span></code></pre></div>
-<hr />
 <h2 id="selecionar-testes-pelo-nome">Selecionar testes pelo nome</h2>
 <h3 id="-k"><code>-k</code></h3>
 <p>A opção <code>-k</code> permite executar testes que possuem determinado texto em seu nome.</p>
@@ -2282,7 +2296,6 @@
 <p>ou:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;soma and not decimal&quot;</span>
 </span></code></pre></div>
-<hr />
 <h1 id="controlando-a-execucao">Controlando a execução</h1>
 <h2 id="parar-na-primeira-falha">Parar na primeira falha</h2>
 <h3 id="-x"><code>-x</code></h3>
@@ -2291,7 +2304,6 @@
 </span></code></pre></div>
 <p>Isso pode ser útil quando você está corrigindo erros um de cada vez.</p>
 <p>Por exemplo, se existem 100 testes e o terceiro falha, o <code>pytest</code> interrompe a execução imediatamente.</p>
-<hr />
 <h2 id="parar-depois-de-uma-quantidade-de-falhas">Parar depois de uma quantidade de falhas</h2>
 <h3 id="-maxfail"><code>--maxfail</code></h3>
 <p>Permite determinar quantas falhas podem acontecer antes de interromper a execução.</p>
@@ -2301,7 +2313,6 @@
 <p>Também é possível combinar com <code>-v</code>:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--maxfail<span class="o">=</span><span class="m">2</span>
 </span></code></pre></div>
-<hr />
 <h2 id="executar-novamente-apenas-os-testes-que-falharam">Executar novamente apenas os testes que falharam</h2>
 <h3 id="-lf-ou-last-failed"><code>--lf</code> ou <code>--last-failed</code></h3>
 <p>O <code>pytest</code> guarda informações sobre a execução anterior.</p>
@@ -2313,14 +2324,12 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>pytest<span class="w"> </span>--lf
 </span></code></pre></div>
 <p>Assim, inicialmente somente esses dois testes serão executados novamente.</p>
-<hr />
 <h2 id="executar-primeiro-os-testes-que-falharam-anteriormente">Executar primeiro os testes que falharam anteriormente</h2>
 <h3 id="-ff-ou-failed-first"><code>--ff</code> ou <code>--failed-first</code></h3>
 <p>Executa todos os testes, mas coloca primeiro aqueles que falharam na execução anterior.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>pytest<span class="w"> </span>--ff
 </span></code></pre></div>
 <p>Isso é útil quando queremos verificar rapidamente se uma correção resolveu um problema, mas ainda queremos executar toda a suíte de testes.</p>
-<hr />
 <h1 id="controlando-o-que-aparece-no-terminal">Controlando o que aparece no terminal</h1>
 <h2 id="mostrar-os-print-dos-testes">Mostrar os <code>print()</code> dos testes</h2>
 <h3 id="-s"><code>-s</code></h3>
@@ -2344,14 +2353,12 @@
 <p>Também é comum combinar:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-s
 </span></code></pre></div>
-<hr />
 <h2 id="mostrar-menos-informacoes">Mostrar menos informações</h2>
 <h3 id="-q-ou-quiet"><code>-q</code> ou <code>--quiet</code></h3>
 <p>A opção <code>-q</code> (<em>quiet</em>) reduz a quantidade de informações mostradas pelo <code>pytest</code>.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>pytest<span class="w"> </span>-q
 </span></code></pre></div>
 <p>É útil quando queremos uma saída mais curta, principalmente em projetos que possuem muitos testes.</p>
-<hr />
 <h1 id="controlando-a-mensagem-de-erro">Controlando a mensagem de erro</h1>
 <h2 id="alterar-o-formato-do-traceback">Alterar o formato do traceback</h2>
 <h3 id="-tb"><code>--tb</code></h3>
@@ -2376,7 +2383,6 @@
 <p>Uma combinação bastante prática é:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--tb<span class="o">=</span>short
 </span></code></pre></div>
-<hr />
 <h1 id="listando-testes-sem-executa-los">Listando testes sem executá-los</h1>
 <h2 id="-collect-only"><code>--collect-only</code></h2>
 <p>O <code>pytest</code> primeiro procura os testes existentes no projeto. Esse processo é chamado de <strong>coleta de testes</strong> (<em>test collection</em>).</p>
@@ -2393,7 +2399,6 @@
 <p>Para uma saída mais compacta:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>pytest<span class="w"> </span>--collect-only<span class="w"> </span>-q
 </span></code></pre></div>
-<hr />
 <h1 id="executando-testes-marcados">Executando testes marcados</h1>
 <h2 id="-m"><code>-m</code></h2>
 <p>O <code>pytest</code> permite adicionar <strong>marcadores</strong> (<em>markers</em>) aos testes.</p>
@@ -2422,7 +2427,6 @@
 <blockquote>
 <p>Marcadores personalizados normalmente devem ser registrados no arquivo de configuração do <code>pytest</code>.</p>
 </blockquote>
-<hr />
 <h1 id="algumas-combinacoes-uteis">Algumas combinações úteis</h1>
 <p>As opções podem ser combinadas.</p>
 <h3 id="ver-detalhadamente-os-testes">Ver detalhadamente os testes</h3>
@@ -2446,7 +2450,6 @@
 <h3 id="executar-um-teste-especifico_1">Executar um teste específico</h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>pytest<span class="w"> </span>test_calculadora.py::test_soma<span class="w"> </span>-v
 </span></code></pre></div>
-<hr />
 <h1 id="resumo-dos-principais-comandos">Resumo dos principais comandos</h1>
 <table>
 <thead>
