@@ -64,6 +64,7 @@ nav:
       - "Fixtures": aulas/05-TDD/4-fixtures.md
       - "Mocks": aulas/05-TDD/5-mocks.md
       - "Testando APIs": aulas/05-TDD/6-flask.md
+      - "Opções do Pytest": aulas/05-TDD/7-opcoes.md
       - Exercícios: https://us.prairielearn.com/pl/course_instance/225046
     - "06 - Deploy na AWS": aulas/06-Deploy/index.md
     - "07 - JavaScript": 
