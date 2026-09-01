@@ -10,13 +10,13 @@
         <meta name="author" content="Marcio F. Stabile Jr.">
       
       
-        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/05-TDD/1-pytest/">
+        <link rel="canonical" href="https://insper.github.io/progeficaz/aulas/05-TDD/7-opcoes/">
       
       
-        <link rel="prev" href="../0-tdd/">
+        <link rel="prev" href="../6-flask/">
       
       
-        <link rel="next" href="../2-boaspraticas/">
+        <link rel="next" href="../../06-Deploy/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Pytest - Programação Eficaz - Insper 2026/2</title>
+        <title>Opções do Pytest - Programação Eficaz - Insper 2026/2</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introducao-ao-pytest" class="md-skip">
+        <a href="#comandos-uteis-do-pytest" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pytest
+              Opções do Pytest
             
           </span>
         </div>
@@ -869,30 +869,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Pytest
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -901,185 +881,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-pytest" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é pytest?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-instalar-o-pytest" class="md-nav__link">
-    <span class="md-ellipsis">
-      Como instalar o pytest
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-escrever-um-teste-basico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Como escrever um teste básico
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Como escrever um teste básico">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemplo-de-um-teste-simples" class="md-nav__link">
-    <span class="md-ellipsis">
-      📌 Exemplo de um teste simples
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-rodar-os-testes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Como rodar os testes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#red-green-refactor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Red-Green-Refactor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Red-Green-Refactor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ciclo-1-criar-a-funcao-de-media" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Ciclo 1 - Criar a função de média
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Ciclo 1 - Criar a função de média">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-red-escrevemos-um-teste-que-falha" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️⃣ Red (Escrevemos um teste que falha)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-green-fazemos-o-teste-passar-com-o-codigo-mais-simples-possivel" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️⃣ Green (Fazemos o teste passar com o código mais simples possível)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-refactor-melhoramos-o-codigo-se-necessario" class="md-nav__link">
-    <span class="md-ellipsis">
-      3️⃣ Refactor (Melhoramos o código, se necessário)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ciclo-2-lidar-com-listas-vazias" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Ciclo 2 - Lidar com listas vazias
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Ciclo 2 - Lidar com listas vazias">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-red-escrevemos-um-novo-teste-que-falha" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️⃣ Red (Escrevemos um novo teste que falha)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-green-fazemos-o-teste-passar-com-a-solucao-mais-simples-possivel" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️⃣ Green (Fazemos o teste passar com a solução mais simples possível)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-refactor-melhoramos-a-implementacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      3️⃣ Refactor (Melhoramos a implementação)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumo-do-processo" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Resumo do Processo
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1194,10 +995,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../7-opcoes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Opções do Pytest
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1206,6 +1027,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ver-mais-detalhes-da-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ver mais detalhes da execução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ver mais detalhes da execução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-v-ou-verbose" class="md-nav__link">
+    <span class="md-ellipsis">
+      -v ou --verbose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrar-um-resumo-dos-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar um resumo dos testes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mostrar um resumo dos testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      -r
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-os-comandos-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ver os comandos disponíveis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ver os comandos disponíveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-h-ou-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      -h ou --help
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2097,37 +2010,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#o-que-e-pytest" class="md-nav__link">
+  <a href="#ver-mais-detalhes-da-execucao" class="md-nav__link">
     <span class="md-ellipsis">
-      O que é pytest?
+      Ver mais detalhes da execução
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-instalar-o-pytest" class="md-nav__link">
-    <span class="md-ellipsis">
-      Como instalar o pytest
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-escrever-um-teste-basico" class="md-nav__link">
-    <span class="md-ellipsis">
-      Como escrever um teste básico
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Como escrever um teste básico">
+    <nav class="md-nav" aria-label="Ver mais detalhes da execução">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemplo-de-um-teste-simples" class="md-nav__link">
+  <a href="#-v-ou-verbose" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Exemplo de um teste simples
+      -v ou --verbose
     </span>
   </a>
   
@@ -2139,105 +2034,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-rodar-os-testes" class="md-nav__link">
+  <a href="#mostrar-um-resumo-dos-testes" class="md-nav__link">
     <span class="md-ellipsis">
-      Como rodar os testes
+      Mostrar um resumo dos testes
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#red-green-refactor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Red-Green-Refactor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Red-Green-Refactor">
+    <nav class="md-nav" aria-label="Mostrar um resumo dos testes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ciclo-1-criar-a-funcao-de-media" class="md-nav__link">
+  <a href="#-r" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Ciclo 1 - Criar a função de média
+      -r
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🔹 Ciclo 1 - Criar a função de média">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-red-escrevemos-um-teste-que-falha" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️⃣ Red (Escrevemos um teste que falha)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-green-fazemos-o-teste-passar-com-o-codigo-mais-simples-possivel" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️⃣ Green (Fazemos o teste passar com o código mais simples possível)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-refactor-melhoramos-o-codigo-se-necessario" class="md-nav__link">
-    <span class="md-ellipsis">
-      3️⃣ Refactor (Melhoramos o código, se necessário)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ciclo-2-lidar-com-listas-vazias" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Ciclo 2 - Lidar com listas vazias
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Ciclo 2 - Lidar com listas vazias">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-red-escrevemos-um-novo-teste-que-falha" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️⃣ Red (Escrevemos um novo teste que falha)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-green-fazemos-o-teste-passar-com-a-solucao-mais-simples-possivel" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️⃣ Green (Fazemos o teste passar com a solução mais simples possível)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-refactor-melhoramos-a-implementacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      3️⃣ Refactor (Melhoramos a implementação)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2247,11 +2058,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resumo-do-processo" class="md-nav__link">
+  <a href="#ver-os-comandos-disponiveis" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Resumo do Processo
+      Ver os comandos disponíveis
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Ver os comandos disponíveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-h-ou-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      -h ou --help
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2270,148 +2096,432 @@
                   
 
 
-<h1 id="introducao-ao-pytest">Introdução ao <strong>pytest</strong></h1>
-<p>O <strong>pytest</strong> é um dos frameworks de teste mais populares para Python. Ele é simples de usar, mas poderoso o suficiente para escrever testes complexos. Com <strong>pytest</strong>, você pode testar funções, classes e até mesmo aplicações inteiras com facilidade.  </p>
-<h2 id="o-que-e-pytest">O que é pytest?</h2>
-<p>O <strong>pytest</strong> é um framework que facilita a escrita e execução de testes automatizados em Python. Ele é mais intuitivo do que o módulo padrão <code>unittest</code>, permitindo que você escreva testes com menos código e mais clareza.  </p>
-<h2 id="como-instalar-o-pytest">Como instalar o pytest</h2>
-<p>Para começar a usar o <code>pytest</code>, primeiro você precisa instalá-lo. <strong>Dentro do ambiente virtual</strong>, basta rodar:  </p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest
+<h1 id="comandos-uteis-do-pytest">Comandos úteis do Pytest</h1>
+<p>Sugestão de: Gabriel E. Vivacqua e Vitor H. Costa</p>
+<p>O <code>pytest</code> possui diversas opções que ajudam a executar, filtrar e analisar testes.</p>
+<p>A estrutura básica de execução é:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pytest
 </span></code></pre></div>
-<p>Após a instalação, você pode verificar se o <code>pytest</code> está disponível com:  </p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pytest<span class="w"> </span>--version
+<p>Esse comando procura automaticamente por arquivos e funções de teste no projeto.</p>
+<p>Por exemplo, arquivos com nomes como:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>test_calculadora.py
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>calculadora_test.py
 </span></code></pre></div>
-<h2 id="como-escrever-um-teste-basico">Como escrever um teste básico</h2>
-<p>Os testes no <code>pytest</code> são escritos como funções normais e utilizam <strong>assertivas (<code>assert</code>)</strong> para verificar se os resultados são os esperados.  </p>
-<h3 id="exemplo-de-um-teste-simples">📌 <strong>Exemplo de um teste simples</strong></h3>
-<p>Crie um arquivo chamado <strong><code>test_math.py</code></strong> e adicione o seguinte código:  </p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">():</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">assert</span> <span class="n">soma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">assert</span> <span class="n">soma</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">assert</span> <span class="n">soma</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<p>e funções como:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">():</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
 </span></code></pre></div>
-<p>Aqui, estamos testando se a função <code>soma(a, b)</code> retorna os valores corretos para diferentes entradas.  </p>
-<h2 id="como-rodar-os-testes">Como rodar os testes</h2>
-<p>Para executar os testes, basta rodar o seguinte comando no terminal:  </p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pytest
+<hr />
+<h2 id="ver-mais-detalhes-da-execucao">Ver mais detalhes da execução</h2>
+<h3 id="-v-ou-verbose"><code>-v</code> ou <code>--verbose</code></h3>
+<p>A opção <code>-v</code> (<em>verbose</em>) faz com que o <code>pytest</code> mostre mais informações durante a execução dos testes.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pytest<span class="w"> </span>-v
 </span></code></pre></div>
-<p>Se tudo estiver correto, você verá uma saída semelhante a:  </p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>============================= test session starts =============================
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>collected 1 item                                                               
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>test_math.py .                                                       [100%]
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>============================== 1 passed in 0.01s ==============================
+<p>Sem <code>-v</code>, uma execução pode aparecer assim:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>...
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>3 passed
 </span></code></pre></div>
-<p>Mas como o <code>pytest</code> sabe que o arquivo <code>test_math.py</code> contém testes? Ele segue uma convenção de nomenclatura: os arquivos de teste devem começar com <code>test_</code> ou terminar com <code>_test</code>. Por causa disso, não é comum que tenhamos testes e o código principal no mesmo arquivo.</p>
-<p>O mais usual seria ter um arquivo <code>math.py</code> com a implementação da função <code>soma</code> e um arquivo <code>test_math.py</code> com os testes.</p>
-<h2 id="red-green-refactor">Red-Green-Refactor</h2>
-<p>Para exemplificar o fluxo <strong>Red-Green-Refactor</strong> com <code>pytest</code>, vamos criar testes para uma função chamada <code>calcula_media</code>. Essa função deve receber uma lista de inteiros e retornar a média dos valores na lista. Primeiramente, crie os arquivos necessários:</p>
-<ol>
-<li>Crie um arquivo <code>funcoes.py</code>.</li>
-<li>Crie um arquivo chamado <code>test_funcoes.py</code>.</li>
-</ol>
-<h3 id="ciclo-1-criar-a-funcao-de-media">🔹 <strong>Ciclo 1 - Criar a função de média</strong></h3>
-<h4 id="1-red-escrevemos-um-teste-que-falha"><strong>1️⃣ Red (Escrevemos um teste que falha)</strong></h4>
-<p>Antes de criar a função, escrevemos um teste no arquivo <code>test_funcoes.py</code> para garantir que a média de <code>[2, 4, 6]</code> seja <code>4.0</code>:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">funcoes</span> <span class="kn">import</span> <span class="n">calcula_media</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">def</span> <span class="nf">test_calcula_media</span><span class="p">():</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="k">assert</span> <span class="n">calcula_media</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span> <span class="o">==</span> <span class="mf">4.0</span>
+<p>Com <code>-v</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>test_calculadora.py::test_soma PASSED
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>test_calculadora.py::test_subtracao PASSED
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>test_calculadora.py::test_multiplicacao PASSED
 </span></code></pre></div>
-<p>🚨 <strong>O teste falha</strong> porque <code>calcula_media</code> ainda não existe.</p>
-<h4 id="2-green-fazemos-o-teste-passar-com-o-codigo-mais-simples-possivel"><strong>2️⃣ Green (Fazemos o teste passar com o código mais simples possível)</strong></h4>
-<p>Agora criamos a função <strong>mais simples possível</strong> no arquivo <code>funcoes.py</code> para passar no teste:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">calcula_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="n">total</span> <span class="o">+=</span> <span class="n">num</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">return</span> <span class="n">total</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<p>Isso é especialmente útil para identificar <strong>qual teste passou ou falhou</strong>.</p>
+<p>Também podemos executar um arquivo específico:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pytest<span class="w"> </span>test_calculadora.py<span class="w"> </span>-v
 </span></code></pre></div>
-<p>✅ <strong>Agora o teste passa!</strong></p>
-<h4 id="3-refactor-melhoramos-o-codigo-se-necessario"><strong>3️⃣ Refactor (Melhoramos o código, se necessário)</strong></h4>
-<p>Agora que saímos de DevLife, podemos utilizar as funções prontas do Python para simplificar o código:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">calcula_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<hr />
+<h2 id="mostrar-um-resumo-dos-testes">Mostrar um resumo dos testes</h2>
+<h3 id="-r"><code>-r</code></h3>
+<p>A opção <code>-r</code> permite escolher quais tipos de resultados devem aparecer no <strong>resumo final da execução</strong>.</p>
+<p>A sintaxe é:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pytest<span class="w"> </span>-r<span class="w"> </span>OPÇÕES
 </span></code></pre></div>
-<h3 id="ciclo-2-lidar-com-listas-vazias">🔹 <strong>Ciclo 2 - Lidar com listas vazias</strong></h3>
-<p>Agora, queremos melhorar a função para que <strong>não quebre</strong> caso receba uma lista vazia.</p>
-<h4 id="1-red-escrevemos-um-novo-teste-que-falha"><strong>1️⃣ Red (Escrevemos um novo teste que falha)</strong></h4>
-<p>Adicionamos um novo caso de teste para listas vazias:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">test_calcula_media_lista_vazia</span><span class="p">():</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="k">assert</span> <span class="n">calcula_media</span><span class="p">([])</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1"># Esperamos que a média de uma lista vazia seja 0</span>
+<p>Por exemplo:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pytest<span class="w"> </span>-r<span class="w"> </span>f
 </span></code></pre></div>
-<p>🚨 <strong>O teste falha!</strong> O código atual gera um erro de <strong>divisão por zero</strong>.</p>
-<h4 id="2-green-fazemos-o-teste-passar-com-a-solucao-mais-simples-possivel"><strong>2️⃣ Green (Fazemos o teste passar com a solução mais simples possível)</strong></h4>
-<p>Agora, alteramos a função para tratar listas vazias:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">calcula_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="k">if</span> <span class="n">lista</span> <span class="o">==</span> <span class="p">[]:</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="k">return</span> <span class="mi">0</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<p>mostra informações adicionais sobre os testes que falharam.</p>
+<p>As principais opções são:</p>
+<table>
+<thead>
+<tr>
+<th>Opção</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f</code></td>
+<td><code>failed</code> — testes que falharam</td>
+</tr>
+<tr>
+<td><code>E</code></td>
+<td><code>error</code> — testes que tiveram erro durante a execução</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td><code>skipped</code> — testes que foram ignorados</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td><code>xfailed</code> — testes que falharam como esperado</td>
+</tr>
+<tr>
+<td><code>X</code></td>
+<td><code>xpassed</code> — testes que deveriam falhar, mas passaram</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>passed</code> — testes que passaram</td>
+</tr>
+<tr>
+<td><code>P</code></td>
+<td><code>passed with output</code> — testes que passaram e produziram saída</td>
+</tr>
+</tbody>
+</table>
+<p>É possível combinar várias opções:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pytest<span class="w"> </span>-r<span class="w"> </span>fs
 </span></code></pre></div>
-<p>✅ <strong>Agora o teste passa!</strong></p>
-<h4 id="3-refactor-melhoramos-a-implementacao"><strong>3️⃣ Refactor (Melhoramos a implementação)</strong></h4>
-<p>A função funciona, mas podemos utilizar técnicas mais avançadas para simplificar o código:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">calcula_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">lista</span> <span class="o">==</span> <span class="p">[]</span> <span class="k">else</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<p>Nesse caso, o resumo apresenta informações sobre testes que <strong>falharam</strong> e testes que foram <strong>ignorados</strong>.</p>
+<p>Uma opção bastante útil é:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest<span class="w"> </span>-ra
 </span></code></pre></div>
-<h2 id="resumo-do-processo">🔹 <strong>Resumo do Processo</strong></h2>
-<p>🔴 <strong>Red</strong> – Criamos um teste antes da implementação e verificamos que ele falha.<br />
-🟢 <strong>Green</strong> – Implementamos o código mais simples possível para fazer o teste passar.<br />
-🛠️ <strong>Refactor</strong> – Melhoramos o código sem alterar o comportamento esperado.  </p>
-<p>E qual é a melhor maneira de estruturarmos os testes? Vamos ver isso <a href="../2-boaspraticas/">a seguir!</a></p>
-<!-- ## Recursos úteis do pytest  
-
-### 1️⃣ **Testes paramétricos** (rodar o mesmo teste com vários valores)  
-Podemos usar `@pytest.mark.parametrize` para testar múltiplos casos de forma eficiente:  
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;a, b, resultado&quot;</span><span class="p">,</span> <span class="p">[</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">])</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">resultado</span><span class="p">):</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="k">assert</span> <span class="n">soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">resultado</span>
+<p>O <code>a</code> significa mostrar informações sobre <strong>todos os resultados relevantes</strong>, exceto os testes que simplesmente passaram.</p>
+<hr />
+<h2 id="ver-os-comandos-disponiveis">Ver os comandos disponíveis</h2>
+<h3 id="-h-ou-help"><code>-h</code> ou <code>--help</code></h3>
+<p>Mostra a lista de opções disponíveis no <code>pytest</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pytest<span class="w"> </span>-h
 </span></code></pre></div>
-
-### 2️⃣ **Testes com exceções** (testando erros)  
-Podemos verificar se uma função levanta uma exceção esperada com `pytest.raises()`:  
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Divisão por zero não permitida!&quot;</span><span class="p">)</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">def</span> <span class="nf">test_divide</span><span class="p">():</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<p>ou:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pytest<span class="w"> </span>--help
 </span></code></pre></div>
-
-### 3️⃣ **Rodando apenas um teste específico**  
-Se quiser rodar apenas um teste específico, use:  
-
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pytest<span class="w"> </span>test_math.py::test_soma
+<p>Esse comando é útil quando você não lembra exatamente o nome ou funcionamento de alguma opção.</p>
+<hr />
+<h1 id="escolhendo-quais-testes-executar">Escolhendo quais testes executar</h1>
+<h2 id="executar-os-testes-de-um-arquivo-especifico">Executar os testes de um arquivo específico</h2>
+<p>Para executar somente os testes presentes em um determinado arquivo:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pytest<span class="w"> </span>test_calculadora.py
 </span></code></pre></div>
-
-### 4️⃣ **Obter um relatório mais detalhado**  
-Para ver mensagens detalhadas sobre os testes, use a opção `-v`:  
-
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>pytest<span class="w"> </span>-v
+<p>Por exemplo, suponha que o projeto tenha:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>test_calculadora.py
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>test_usuario.py
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>test_produto.py
 </span></code></pre></div>
-
-
-## Conclusão  
-
-O `pytest` é uma ferramenta essencial para quem quer escrever testes de forma simples e eficiente em Python. Com uma sintaxe intuitiva e diversas funcionalidades úteis, ele facilita a criação e execução de testes automatizados, garantindo que seu código funcione corretamente.  
-
-Agora que você conhece o básico, experimente escrever seus próprios testes e explorar mais recursos do `pytest`! 🚀 -->
+<p>O comando:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>pytest<span class="w"> </span>test_usuario.py
+</span></code></pre></div>
+<p>executará somente os testes presentes em <code>test_usuario.py</code>.</p>
+<hr />
+<h2 id="executar-um-teste-especifico">Executar um teste específico</h2>
+<p>Podemos utilizar <code>::</code> para indicar exatamente qual teste queremos executar.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>pytest<span class="w"> </span>arquivo_test.py::funcao_test
+</span></code></pre></div>
+<p>Por exemplo:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">():</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">def</span> <span class="nf">test_subtracao</span><span class="p">():</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="k">assert</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span>
+</span></code></pre></div>
+<p>Para executar somente <code>test_soma</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>pytest<span class="w"> </span>test_calculadora.py::test_soma
+</span></code></pre></div>
+<hr />
+<h2 id="executar-os-testes-de-uma-classe-especifica">Executar os testes de uma classe específica</h2>
+<p>Quando os testes estão organizados em classes, também podemos selecionar uma classe inteira.</p>
+<p>Por exemplo:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">class</span> <span class="nc">TestCalculadora</span><span class="p">:</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="k">def</span> <span class="nf">test_soma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>        <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="k">def</span> <span class="nf">test_subtracao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>        <span class="k">assert</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span>
+</span></code></pre></div>
+<p>Para executar todos os testes da classe:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>pytest<span class="w"> </span>test_calculadora.py::TestCalculadora
+</span></code></pre></div>
+<p>Para executar somente um método:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>pytest<span class="w"> </span>test_calculadora.py::TestCalculadora::test_soma
+</span></code></pre></div>
+<hr />
+<h2 id="selecionar-testes-pelo-nome">Selecionar testes pelo nome</h2>
+<h3 id="-k"><code>-k</code></h3>
+<p>A opção <code>-k</code> permite executar testes que possuem determinado texto em seu nome.</p>
+<p>Por exemplo:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span>soma
+</span></code></pre></div>
+<p>Considere os testes:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">def</span> <span class="nf">test_soma_inteiros</span><span class="p">():</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    <span class="o">...</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="k">def</span> <span class="nf">test_soma_decimais</span><span class="p">():</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    <span class="o">...</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="k">def</span> <span class="nf">test_subtracao</span><span class="p">():</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>    <span class="o">...</span>
+</span></code></pre></div>
+<p>O comando:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span>soma
+</span></code></pre></div>
+<p>executará:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>test_soma_inteiros
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>test_soma_decimais
+</span></code></pre></div>
+<p>mas não executará:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>test_subtracao
+</span></code></pre></div>
+<p>Também podemos usar expressões:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;soma or subtracao&quot;</span>
+</span></code></pre></div>
+<p>ou:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>pytest<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;soma and not decimal&quot;</span>
+</span></code></pre></div>
+<hr />
+<h1 id="controlando-a-execucao">Controlando a execução</h1>
+<h2 id="parar-na-primeira-falha">Parar na primeira falha</h2>
+<h3 id="-x"><code>-x</code></h3>
+<p>A opção <code>-x</code> faz o <code>pytest</code> interromper a execução assim que encontrar o primeiro teste que falhou.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>pytest<span class="w"> </span>-x
+</span></code></pre></div>
+<p>Isso pode ser útil quando você está corrigindo erros um de cada vez.</p>
+<p>Por exemplo, se existem 100 testes e o terceiro falha, o <code>pytest</code> interrompe a execução imediatamente.</p>
+<hr />
+<h2 id="parar-depois-de-uma-quantidade-de-falhas">Parar depois de uma quantidade de falhas</h2>
+<h3 id="-maxfail"><code>--maxfail</code></h3>
+<p>Permite determinar quantas falhas podem acontecer antes de interromper a execução.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>pytest<span class="w"> </span>--maxfail<span class="o">=</span><span class="m">2</span>
+</span></code></pre></div>
+<p>Nesse exemplo, o <code>pytest</code> interrompe a execução depois que <strong>dois testes falharem</strong>.</p>
+<p>Também é possível combinar com <code>-v</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--maxfail<span class="o">=</span><span class="m">2</span>
+</span></code></pre></div>
+<hr />
+<h2 id="executar-novamente-apenas-os-testes-que-falharam">Executar novamente apenas os testes que falharam</h2>
+<h3 id="-lf-ou-last-failed"><code>--lf</code> ou <code>--last-failed</code></h3>
+<p>O <code>pytest</code> guarda informações sobre a execução anterior.</p>
+<p>O comando:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>pytest<span class="w"> </span>--lf
+</span></code></pre></div>
+<p>executa somente os testes que falharam na última execução.</p>
+<p>Por exemplo, se temos 50 testes e apenas dois falharam, depois de corrigir o código podemos executar:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>pytest<span class="w"> </span>--lf
+</span></code></pre></div>
+<p>Assim, inicialmente somente esses dois testes serão executados novamente.</p>
+<hr />
+<h2 id="executar-primeiro-os-testes-que-falharam-anteriormente">Executar primeiro os testes que falharam anteriormente</h2>
+<h3 id="-ff-ou-failed-first"><code>--ff</code> ou <code>--failed-first</code></h3>
+<p>Executa todos os testes, mas coloca primeiro aqueles que falharam na execução anterior.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>pytest<span class="w"> </span>--ff
+</span></code></pre></div>
+<p>Isso é útil quando queremos verificar rapidamente se uma correção resolveu um problema, mas ainda queremos executar toda a suíte de testes.</p>
+<hr />
+<h1 id="controlando-o-que-aparece-no-terminal">Controlando o que aparece no terminal</h1>
+<h2 id="mostrar-os-print-dos-testes">Mostrar os <code>print()</code> dos testes</h2>
+<h3 id="-s"><code>-s</code></h3>
+<p>Por padrão, o <code>pytest</code> captura a saída produzida por <code>print()</code>.</p>
+<p>Considere:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">def</span> <span class="nf">test_soma</span><span class="p">():</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Executando teste de soma&quot;</span><span class="p">)</span>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+</span></code></pre></div>
+<p>Executando:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>pytest
+</span></code></pre></div>
+<p>o texto normalmente não aparece durante um teste que passa.</p>
+<p>Com:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>pytest<span class="w"> </span>-s
+</span></code></pre></div>
+<p>veremos:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Executando teste de soma
+</span></code></pre></div>
+<p>Essa opção pode ser útil durante a depuração.</p>
+<p>Também é comum combinar:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-s
+</span></code></pre></div>
+<hr />
+<h2 id="mostrar-menos-informacoes">Mostrar menos informações</h2>
+<h3 id="-q-ou-quiet"><code>-q</code> ou <code>--quiet</code></h3>
+<p>A opção <code>-q</code> (<em>quiet</em>) reduz a quantidade de informações mostradas pelo <code>pytest</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>pytest<span class="w"> </span>-q
+</span></code></pre></div>
+<p>É útil quando queremos uma saída mais curta, principalmente em projetos que possuem muitos testes.</p>
+<hr />
+<h1 id="controlando-a-mensagem-de-erro">Controlando a mensagem de erro</h1>
+<h2 id="alterar-o-formato-do-traceback">Alterar o formato do traceback</h2>
+<h3 id="-tb"><code>--tb</code></h3>
+<p>Quando um teste falha, o <code>pytest</code> mostra o <em>traceback</em>, ou seja, informações indicando onde ocorreu o erro.</p>
+<p>Podemos controlar a quantidade de informações mostradas.</p>
+<h3 id="traceback-curto">Traceback curto</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>short
+</span></code></pre></div>
+<p>Mostra uma versão reduzida do erro.</p>
+<h3 id="traceback-completo">Traceback completo</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>long
+</span></code></pre></div>
+<p>Mostra informações mais detalhadas.</p>
+<h3 id="apenas-uma-linha">Apenas uma linha</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>line
+</span></code></pre></div>
+<p>Mostra cada erro de forma bastante compacta.</p>
+<h3 id="nao-mostrar-traceback">Não mostrar traceback</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>pytest<span class="w"> </span>--tb<span class="o">=</span>no
+</span></code></pre></div>
+<p>Pode ser útil quando queremos visualizar apenas quais testes falharam.</p>
+<p>Uma combinação bastante prática é:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--tb<span class="o">=</span>short
+</span></code></pre></div>
+<hr />
+<h1 id="listando-testes-sem-executa-los">Listando testes sem executá-los</h1>
+<h2 id="-collect-only"><code>--collect-only</code></h2>
+<p>O <code>pytest</code> primeiro procura os testes existentes no projeto. Esse processo é chamado de <strong>coleta de testes</strong> (<em>test collection</em>).</p>
+<p>Podemos pedir para ele mostrar quais testes encontrou sem executá-los:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>pytest<span class="w"> </span>--collect-only
+</span></code></pre></div>
+<p>Por exemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>test_calculadora.py
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>    test_soma
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>    test_subtracao
+</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>    test_multiplicacao
+</span></code></pre></div>
+<p>Esse comando é útil para verificar se o <code>pytest</code> está conseguindo encontrar todos os testes esperados.</p>
+<p>Para uma saída mais compacta:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>pytest<span class="w"> </span>--collect-only<span class="w"> </span>-q
+</span></code></pre></div>
+<hr />
+<h1 id="executando-testes-marcados">Executando testes marcados</h1>
+<h2 id="-m"><code>-m</code></h2>
+<p>O <code>pytest</code> permite adicionar <strong>marcadores</strong> (<em>markers</em>) aos testes.</p>
+<p>Por exemplo:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>
+</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>
+</span><span id="__span-49-4"><a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">lento</span>
+</span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="k">def</span> <span class="nf">test_operacao_complexa</span><span class="p">():</span>
+</span><span id="__span-49-6"><a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>    <span class="k">assert</span> <span class="kc">True</span>
+</span></code></pre></div>
+<p>Podemos executar apenas os testes que possuem a marca <code>lento</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>pytest<span class="w"> </span>-m<span class="w"> </span>lento
+</span></code></pre></div>
+<p>Também podemos excluir esses testes:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>pytest<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;not lento&quot;</span>
+</span></code></pre></div>
+<p>Os marcadores são úteis para separar, por exemplo:</p>
+<ul>
+<li>testes rápidos;</li>
+<li>testes lentos;</li>
+<li>testes de integração;</li>
+<li>testes que dependem de banco de dados;</li>
+<li>testes que dependem de serviços externos.</li>
+</ul>
+<blockquote>
+<p>Marcadores personalizados normalmente devem ser registrados no arquivo de configuração do <code>pytest</code>.</p>
+</blockquote>
+<hr />
+<h1 id="algumas-combinacoes-uteis">Algumas combinações úteis</h1>
+<p>As opções podem ser combinadas.</p>
+<h3 id="ver-detalhadamente-os-testes">Ver detalhadamente os testes</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>pytest<span class="w"> </span>-v
+</span></code></pre></div>
+<h3 id="ver-detalhes-e-os-print">Ver detalhes e os <code>print()</code></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-s
+</span></code></pre></div>
+<h3 id="parar-na-primeira-falha_1">Parar na primeira falha</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-x
+</span></code></pre></div>
+<h3 id="mostrar-traceback-mais-curto">Mostrar traceback mais curto</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--tb<span class="o">=</span>short
+</span></code></pre></div>
+<h3 id="executar-novamente-apenas-os-testes-que-falharam_1">Executar novamente apenas os testes que falharam</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>--lf
+</span></code></pre></div>
+<h3 id="executar-testes-cujo-nome-contem-usuario">Executar testes cujo nome contém <code>usuario</code></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>pytest<span class="w"> </span>-v<span class="w"> </span>-k<span class="w"> </span>usuario
+</span></code></pre></div>
+<h3 id="executar-um-teste-especifico_1">Executar um teste específico</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>pytest<span class="w"> </span>test_calculadora.py::test_soma<span class="w"> </span>-v
+</span></code></pre></div>
+<hr />
+<h1 id="resumo-dos-principais-comandos">Resumo dos principais comandos</h1>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pytest</code></td>
+<td>Executa os testes encontrados</td>
+</tr>
+<tr>
+<td><code>pytest arquivo.py</code></td>
+<td>Executa os testes de um arquivo</td>
+</tr>
+<tr>
+<td><code>pytest arquivo.py::teste</code></td>
+<td>Executa um teste específico</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Mostra mais detalhes</td>
+</tr>
+<tr>
+<td><code>-q</code></td>
+<td>Mostra menos informações</td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>Exibe saídas de <code>print()</code></td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td>Controla o resumo da execução</td>
+</tr>
+<tr>
+<td><code>-k</code></td>
+<td>Filtra testes pelo nome</td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td>Filtra testes por marcador</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td>Para na primeira falha</td>
+</tr>
+<tr>
+<td><code>--maxfail=N</code></td>
+<td>Para após <code>N</code> falhas</td>
+</tr>
+<tr>
+<td><code>--lf</code></td>
+<td>Executa os testes que falharam anteriormente</td>
+</tr>
+<tr>
+<td><code>--ff</code></td>
+<td>Executa primeiro os que falharam anteriormente</td>
+</tr>
+<tr>
+<td><code>--tb=short</code></td>
+<td>Mostra um traceback reduzido</td>
+</tr>
+<tr>
+<td><code>--collect-only</code></td>
+<td>Lista os testes sem executá-los</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>Mostra a ajuda do <code>pytest</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
