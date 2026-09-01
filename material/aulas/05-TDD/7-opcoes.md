@@ -26,7 +26,6 @@ def test_soma():
     assert 2 + 2 == 4
 ```
 
----
 
 ## Ver mais detalhes da execução
 
@@ -61,7 +60,6 @@ Também podemos executar um arquivo específico:
 pytest test_calculadora.py -v
 ```
 
----
 
 ## Mostrar um resumo dos testes
 
@@ -111,7 +109,6 @@ pytest -ra
 
 O `a` significa mostrar informações sobre **todos os resultados relevantes**, exceto os testes que simplesmente passaram.
 
----
 
 ## Ver os comandos disponíveis
 
@@ -131,7 +128,6 @@ pytest --help
 
 Esse comando é útil quando você não lembra exatamente o nome ou funcionamento de alguma opção.
 
----
 
 # Escolhendo quais testes executar
 
@@ -159,7 +155,6 @@ pytest test_usuario.py
 
 executará somente os testes presentes em `test_usuario.py`.
 
----
 
 ## Executar um teste específico
 
@@ -186,7 +181,6 @@ Para executar somente `test_soma`:
 pytest test_calculadora.py::test_soma
 ```
 
----
 
 ## Executar os testes de uma classe específica
 
@@ -216,7 +210,6 @@ Para executar somente um método:
 pytest test_calculadora.py::TestCalculadora::test_soma
 ```
 
----
 
 ## Selecionar testes pelo nome
 
@@ -276,7 +269,6 @@ ou:
 pytest -k "soma and not decimal"
 ```
 
----
 
 # Controlando a execução
 
@@ -294,65 +286,6 @@ Isso pode ser útil quando você está corrigindo erros um de cada vez.
 
 Por exemplo, se existem 100 testes e o terceiro falha, o `pytest` interrompe a execução imediatamente.
 
----
-
-## Parar depois de uma quantidade de falhas
-
-### `--maxfail`
-
-Permite determinar quantas falhas podem acontecer antes de interromper a execução.
-
-```bash
-pytest --maxfail=2
-```
-
-Nesse exemplo, o `pytest` interrompe a execução depois que **dois testes falharem**.
-
-Também é possível combinar com `-v`:
-
-```bash
-pytest -v --maxfail=2
-```
-
----
-
-## Executar novamente apenas os testes que falharam
-
-### `--lf` ou `--last-failed`
-
-O `pytest` guarda informações sobre a execução anterior.
-
-O comando:
-
-```bash
-pytest --lf
-```
-
-executa somente os testes que falharam na última execução.
-
-Por exemplo, se temos 50 testes e apenas dois falharam, depois de corrigir o código podemos executar:
-
-```bash
-pytest --lf
-```
-
-Assim, inicialmente somente esses dois testes serão executados novamente.
-
----
-
-## Executar primeiro os testes que falharam anteriormente
-
-### `--ff` ou `--failed-first`
-
-Executa todos os testes, mas coloca primeiro aqueles que falharam na execução anterior.
-
-```bash
-pytest --ff
-```
-
-Isso é útil quando queremos verificar rapidamente se uma correção resolveu um problema, mas ainda queremos executar toda a suíte de testes.
-
----
 
 # Controlando o que aparece no terminal
 
@@ -398,22 +331,6 @@ Também é comum combinar:
 pytest -v -s
 ```
 
----
-
-## Mostrar menos informações
-
-### `-q` ou `--quiet`
-
-A opção `-q` (*quiet*) reduz a quantidade de informações mostradas pelo `pytest`.
-
-```bash
-pytest -q
-```
-
-É útil quando queremos uma saída mais curta, principalmente em projetos que possuem muitos testes.
-
----
-
 # Controlando a mensagem de erro
 
 ## Alterar o formato do traceback
@@ -424,14 +341,6 @@ Quando um teste falha, o `pytest` mostra o *traceback*, ou seja, informações i
 
 Podemos controlar a quantidade de informações mostradas.
 
-### Traceback curto
-
-```bash
-pytest --tb=short
-```
-
-Mostra uma versão reduzida do erro.
-
 ### Traceback completo
 
 ```bash
@@ -439,30 +348,6 @@ pytest --tb=long
 ```
 
 Mostra informações mais detalhadas.
-
-### Apenas uma linha
-
-```bash
-pytest --tb=line
-```
-
-Mostra cada erro de forma bastante compacta.
-
-### Não mostrar traceback
-
-```bash
-pytest --tb=no
-```
-
-Pode ser útil quando queremos visualizar apenas quais testes falharam.
-
-Uma combinação bastante prática é:
-
-```bash
-pytest -v --tb=short
-```
-
----
 
 # Listando testes sem executá-los
 
@@ -493,96 +378,6 @@ Para uma saída mais compacta:
 pytest --collect-only -q
 ```
 
----
-
-# Executando testes marcados
-
-## `-m`
-
-O `pytest` permite adicionar **marcadores** (*markers*) aos testes.
-
-Por exemplo:
-
-```python
-import pytest
-
-
-@pytest.mark.lento
-def test_operacao_complexa():
-    assert True
-```
-
-Podemos executar apenas os testes que possuem a marca `lento`:
-
-```bash
-pytest -m lento
-```
-
-Também podemos excluir esses testes:
-
-```bash
-pytest -m "not lento"
-```
-
-Os marcadores são úteis para separar, por exemplo:
-
-* testes rápidos;
-* testes lentos;
-* testes de integração;
-* testes que dependem de banco de dados;
-* testes que dependem de serviços externos.
-
-> Marcadores personalizados normalmente devem ser registrados no arquivo de configuração do `pytest`.
-
----
-
-# Algumas combinações úteis
-
-As opções podem ser combinadas.
-
-### Ver detalhadamente os testes
-
-```bash
-pytest -v
-```
-
-### Ver detalhes e os `print()`
-
-```bash
-pytest -v -s
-```
-
-### Parar na primeira falha
-
-```bash
-pytest -v -x
-```
-
-### Mostrar traceback mais curto
-
-```bash
-pytest -v --tb=short
-```
-
-### Executar novamente apenas os testes que falharam
-
-```bash
-pytest -v --lf
-```
-
-### Executar testes cujo nome contém `usuario`
-
-```bash
-pytest -v -k usuario
-```
-
-### Executar um teste específico
-
-```bash
-pytest test_calculadora.py::test_soma -v
-```
-
----
 
 # Resumo dos principais comandos
 
