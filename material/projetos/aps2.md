@@ -2,7 +2,7 @@
 
 !!! success "Entrega"
 
-    :date:  17/04 (sexta-feira)
+    :date:  13/10 (terça-feira)
     
     :clock1: até as 23:59
     
