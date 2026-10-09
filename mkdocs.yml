@@ -103,7 +103,7 @@ nav:
     - "Projeto 2": projetos/projeto2/index.md
     - "APS 2": projetos/aps2.md
     - "APS 3": projetos/aps3.md
-    # - "Projeto 3": projetos/projeto3/index.md
+    - "Projeto 3": projetos/projeto3/index.md
 
   # - Simulado:
   #   - "Avaliação Intermediária": simulado/ai.md
